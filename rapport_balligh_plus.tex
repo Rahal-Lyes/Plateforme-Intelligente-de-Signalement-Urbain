@@ -98,7 +98,7 @@
 \usepackage{mathpazo}
 
 % ── Mise en page ───────────────────────────────────────────
-\usepackage[top=2.5cm,bottom=2.8cm,left=3cm,right=2.5cm]{geometry}
+\usepackage[top=2.5cm,bottom=2.8cm,left=3cm,right=2.5cm,headheight=16pt]{geometry}
 \usepackage{setspace}
 \onehalfspacing
 
@@ -116,7 +116,6 @@
 
 % ── Titres personnalisés ───────────────────────────────────
 \usepackage{titlesec}
-
 % Chapitre : grand, sobre, avec filet coloré
 \titleformat{\chapter}[display]
   {\normalfont\Large\bfseries\color{primary}}
@@ -196,7 +195,7 @@
 }
 
 % ── Divers ─────────────────────────────────────────────────
-\usepackage{graphicx}
+% graphicx already loaded above
 \usepackage{float}
 \usepackage{amsmath}
 \usepackage{amssymb}
@@ -210,6 +209,10 @@
 \newcommand{\thdcell}[1]{%
   \cellcolor{tabhead}\textbf{\textcolor{white}{#1}}%
 }
+
+% ── Support arabe (RTL) ────────────────────────────────────
+\usepackage{arabtex}
+\usepackage{utf8}
 
 % ── Boîte de citation/note élégante ────────────────────────
 \usepackage{tcolorbox}
@@ -360,35 +363,116 @@ jour.
 \addcontentsline{toc}{chapter}{Liste des Figures}
 \newpage
 
-% ── Préface ─────────────────────────────────────────────────
+
+% ── Préface (Français) ──────────────────────────────────────
 \cleardoublepage
 \chapter*{Préface}
 \addcontentsline{toc}{chapter}{Préface}
-
+ 
+{\small\textcolor{muted}{\textit{Version française}}}
+\vspace{0.4cm}
+ 
 La ville algérienne est en mutation. Portée par une génération connectée et un
 État en quête de modernisation, elle amorce une transition numérique qui touche
 progressivement tous les secteurs de la vie publique. Pourtant, un maillon
-essentiel demeure souvent négligé : le lien direct entre le citoyen et sa
-commune.
-
+essentiel demeure souvent négligé : le lien direct entre le citoyen et sa commune.
+ 
 C'est dans ce contexte que nous avons conçu \textbf{Balligh+} — du mot arabe
-\textit{بلّغ} signifiant \textit{« informer, transmettre »} — une plateforme
+\textit{\Arab{bl-g}} signifiant \textit{« informer, transmettre »} — une plateforme
 numérique dédiée au signalement participatif des dysfonctionnements urbains.
 Nids-de-poule, pannes d'éclairage public, fuites d'eau, dépôts sauvages de
 déchets : autant de problèmes du quotidien qui, faute de canal adéquat, restent
 trop longtemps sans réponse.
-
+ 
 Ce mémoire retrace l'intégralité du parcours de création : de l'identification
 du problème à l'analyse du marché, de la conception architecturale au
 développement du prototype fonctionnel, et de la stratégie commerciale à la
 vision d'évolution à long terme. Il témoigne d'un effort collectif alliant
-rigueur académique, sensibilité aux réalités locales et ambition
-entrepreneuriale.
-
+rigueur académique, sensibilité aux réalités locales et ambition entrepreneuriale.
+ 
 Nous espérons que ce travail contribuera, modestement, à la réflexion sur la
 place du numérique dans la gouvernance locale algérienne, et incitera d'autres
 étudiants à s'engager dans des projets à impact territorial concret.
+ 
+\vspace{0.8cm}
+\begin{flushright}
+  \textit{Les auteurs}
+\end{flushright}
+ 
+\vspace{1cm}
+\textcolor{accent}{\rule{\linewidth}{0.6pt}}
+\vspace{0.8cm}
+ 
+% ── Préface (English) ───────────────────────────────────────
+{\small\textcolor{muted}{\textit{English version}}}
+\vspace{0.4cm}
+ 
+Algerian cities are undergoing profound transformation. Driven by a
+connected generation and a state committed to modernisation, they are
+embarking on a digital transition that is gradually reshaping every
+sector of public life. Yet one essential link is too often overlooked:
+the direct relationship between the citizen and their local municipality.
+ 
+It is in this context that we designed \textbf{Balligh+} — from the
+Arabic word \textit{\Arab{bl-g}} meaning \textit{"to inform, to transmit"} — a
+digital platform dedicated to participatory reporting of urban
+dysfunctions. Potholes, street-lighting failures, water leaks, illegal
+waste dumps: everyday problems that, for lack of a proper channel,
+remain unaddressed for far too long.
+ 
+This thesis documents the full journey of creation: from identifying the
+problem and analysing the market, through architectural design and
+functional prototype development, to commercial strategy and long-term
+vision. It reflects a collective effort combining academic rigour,
+sensitivity to local realities and entrepreneurial ambition.
+ 
+We hope this work will contribute, however modestly, to broader
+reflection on the role of digital technology in Algerian local
+governance, and will inspire other students to engage in projects with
+concrete territorial impact.
+ 
+\vspace{0.8cm}
+\begin{flushright}
+  \textit{The authors}
+\end{flushright}
+ 
+\vspace{1cm}
+\textcolor{accent}{\rule{\linewidth}{0.6pt}}
+\vspace{0.8cm}
+ 
+% ── Préface (Arabe) ─────────────────────────────────────────
+\vspace{0.4cm}
 
+\begin{flushright}
+{\large\textbf{\textcolor{primary}{\Arab{mqd_map}}}}
+
+\vspace{0.4cm}
+
+\begin{arabtext}
+t^shd Almdn Alj_z'yrp t.hwlt Emy_qp, tqdwhA 'jyl mt_s_lp bAlEAlm Alrqmy wdwlp
+tsEY 'ilY Alt.hdyt. wfy x.d_m h_d_A Alt.hwl Al^sAml Al_dy y.tAl tdryjA~ kl q_t_AEAt
+Al.hyAp AlEAmp, ybqY .hlqp 'AsAsyp mg_fwlp fy 'gbl Al'.hyAn{:} Alrb_t AlmbA^sr byn
+Almw_t_n wbldyth.
+
+fy h_d_A Als_yyAq wuld_t fkrp blg+  mstw.hApN mn AlfiEl AlErby bl-g bmEnY Al'ixbAr
+wAl'iy_sAl  mn_s_p rqmyp mtkAmlp mxs_s_p ll'iblAg Alt^sArky En Al'AE_tAl Al.hd_yryp.
+Al.hfr fy Al_t_rqAt, wAE_tAl Al'id_A'p AlEmwmyp, wtsrbt Almy_Ah, wAlm_tAr.h AlE^s_w'yyp
+llnfAyAt{:} '^ skAlyAt ywmyp t_z_l dwn .hlwl lftrt _twylt bsbb gyAb qnAp twA_sl fE_Alp.
+
+ystEr.d h_d_A Al_md_krp msAr Al'injAz bkAmh{:} mn t^sx-y_s Alm^sklp wt.hlyl Als_wq,
+mrwr_AN bAlt_s_mym AlmErmAry wt_twyr AlnmwD_j Al'Awly Alwz_yfy, ws_wl_AN 'ilY Als_trAtyjyp
+Alt_jAryp wruyp Alt_t_wwr ElY Almd_y AlbEyd. whw _tmrp jhd jmAEy yjmE Al_s_rAmp
+Al'AkAdymyp wAl.hsAsyp tjAh AlwAqE Alm.hly wAl_t_mw.h Alryl Ady.
+
+n'm_l 'An ys_hm h_d_A AlEml, wlw b^skl mtwA.d_E, fy Altkyr AlJmAEy .hwl dwr
+Alt_knwlwjyA Alrqmyp fy .hwkmp Almjtm_EAt Alm.hlyp Alj_z'yrp, w'An y^sj_E _tlAb_AN
+'Axryn ElY Al'AnxrA_t fy m^Ary_E _dAt '_tr trAby mlmws.
+
+\vspace{0.8cm}
+Almu^lfw^n
+\end{arabtext}
+\end{flushright}
+ 
 \vspace{1cm}
 \begin{flushright}
   \textit{Les auteurs}
