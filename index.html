@@ -1,13 +1,220 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <title>Balligh+ PDF</title>
-</head>
-<body>
-  <h1>Balligh+ — Rapport PDF</h1>
-  <a href="rapport_balligh_plus.pdf">
-    Ouvrir le PDF
-  </a>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Plateforme Intelligente de Signalement Urbain — Balligh+"
+    />
+    <meta
+      name="author"
+      content="RAHAL Lyes, BAHAR Naceredine, BOUKHRISSA Yazid"
+    />
+    <title>Balligh+ — Plateforme Intelligente de Signalement Urbain</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+      }
+
+      .container {
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        max-width: 700px;
+        width: 100%;
+        padding: 60px 40px;
+        text-align: center;
+      }
+
+      .header {
+        margin-bottom: 30px;
+      }
+
+      .logo {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto 20px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 40px;
+        font-weight: bold;
+      }
+
+      h1 {
+        color: #333;
+        font-size: 32px;
+        margin-bottom: 10px;
+      }
+
+      .subtitle {
+        color: #666;
+        font-size: 16px;
+        font-style: italic;
+        margin-bottom: 20px;
+      }
+
+      .description {
+        color: #555;
+        line-height: 1.6;
+        margin-bottom: 30px;
+        font-size: 14px;
+      }
+
+      .info-box {
+        background: #f8f9fa;
+        border-left: 4px solid #667eea;
+        padding: 15px;
+        margin-bottom: 30px;
+        text-align: left;
+        border-radius: 6px;
+      }
+
+      .info-box h3 {
+        color: #667eea;
+        margin-bottom: 10px;
+        font-size: 14px;
+        text-transform: uppercase;
+      }
+
+      .info-box p {
+        color: #666;
+        font-size: 13px;
+        line-height: 1.8;
+      }
+
+      .cta-button {
+        display: inline-block;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 16px 40px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 16px;
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+        margin-bottom: 20px;
+      }
+
+      .cta-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+      }
+
+      .secondary-link {
+        display: inline-block;
+        color: #667eea;
+        text-decoration: none;
+        font-size: 14px;
+        margin-top: 10px;
+        transition: color 0.3s ease;
+      }
+
+      .secondary-link:hover {
+        color: #764ba2;
+        text-decoration: underline;
+      }
+
+      .footer {
+        margin-top: 40px;
+        padding-top: 20px;
+        border-top: 1px solid #eee;
+        color: #999;
+        font-size: 12px;
+      }
+
+      .team {
+        color: #666;
+        font-size: 13px;
+        line-height: 1.8;
+      }
+
+      @media (max-width: 600px) {
+        .container {
+          padding: 40px 20px;
+        }
+
+        h1 {
+          font-size: 24px;
+        }
+
+        .cta-button {
+          padding: 14px 30px;
+          font-size: 14px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="logo">📍</div>
+        <h1>Balligh+</h1>
+        <p class="subtitle">Plateforme Intelligente de Signalement Urbain</p>
+      </div>
+
+      <p class="description">
+        Cas des Communes Algériennes — Mémoire de Master en Informatique (ISIL)
+      </p>
+
+      <div class="info-box">
+        <h3>📚 À propos du projet</h3>
+        <p>
+          Balligh+ est une plateforme innovante conçue pour faciliter le
+          signalement des problèmes urbains dans les communes algériennes,
+          permettant aux citoyens de rapporter efficacement les problèmes
+          d'infrastructure, de salubrité et d'équipements publics.
+        </p>
+      </div>
+
+      <div class="info-box">
+        <h3>🎓 Informations académiques</h3>
+        <p>
+          <strong>Université :</strong> Akli Mohand Oulhadj de Bouira<br />
+          <strong>Spécialité :</strong> Ingénierie des Systèmes d'Information et
+          du Logiciel<br />
+          <strong>Année :</strong> 2025/2026<br />
+          <strong>Encadrant :</strong> Mr DJOUABRI Abdrazak
+        </p>
+      </div>
+
+      <div class="info-box">
+        <h3>👥 Équipe</h3>
+        <p class="team">
+          RAHAL Lyes<br />
+          BAHAR Naceredine<br />
+          BOUKHRISSA Yazid
+        </p>
+      </div>
+
+      <a href="rapport_balligh_plus.pdf" class="cta-button">
+        📄 Ouvrir le rapport PDF
+      </a>
+
+      <a href="README.md" class="secondary-link"> En savoir plus → </a>
+
+      <div class="footer">
+        <p>Mémoire de Master — 2025/2026</p>
+      </div>
+    </div>
+  </body>
 </html>
