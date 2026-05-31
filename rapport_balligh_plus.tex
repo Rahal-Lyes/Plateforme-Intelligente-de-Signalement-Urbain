@@ -105,14 +105,24 @@
 % ── Palette de couleurs (inspiration algérienne) ───────────
 %   Vert émeraude profond · Or antique · Bleu nuit · Gris doux
 \usepackage{xcolor}
-\definecolor{primary}{RGB}{0, 100, 70}        % Vert émeraude — couleur principale
-\definecolor{accent}{RGB}{180, 130, 30}        % Or antique — accentuation
-\definecolor{dark}{RGB}{25, 35, 55}            % Bleu nuit — texte sombre
-\definecolor{muted}{RGB}{100, 115, 105}        % Gris sauge — discret
-\definecolor{lightbg}{RGB}{248, 248, 244}      % Fond ivoire très doux
-\definecolor{rulecol}{RGB}{0, 100, 70}         % Lignes décoratives
-\definecolor{tabhead}{RGB}{0, 80, 55}          % En-tête de tableaux
-\definecolor{tabalt}{RGB}{232, 242, 237}       % Lignes alternées
+% \definecolor{primary}{RGB}{25,25,112}        % Vert émeraude — couleur principale
+% \definecolor{accent}{RGB}{180, 130, 30}        % Or antique — accentuation
+% \definecolor{dark}{RGB}{25, 35, 55}            % Bleu nuit — texte sombre
+% \definecolor{muted}{RGB}{100, 115, 105}        % Gris sauge — discret
+% \definecolor{lightbg}{RGB}{0,0,139}      % Fond ivoire très doux
+% \definecolor{rulecol}{RGB}{0, 100, 70}         % Lignes décoratives
+% \definecolor{tabhead}{RGB}{0, 80, 55}          % En-tête de tableaux
+% \definecolor{tabalt}{RGB}{232, 242, 237}       % Lignes alternées
+\usepackage{xcolor}
+
+\definecolor{primary}{named}{NavyBlue}
+\definecolor{accent}{named}{Goldenrod}
+\definecolor{dark}{named}{MidnightBlue}
+\definecolor{muted}{named}{Gray}
+\definecolor{lightbg}{named}{LightGray}
+\definecolor{rulecol}{named}{NavyBlue}
+\definecolor{tabhead}{named}{DarkGray}
+\definecolor{tabalt}{named}{Gray}
 
 % ── Titres personnalisés ───────────────────────────────────
 \usepackage{titlesec}
@@ -231,38 +241,38 @@
 \begin{document}
 
 % ── Page de garde ───────────────────────────────────────────
-\begin{titlepage}
+% \begin{titlepage}
 
-  \centering
-  \vspace*{1cm}
+%   \centering
+%   \vspace*{1cm}
 
-  {\large\textbf{République Algérienne Démocratique et Populaire}}\\[0.4cm]
-  {\normalsize Ministère de l'Enseignement Supérieur et de la Recherche Scientifique}\\[0.8cm]
+%   {\large\textbf{République Algérienne Démocratique et Populaire}}\\[0.4cm]
+%   {\normalsize Ministère de l'Enseignement Supérieur et de la Recherche Scientifique}\\[0.8cm]
 
-  \rule{\linewidth}{1.5pt}\\[0.3cm]
-  {\Large\textbf{\textcolor{primary}{Université Akli Mohand Oulhadj de Bouira}}}\\[0.2cm]
-  {\normalsize Faculté des Sciences et des Sciences Appliquées}\\
-  {\normalsize Département d'Informatique}\\[0.3cm]
-  \rule{\linewidth}{1.5pt}\\[1.2cm]
+%   \rule{\linewidth}{1.5pt}\\[0.3cm]
+%   {\Large\textbf{\textcolor{primary}{Université Akli Mohand Oulhadj de Bouira}}}\\[0.2cm]
+%   {\normalsize Faculté des Sciences et des Sciences Appliquées}\\
+%   {\normalsize Département d'Informatique}\\[0.3cm]
+%   \rule{\linewidth}{1.5pt}\\[1.2cm]
 
-  {\large\textbf{Mémoire de Master}}\\[0.2cm]
-  {\normalsize en Informatique}\\[0.3cm]
-  {\normalsize\textit{Spécialité : \textbf{Ingénierie des systèmes d'information et du logiciel}}}\\[1.5cm]
+%   {\large\textbf{Mémoire de Master}}\\[0.2cm]
+%   {\normalsize en Informatique}\\[0.3cm]
+%   {\normalsize\textit{Spécialité : \textbf{Ingénierie des systèmes d'information et du logiciel}}}\\[1.5cm]
 
-  {\LARGE\textbf{\textcolor{primary}{Plateforme Intelligente de Signalement Urbain}}}\\[0.6cm]
-  {\large\textit{``\textbf{Balligh+ — Cas des Communes Algériennes}''}}\\[2cm]
+%   {\LARGE\textbf{\textcolor{primary}{Plateforme Intelligente de Signalement Urbain}}}\\[0.6cm]
+%   {\large\textit{``\textbf{Balligh+ — Cas des Communes Algériennes}''}}\\[2cm]
 
-  \begin{tabular}{p{0.45\linewidth}p{0.45\linewidth}}
-    \textbf{Encadré par}       & \textbf{Réalisé par}   \\
-    \quad Mr DJOUABRI Abdrazak & \quad RAHAL Lyes       \\
-                               & \quad BAHAR Naceredine \\
-                               & \quad BOUKHRISSA Yazid \\
-  \end{tabular}
+%   \begin{tabular}{p{0.45\linewidth}p{0.45\linewidth}}
+%     \textbf{Encadré par}       & \textbf{Réalisé par}   \\
+%     \quad Mr DJOUABRI Abdrazak & \quad RAHAL Lyes       \\
+%                                & \quad BAHAR Naceredine \\
+%                                & \quad BOUKHRISSA Yazid \\
+%   \end{tabular}
 
-  \vfill
-  {\large\textbf{2025/2026}}
-\end{titlepage}
-
+%   \vfill
+%   {\large\textbf{2025/2026}}
+% \end{titlepage}
+\input{./page_garde.tex}
 % ── Dédicace ────────────────────────────────────────────────
 \cleardoublepage
 \thispagestyle{empty}
@@ -311,48 +321,79 @@ jour.
 \newpage
 
 % ── Liste des abréviations ──────────────────────────────────
-\cleardoublepage
-\chapter*{Liste des Abréviations}
-\addcontentsline{toc}{chapter}{Liste des Abréviations}
+% \cleardoublepage
+% \chapter*{Liste des Abréviations}
+% \addcontentsline{toc}{chapter}{Liste des Abréviations}
 
-\renewcommand{\arraystretch}{1.5}
+% \renewcommand{\arraystretch}{1.5}
+% \begin{tabularx}{\linewidth}{>{\bfseries\color{primary}}lX}
+%   \toprule
+%   \rowcolor{primary}
+%   \thdcell{Abréviation} & \thdcell{Signification}                                                    \\
+%   \midrule
+%   API                   & Application Programming Interface (Interface de Programmation Applicative) \\
+%   \rowcolor{primary}
+%   BD                    & Base de Données                                                            \\
+%   CDD                   & Cahier des Charges et Définition des besoins                               \\
+%   \rowcolor{primary}
+%   CSS                   & Cascading Style Sheets (Feuilles de Style en Cascade)                      \\
+%   GPS                   & Global Positioning System (Système de Positionnement Global)               \\
+%   \rowcolor{primary}
+%   HTML                  & HyperText Markup Language                                                  \\
+%   HTTP                  & HyperText Transfer Protocol                                                \\
+%   \rowcolor{primary}
+%   JS                    & JavaScript                                                                 \\
+%   MVC                   & Modèle-Vue-Contrôleur                                                      \\
+%   \rowcolor{primary}
+%   MySQL                 & My Structured Query Language                                               \\
+%   OSM                   & OpenStreetMap                                                              \\
+%   \rowcolor{primary}
+%   PHP                   & PHP : Hypertext Preprocessor                                               \\
+%   RTL                   & Right-To-Left (Écriture de droite à gauche)                                \\
+%   \rowcolor{primary}
+%   SI                    & Système d'Information                                                      \\
+%   SQL                   & Structured Query Language (Langage de Requête Structurée)                  \\
+%   \rowcolor{primary}
+%   UI                    & User Interface (Interface Utilisateur)                                     \\
+%   URL                   & Uniform Resource Locator (Localisateur Uniforme de Ressource)              \\
+%   \rowcolor{primary}
+%   UX                    & User Experience (Expérience Utilisateur)                                   \\
+%   WEBP                  & Web Picture Format                                                         \\
+%   \bottomrule
+% \end{tabularx}
+% \newpage
+
 \begin{tabularx}{\linewidth}{>{\bfseries\color{primary}}lX}
   \toprule
   \rowcolor{primary}
-  \thdcell{Abréviation} & \thdcell{Signification}                                                    \\
+  \textcolor{white}{\textbf{Abréviation}}
+  &
+  \textcolor{white}{\textbf{Signification}}
+  \\
   \midrule
-  API                   & Application Programming Interface (Interface de Programmation Applicative) \\
-  \rowcolor{tabalt}
-  BD                    & Base de Données                                                            \\
-  CDD                   & Cahier des Charges et Définition des besoins                               \\
-  \rowcolor{tabalt}
-  CSS                   & Cascading Style Sheets (Feuilles de Style en Cascade)                      \\
-  GPS                   & Global Positioning System (Système de Positionnement Global)               \\
-  \rowcolor{tabalt}
-  HTML                  & HyperText Markup Language                                                  \\
-  HTTP                  & HyperText Transfer Protocol                                                \\
-  \rowcolor{tabalt}
-  JS                    & JavaScript                                                                 \\
-  MVC                   & Modèle-Vue-Contrôleur                                                      \\
-  \rowcolor{tabalt}
-  MySQL                 & My Structured Query Language                                               \\
-  OSM                   & OpenStreetMap                                                              \\
-  \rowcolor{tabalt}
-  PHP                   & PHP : Hypertext Preprocessor                                               \\
-  RTL                   & Right-To-Left (Écriture de droite à gauche)                                \\
-  \rowcolor{tabalt}
-  SI                    & Système d'Information                                                      \\
-  SQL                   & Structured Query Language (Langage de Requête Structurée)                  \\
-  \rowcolor{tabalt}
-  UI                    & User Interface (Interface Utilisateur)                                     \\
-  URL                   & Uniform Resource Locator (Localisateur Uniforme de Ressource)              \\
-  \rowcolor{tabalt}
-  UX                    & User Experience (Expérience Utilisateur)                                   \\
-  WEBP                  & Web Picture Format                                                         \\
+
+  API   & Application Programming Interface (Interface de Programmation Applicative) \\
+  BD    & Base de Données \\
+  CDD   & Cahier des Charges et Définition des besoins \\
+  CSS   & Cascading Style Sheets (Feuilles de Style en Cascade) \\
+  GPS   & Global Positioning System (Système de Positionnement Global) \\
+  HTML  & HyperText Markup Language \\
+  HTTP  & HyperText Transfer Protocol \\
+  JS    & JavaScript \\
+  MVC   & Modèle-Vue-Contrôleur \\
+  MySQL & My Structured Query Language \\
+  OSM   & OpenStreetMap \\
+  PHP   & PHP : Hypertext Preprocessor \\
+  RTL   & Right-To-Left (Écriture de droite à gauche) \\
+  SI    & Système d'Information \\
+  SQL   & Structured Query Language (Langage de Requête Structurée) \\
+  UI    & User Interface (Interface Utilisateur) \\
+  URL   & Uniform Resource Locator (Localisateur Uniforme de Ressource) \\
+  UX    & User Experience (Expérience Utilisateur) \\
+  WEBP  & Web Picture Format \\
+
   \bottomrule
 \end{tabularx}
-\newpage
-
 % ── Liste des tableaux ──────────────────────────────────────
 \listoftables
 \addcontentsline{toc}{chapter}{Liste des Tableaux}
@@ -850,7 +891,7 @@ concret, immédiatement déployable, sans investissement lourd en infrastructure
   \renewcommand{\arraystretch}{1.4}
   \begin{tabularx}{\linewidth}{lXX}
     \toprule
-    \rowcolor{primary}
+    \rowcolor{lightgray}
     \thdcell{Concurrent}  & \thdcell{Points forts}                                & \thdcell{Points faibles}                                      \\
     \midrule
     Groupes Facebook      & Notoriété locale, facilité d'accès, communauté active & Aucune traçabilité, pas de suivi officiel, contenu non modéré \\
@@ -871,7 +912,7 @@ concret, immédiatement déployable, sans investissement lourd en infrastructure
   \renewcommand{\arraystretch}{1.5}
   \begin{tabularx}{\linewidth}{|X|X|}
     \hline
-    \cellcolor{primary!80}\textbf{\textcolor{white}{FORCES}}        & \cellcolor{accent!80}\textbf{\textcolor{white}{FAIBLESSES}} \\
+    \textbf{\textcolor{dark}{FORCES}}        & \textbf{\textcolor{dark}{FAIBLESSES}} \\
     \hline
     \begin{itemize}[leftmargin=*,topsep=2pt,itemsep=1pt]
       \item Plateforme trilingue (AR/FR/EN) avec support RTL
@@ -891,7 +932,7 @@ concret, immédiatement déployable, sans investissement lourd en infrastructure
       \item Résistance possible des institutions face à la transformation numérique
     \end{itemize}                                             \\
     \hline
-    \cellcolor{blue!60}\textbf{\textcolor{white}{OPPORTUNITÉS}}     & \cellcolor{red!60}\textbf{\textcolor{white}{MENACES}}       \\
+    \textbf{\textcolor{dark}{OPPORTUNITÉS}}     &\textbf{\textcolor{dark}{MENACES}}       \\
     \hline
     \begin{itemize}[leftmargin=*,topsep=2pt,itemsep=1pt]
       \item Programme national e-Algeria et Smart City
@@ -926,7 +967,7 @@ rapidité d'action et l'implication citoyenne.
   \renewcommand{\arraystretch}{1.5}
   \begin{tabularx}{\linewidth}{lX}
     \toprule
-    \rowcolor{primary}
+  \rowcolor{white}
     \thdcell{Dimension}   & \thdcell{Détail}                                                                                                                                                        \\
     \midrule
     \textbf{Produit}      & Plateforme web responsive trilingue + future app mobile ; signalement photo + géolocalisation ; dashboard admin analytique ; export CSV ; historique de statut          \\
