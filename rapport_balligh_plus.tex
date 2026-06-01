@@ -139,6 +139,7 @@
 % ── Support arabe (RTL) ────────────────────────────────────
 \usepackage{arabtex}
 \usepackage{utf8}
+\setcode{utf8}
 
 % ── Boîte de citation/note élégante ────────────────────────
 \usepackage{tcolorbox}
@@ -190,25 +191,7 @@
 % \end{titlepage}
 \input{./page_garde.tex}
 % ── Dédicace ────────────────────────────────────────────────
-% \cleardoublepage
-% \thispagestyle{empty}
-% \vspace*{4cm}
-% \begin{center}
-%   {\large\textit{\textcolor{primary}{\bfseries Dédicace}}}\\[0.8cm]
-%   \rule{0.4\linewidth}{0.4pt}\\[1cm]
-%   {\normalsize\itshape
-%   Nous dédions ce travail à nos familles,\\[0.3cm]
-%   à nos parents qui nous ont soutenus tout au long de ce parcours,\\[0.3cm]
-%   à nos enseignants qui nous ont guidés avec bienveillance,\\[0.3cm]
-%   ainsi qu'à tous ceux qui croient en l'avenir numérique de l'Algérie.\\[1cm]
-%   \textit{« Le savoir est une lumière que nul ne peut éteindre. »}
-%   }\\[1cm]
-%   \rule{0.4\linewidth}{0.4pt}
-% \end{center}
-% \newpage
-% =========================
-% Dédicace de RAHAL Lyes
-% =========================
+
 
 \cleardoublepage
 \thispagestyle{empty}
@@ -355,48 +338,7 @@ Enfin, nous adressons notre profonde reconnaissance à nos familles, nos proches
 \end{flushright}
 \newpage
 
-% ── Liste des abréviations ──────────────────────────────────
-% \cleardoublepage
-% \chapter*{Liste des Abréviations}
-% \addcontentsline{toc}{chapter}{Liste des Abréviations}
 
-% \renewcommand{\arraystretch}{1.5}
-% \begin{tabularx}{\linewidth}{>{\bfseries\color{primary}}lX}
-%   \toprule
-%   \rowcolor{primary}
-%   \thdcell{Abréviation} & \thdcell{Signification}                                                    \\
-%   \midrule
-%   API                   & Application Programming Interface (Interface de Programmation Applicative) \\
-%   \rowcolor{primary}
-%   BD                    & Base de Données                                                            \\
-%   CDD                   & Cahier des Charges et Définition des besoins                               \\
-%   \rowcolor{primary}
-%   CSS                   & Cascading Style Sheets (Feuilles de Style en Cascade)                      \\
-%   GPS                   & Global Positioning System (Système de Positionnement Global)               \\
-%   \rowcolor{primary}
-%   HTML                  & HyperText Markup Language                                                  \\
-%   HTTP                  & HyperText Transfer Protocol                                                \\
-%   \rowcolor{primary}
-%   JS                    & JavaScript                                                                 \\
-%   MVC                   & Modèle-Vue-Contrôleur                                                      \\
-%   \rowcolor{primary}
-%   MySQL                 & My Structured Query Language                                               \\
-%   OSM                   & OpenStreetMap                                                              \\
-%   \rowcolor{primary}
-%   PHP                   & PHP : Hypertext Preprocessor                                               \\
-%   RTL                   & Right-To-Left (Écriture de droite à gauche)                                \\
-%   \rowcolor{primary}
-%   SI                    & Système d'Information                                                      \\
-%   SQL                   & Structured Query Language (Langage de Requête Structurée)                  \\
-%   \rowcolor{primary}
-%   UI                    & User Interface (Interface Utilisateur)                                     \\
-%   URL                   & Uniform Resource Locator (Localisateur Uniforme de Ressource)              \\
-%   \rowcolor{primary}
-%   UX                    & User Experience (Expérience Utilisateur)                                   \\
-%   WEBP                  & Web Picture Format                                                         \\
-%   \bottomrule
-% \end{tabularx}
-% \newpage
 
 \begin{tabularx}{\linewidth}{>{\bfseries\color{primary}}lX}
   \toprule
@@ -525,33 +467,25 @@ concrete territorial impact.
 \vspace{0.4cm}
 
 \begin{arabtext}
-t^shd Almdn Alj_z'yrp t.hwlt Emy_qp, tqdwhA 'jyl mt_s_lp bAlEAlm Alrqmy wdwlp
-tsEY 'ilY Alt.hdyt. wfy x.d_m h_d_A Alt.hwl Al^sAml Al_dy y.tAl tdryjA~ kl q_t_AEAt
-Al.hyAp AlEAmp, ybqY .hlqp 'AsAsyp mg_fwlp fy 'gbl Al'.hyAn{:} Alrb_t AlmbA^sr byn
-Almw_t_n wbldyth.
+تشهد المدن الجزائرية اليوم تحوّلاتٍ عميقة تقودها أجيالٌ متّصلة بالعالم الرقمي، ودولةٌ تسعى إلى تحديث مختلف مرافقها وخدماتها. وفي خضمّ هذا التحوّل الشامل الذي يطال تدريجياً شتّى قطاعات الحياة العامة، تبقى إحدى الحلقات الأساسية بحاجة إلى مزيدٍ من التطوير، وهي العلاقة المباشرة بين المواطن والبلدية.
 
-fy h_d_A Als_yyAq wuld_t fkrp blg+  mstw.hApN mn AlfiEl AlErby bl-g bmEnY Al'ixbAr
-wAl'iy_sAl  mn_s_p rqmyp mtkAmlp mxs_s_p ll'iblAg Alt^sArky En Al'AE_tAl Al.hd_yryp.
-Al.hfr fy Al_t_rqAt, wAE_tAl Al'id_A'p AlEmwmyp, wtsrbt Almy_Ah, wAlm_tAr.h AlE^s_w'yyp
-llnfAyAt{:} '^ skAlyAt ywmyp t_z_l dwn .hlwl lftrt _twylt bsbb gyAb qnAp twA_sl fE_Alp.
+في هذا السياق وُلد مشروع «بلّغ»، المستوحى اسمه من الفعل العربي «بلّغ» بمعنى الإخبار والإيصال. وهو منصّة رقمية ذكية تهدف إلى تسهيل الإبلاغ التشاركي عن مختلف الأعطال والمشكلات الحضرية، مثل الحفر في الطرقات، وأعطال الإنارة العمومية، وتسربات المياه، والمفارغ العشوائية للنفايات، وغيرها من الظواهر التي تؤثر سلباً في جودة الحياة داخل الأحياء والمدن.
 
-ystEr.d h_d_A Al_md_krp msAr Al'injAz bkAmh{:} mn t^sx-y_s Alm^sklp wt.hlyl Als_wq,
-mrwr_AN bAlt_s_mym AlmErmAry wt_twyr AlnmwD_j Al'Awly Alwz_yfy, ws_wl_AN 'ilY Als_trAtyjyp
-Alt_jAryp wruyp Alt_t_wwr ElY Almd_y AlbEyd. whw _tmrp jhd jmAEy yjmE Al_s_rAmp
-Al'AkAdymyp wAl.hsAsyp tjAh AlwAqE Alm.hly wAl_t_mw.h Alryl Ady.
+يسعى المشروع إلى توفير قناة تواصل فعّالة وشفافة بين المواطنين والجهات المحلية، بما يضمن سرعة نقل المعلومات، وتحسين متابعة الشكاوى، وتعزيز مشاركة المواطنين في تحسين محيطهم العمراني.
 
-n'm_l 'An ys_hm h_d_A AlEml, wlw b^skl mtwA.d_E, fy Altkyr AlJmAEy .hwl dwr
-Alt_knwlwjyA Alrqmyp fy .hwkmp Almjtm_EAt Alm.hlyp Alj_z'yrp, w'An y^sj_E _tlAb_AN
-'Axryn ElY Al'AnxrA_t fy m^Ary_E _dAt '_tr trAby mlmws.
+وتستعرض هذه المذكّرة مختلف مراحل إنجاز المشروع، بدءاً من تحديد الإشكالية وتحليل الاحتياجات ودراسة الحلول المتاحة، مروراً بتصميم البنية التقنية وتطوير النموذج الأوّلي، وصولاً إلى تقييم النتائج ووضع رؤية مستقبلية لتطوير المنصّة وتوسيع نطاق استخدامها.
 
+ويمثل هذا العمل ثمرة جهدٍ جماعي يجمع بين المعرفة الأكاديمية والتطبيق العملي، ويعكس إيماننا بأهمية توظيف التكنولوجيا الحديثة لخدمة المجتمع والمساهمة في بناء مدن أكثر استجابةً وفعاليةً واستدامة.
+
+ونأمل أن يشكّل هذا المشروع خطوةً متواضعة نحو تعزيز ثقافة المشاركة الرقمية والمواطنة الفاعلة، وأن يكون مصدر إلهامٍ لطلبة ومطوّرين آخرين لإطلاق مبادرات رقمية ذات أثر إيجابي ملموس على المجتمع الجزائري.
 \vspace{0.8cm}
-Almu^lfw^n
+
 \end{arabtext}
 \end{flushright}
  
 \vspace{1cm}
 \begin{flushright}
-  \textit{Les auteurs}
+
 \end{flushright}
 \newpage
 
