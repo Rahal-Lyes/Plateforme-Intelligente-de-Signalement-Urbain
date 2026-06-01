@@ -1,88 +1,4 @@
-% ============================================================
-%  Mémoire de Master — Balligh+
-%  Plateforme Intelligente de Signalement Urbain
-%  Université Akli Mohand Oulhadj de Bouira — 2024/2025
-% ============================================================
-% \documentclass[12pt,a4paper]{report}
 
-% % ── Encodage & langue ──────────────────────────────────────
-% \usepackage[utf8]{inputenc}
-% \usepackage[T1]{fontenc}
-% \usepackage[francais]{babel}
-% \usepackage{iflang}
-
-% % ── Mise en page ───────────────────────────────────────────
-% \usepackage[top=2.5cm,bottom=2.5cm,left=3cm,right=2.5cm]{geometry}
-% \usepackage{setspace}
-% \onehalfspacing
-
-% % ── Polices & couleurs ─────────────────────────────────────
-% \usepackage{xcolor}
-% \definecolor{primary}{RGB}{30,80,160}
-% \definecolor{accent}{RGB}{0,130,100}
-% \definecolor{lightgray}{RGB}{245,245,245}
-
-% % ── Titres personnalisés ───────────────────────────────────
-% \usepackage{titlesec}
-% \titleformat{\chapter}[display]
-%   {\normalfont\Large\bfseries\color{primary}}
-%   {\chaptertitlename\ \thechapter}{12pt}{\Huge}
-% \titleformat{\section}
-%   {\normalfont\large\bfseries\color{primary}}
-%   {\thesection}{1em}{}
-% \titleformat{\subsection}
-%   {\normalfont\normalsize\bfseries\color{accent}}
-%   {\thesubsection}{1em}{}
-
-% % ── Tableaux ───────────────────────────────────────────────
-% \usepackage{booktabs}
-% \usepackage{tabularx}
-% \usepackage{longtable}
-% \usepackage{array}
-% \usepackage{multirow}
-% \usepackage{colortbl}
-% \usepackage{makecell}
-
-% % ── Listes ─────────────────────────────────────────────────
-% \usepackage{enumitem}
-% \setlist[itemize]{leftmargin=*,topsep=4pt,itemsep=2pt}
-
-% % ── Liens & PDF ────────────────────────────────────────────
-% \usepackage{hyperref}
-% \hypersetup{
-%   colorlinks=true,
-%   linkcolor=primary,
-%   urlcolor=accent,
-%   pdftitle={Balligh+ — Plateforme Intelligente de Signalement Urbain},
-%   pdfauthor={RAHAL Lyes, BAHAR Naceredine, BOUKHRISSA Yazid},
-% }
-
-% % ── En-têtes/pieds de page ─────────────────────────────────
-% \usepackage{fancyhdr}
-% \pagestyle{fancy}
-% \fancyhf{}
-% \fancyhead[L]{\small\textcolor{primary}{Balligh+ — Signalement Urbain}}
-% \fancyhead[R]{\small\textcolor{primary}{\leftmark}}
-% \fancyfoot[C]{\thepage}
-% \renewcommand{\headrulewidth}{0.4pt}
-
-% % ── Divers ─────────────────────────────────────────────────
-% \usepackage{graphicx}
-% \usepackage{float}
-% \usepackage{amsmath}
-% \usepackage{amssymb}
-% \usepackage{wasysym}
-
-% % ── Macro utilitaire : cellule d'en-tête de tableau ────────
-% \newcommand{\thdcell}[1]{\textbf{\textcolor{white}{#1}}}
-
-% % ============================================================
-% \begin{document}
-
-% ============================================================
-%  Mémoire de Master — Balligh+
-%  Plateforme Intelligente de Signalement Urbain
-%  Université Akli Mohand Oulhadj de Bouira — 2024/2025
 % ============================================================
 \documentclass[12pt,a4paper]{report}
 
@@ -274,21 +190,145 @@
 % \end{titlepage}
 \input{./page_garde.tex}
 % ── Dédicace ────────────────────────────────────────────────
+% \cleardoublepage
+% \thispagestyle{empty}
+% \vspace*{4cm}
+% \begin{center}
+%   {\large\textit{\textcolor{primary}{\bfseries Dédicace}}}\\[0.8cm]
+%   \rule{0.4\linewidth}{0.4pt}\\[1cm]
+%   {\normalsize\itshape
+%   Nous dédions ce travail à nos familles,\\[0.3cm]
+%   à nos parents qui nous ont soutenus tout au long de ce parcours,\\[0.3cm]
+%   à nos enseignants qui nous ont guidés avec bienveillance,\\[0.3cm]
+%   ainsi qu'à tous ceux qui croient en l'avenir numérique de l'Algérie.\\[1cm]
+%   \textit{« Le savoir est une lumière que nul ne peut éteindre. »}
+%   }\\[1cm]
+%   \rule{0.4\linewidth}{0.4pt}
+% \end{center}
+% \newpage
+% =========================
+% Dédicace de RAHAL Lyes
+% =========================
+
 \cleardoublepage
 \thispagestyle{empty}
+
 \vspace*{4cm}
+
 \begin{center}
-  {\large\textit{\textcolor{primary}{\bfseries Dédicace}}}\\[0.8cm]
-  \rule{0.4\linewidth}{0.4pt}\\[1cm]
-  {\normalsize\itshape
-  Nous dédions ce travail à nos familles,\\[0.3cm]
-  à nos parents qui nous ont soutenus tout au long de ce parcours,\\[0.3cm]
-  à nos enseignants qui nous ont guidés avec bienveillance,\\[0.3cm]
-  ainsi qu'à tous ceux qui croient en l'avenir numérique de l'Algérie.\\[1cm]
-  \textit{« Le savoir est une lumière que nul ne peut éteindre. »}
-  }\\[1cm]
-  \rule{0.4\linewidth}{0.4pt}
+{\large\textit{\textcolor{primary}{\bfseries Dédicace}}}\\[0.8cm]
+
+\rule{0.4\linewidth}{0.4pt}\\[1cm]
+
+{\normalsize\itshape
+
+Je dédie ce travail à mes chers parents, qui ont toujours été une source
+d'amour, de soutien et de motivation. Aucun mot ne saurait exprimer ma
+gratitude pour tous les sacrifices qu'ils ont consentis afin de me permettre
+de poursuivre mes études et de réaliser mes ambitions.
+
+À ma famille, pour son affection, sa confiance et ses encouragements tout au
+long de mon parcours.
+
+À mes amis et à toutes les personnes qui m'ont soutenu de près ou de loin.
+
+Enfin, à tous ceux qui croient en la valeur du savoir et de l'innovation.
+
+\vspace{1cm}
+
+\textit{« Le succès est la somme de petits efforts répétés jour après jour. »}
+
+}\\[1cm]
+
+\rule{0.4\linewidth}{0.4pt}\\[0.5cm]
+
+{\bfseries RAHAL Lyes}
+
 \end{center}
+
+\newpage
+
+% =========================
+% Dédicace de BAHAR Naceredine
+% =========================
+
+\cleardoublepage
+\thispagestyle{empty}
+
+\vspace*{4cm}
+
+\begin{center}
+{\large\textit{\textcolor{primary}{\bfseries Dédicace}}}\\[0.8cm]
+
+\rule{0.4\linewidth}{0.4pt}\\[1cm]
+
+{\normalsize\itshape
+
+Je dédie ce travail à mes parents, dont le soutien, la patience et les
+encouragements m'ont accompagné durant toutes ces années d'études.
+
+À mes frères, mes sœurs et toute ma famille pour leur présence et leur
+confiance.
+
+À mes enseignants qui ont contribué à ma formation et m'ont transmis des
+connaissances précieuses.
+
+À tous ceux qui m'ont aidé à avancer et à persévérer face aux difficultés.
+
+\vspace{1cm}
+
+\textit{« La persévérance transforme les rêves en réalité. »}
+
+}\\[1cm]
+
+\rule{0.4\linewidth}{0.4pt}\\[0.5cm]
+
+{\bfseries BAHAR Naceredine}
+
+\end{center}
+
+\newpage
+
+% =========================
+% Dédicace de BOUKHRISSA Yazid
+% =========================
+
+\cleardoublepage
+\thispagestyle{empty}
+
+\vspace*{4cm}
+
+\begin{center}
+{\large\textit{\textcolor{primary}{\bfseries Dédicace}}}\\[0.8cm]
+
+\rule{0.4\linewidth}{0.4pt}\\[1cm]
+
+{\normalsize\itshape
+
+Je dédie ce travail à mes très chers parents, pour leur amour, leurs
+sacrifices et leur soutien inconditionnel qui ont toujours éclairé mon
+chemin.
+
+À ma famille et à mes proches qui ont cru en moi et m'ont encouragé à donner
+le meilleur de moi-même.
+
+À mes camarades et amis avec qui j'ai partagé cette aventure universitaire.
+
+À toutes les personnes qui ont contribué à mon épanouissement personnel et
+professionnel.
+
+\vspace{1cm}
+
+\textit{« L'avenir appartient à ceux qui croient à la beauté de leurs rêves. »}
+
+}\\[1cm]
+
+\rule{0.4\linewidth}{0.4pt}\\[0.5cm]
+
+{\bfseries BOUKHRISSA Yazid}
+
+\end{center}
+
 \newpage
 
 % ── Remerciements ───────────────────────────────────────────
@@ -297,21 +337,16 @@
 \chapter*{Remerciements}
 \addcontentsline{toc}{chapter}{Remerciements}
 
-Nous tenons tout d'abord à adresser nos sincères remerciements à notre
-encadreur, \textbf{Mr DJOUABRI Abdrazak}, pour sa disponibilité, ses précieux
-conseils et son accompagnement rigoureux tout au long de l'élaboration de ce
-mémoire.
+Nous tenons tout d'abord à adresser nos sincères remerciements à notre encadreur, \textbf{M. DJOUABRI Abdrazak}, pour sa disponibilité, ses précieux conseils, son accompagnement rigoureux et son soutien tout au long de l'élaboration de ce mémoire.
 
-Nous remercions également l'ensemble du corps enseignant du \textbf{Département
-  d'Informatique} de l'Université Akli Mohand Oulhadj de Bouira pour la qualité
-de la formation dispensée au cours de nos années d'études.
+Nous remercions également l'ensemble du corps enseignant du \textbf{Département d'Informatique} de l'Université Akli Mohand Oulhadj de Bouira pour la qualité de la formation dispensée au cours de nos années d'études et pour les connaissances qui nous ont permis de mener à bien ce projet.
 
-Notre gratitude va aussi aux membres du jury pour l'attention portée à
-l'évaluation de ce travail.
+Nos remerciements s'adressent également à toute l'équipe de l'\textbf{Incubateur de l'Université de Bouira}, et plus particulièrement aux enseignants formateurs, pour leur encadrement, leurs conseils et leur accompagnement dans le développement de notre esprit entrepreneurial et de nos compétences en gestion de projet.
 
-Enfin, nous exprimons notre profonde reconnaissance à nos familles et proches
-pour leur soutien moral indéfectible, sans lequel ce projet n'aurait pu voir le
-jour.
+Nous exprimons également notre gratitude aux membres du jury pour l'intérêt qu'ils portent à ce travail et pour le temps consacré à son évaluation.
+
+Enfin, nous adressons notre profonde reconnaissance à nos familles, nos proches et à toutes les personnes qui nous ont soutenus, de près ou de loin, par leurs encouragements, leur confiance et leur soutien moral tout au long de notre parcours universitaire. Sans leur appui, la réalisation de ce projet n'aurait pas été possible.
+
 
 \vspace{1cm}
 \begin{flushright}
