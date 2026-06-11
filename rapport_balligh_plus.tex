@@ -1099,170 +1099,995 @@ fonctionnelle :
 \end{itemize}
 \restoreleftmark
 % ============================================================
+% \chapter{Plan Financier}
+
+% Cette section présente une étude financière complète portant sur une période
+% prévisionnelle de cinq ans. Elle met en évidence les investissements requis,
+% les charges d'exploitation et les sources potentielles de revenus.
+
+% \section{Les Coûts et Charges}
+
+% \subsection{Immobilisations corporelles}
+
+% \begin{table}[H]
+%   \centering
+%   \caption{Immobilisations corporelles (en DA)}
+%   \renewcommand{\arraystretch}{1.3}
+%   \begin{tabular}{lrrrrrr}
+%     \toprule
+%     \rowcolor{primary}
+%     \thdcell{Libellé}  & \thdcell{P.U} & \thdcell{Qté} & \thdcell{N}       & \thdcell{N+1}     & \thdcell{N+2}     & \thdcell{N+3}     \\
+%     \midrule
+%     PC\,/\,Laptop      & 120\,000      & 3             & 360\,000          & 300\,000          & 250\,000          & 200\,000          \\
+%     \rowcolor{lightgray}
+%     Bureau             & 36\,000       & 3             & 108\,000          & 108\,000          & 98\,000           & 90\,000           \\
+%     Chaise ergonomique & 12\,000       & 6             & 72\,000           & 72\,000           & 60\,000           & 50\,000           \\
+%     \rowcolor{lightgray}
+%     Serveur VPS        & 80\,000       & 1             & 80\,000           & 80\,000           & 80\,000           & 80\,000           \\
+%     Climatiseur        & 68\,000       & 1             & 68\,000           & 68\,000           & 59\,000           & 48\,000           \\
+%     \rowcolor{lightgray}
+%     Imprimante         & 45\,000       & 1             & 45\,000           & 45\,000           & 30\,000           & 28\,000           \\
+%     \midrule
+%     \rowcolor{primary!30}
+%     \textbf{TOTAL}     &               &               & \textbf{733\,000} & \textbf{673\,000} & \textbf{577\,000} & \textbf{496\,000} \\
+%     \bottomrule
+%   \end{tabular}
+% \end{table}
+
+% \subsection{Immobilisations incorporelles}
+
+% \begin{table}[H]
+%   \centering
+%   \caption{Immobilisations incorporelles (en DA)}
+%   \renewcommand{\arraystretch}{1.3}
+%   \begin{tabular}{lrrrr}
+%     \toprule
+%     \rowcolor{primary}
+%     \thdcell{Libellé}                     & \thdcell{N}       & \thdcell{N+1}     & \thdcell{N+2}     & \thdcell{N+3}     \\
+%     \midrule
+%     Nom de domaine + hébergement web      & 24\,000           & 24\,000           & 24\,000           & 24\,000           \\
+%     \rowcolor{lightgray}
+%     API Google Maps (clé premium)         & 60\,000           & 60\,000           & 60\,000           & 60\,000           \\
+%     Licences logiciels (Adobe, JetBrains) & 80\,000           & 80\,000           & 80\,000           & 80\,000           \\
+%     \rowcolor{lightgray}
+%     Certificat SSL et sécurité            & 20\,000           & 20\,000           & 20\,000           & 20\,000           \\
+%     \midrule
+%     \rowcolor{primary!30}
+%     \textbf{TOTAL}                        & \textbf{184\,000} & \textbf{184\,000} & \textbf{184\,000} & \textbf{184\,000} \\
+%     \bottomrule
+%   \end{tabular}
+% \end{table}
+
+% \subsection{Charges d'exploitation}
+
+% \begin{table}[H]
+%   \centering
+%   \caption{Charges d'exploitation (en DA)}
+%   \renewcommand{\arraystretch}{1.3}
+%   \begin{tabular}{lrrrr}
+%     \toprule
+%     \rowcolor{primary}
+%     \thdcell{Libellé}                    & \thdcell{N}       & \thdcell{N+1}     & \thdcell{N+2}     & \thdcell{N+3}     \\
+%     \midrule
+%     ADSL, électricité, factures diverses & 200\,000          & 200\,000          & 200\,000          & 200\,000          \\
+%     \rowcolor{lightgray}
+%     Assurance matériel et personnel      & 40\,000           & 40\,000           & 50\,000           & 50\,000           \\
+%     Location bureau\,/\,coworking        & 360\,000          & 360\,000          & 480\,000          & 480\,000          \\
+%     \rowcolor{lightgray}
+%     Maintenance et mises à jour          & 30\,000           & 30\,000           & 30\,000           & 30\,000           \\
+%     Marketing digital                    & 100\,000          & 150\,000          & 200\,000          & 200\,000          \\
+%     \midrule
+%     \rowcolor{primary!30}
+%     \textbf{TOTAL}                       & \textbf{730\,000} & \textbf{780\,000} & \textbf{960\,000} & \textbf{960\,000} \\
+%     \bottomrule
+%   \end{tabular}
+% \end{table}
+
+% \subsection{Dépenses de personnel}
+
+% \begin{table}[H]
+%   \centering
+%   \caption{Dépenses de personnel (en DA)}
+%   \renewcommand{\arraystretch}{1.3}
+%   \begin{tabular}{lrrrr}
+%     \toprule
+%     \rowcolor{primary}
+%     \thdcell{Poste}               & \thdcell{N}          & \thdcell{N+1}        & \thdcell{N+2}        & \thdcell{N+3}        \\
+%     \midrule
+%     Fondatrice\,/\,Chef de projet & 720\,000             & 780\,000             & 840\,000             & 900\,000             \\
+%     \rowcolor{lightgray}
+%     Lead Développeuse web         & 600\,000             & 660\,000             & 720\,000             & 780\,000             \\
+%     Chargée de communication      & 600\,000             & 660\,000             & 720\,000             & 780\,000             \\
+%     \rowcolor{lightgray}
+%     Secrétaire\,/\,Support        & 360\,000             & 384\,000             & 432\,000             & 456\,000             \\
+%     \midrule
+%     \rowcolor{primary!30}
+%     \textbf{TOTAL}                & \textbf{2\,280\,000} & \textbf{2\,484\,000} & \textbf{2\,712\,000} & \textbf{2\,916\,000} \\
+%     \bottomrule
+%   \end{tabular}
+% \end{table}
+
+% \section{Chiffre d'Affaires}
+
+% Les revenus de Baligh+ proviennent de plusieurs sources :
+% \begin{itemize}
+%   \item \textbf{Service A} — Abonnement mensuel commune (accès dashboard) : 15\,000 DA/mois.
+%   \item \textbf{Service B} — Abonnement direction de wilaya (API + analytics) : 50\,000 DA/mois.
+%   \item \textbf{Service C} — Commission sur intégrations tiers (passerelles SMS, notifications push) : 8\,\%.
+%   \item \textbf{Service D} — Publicité institutionnelle ciblée : 10\,000 DA\,/\,annonce sponsorisée.
+% \end{itemize}
+
+% \subsection{Scénario pessimiste}
+
+% \begin{table}[H]
+%   \centering
+%   \caption{Chiffre d'affaires — Scénario pessimiste (en DA)}
+%   \renewcommand{\arraystretch}{1.3}
+%   \small
+%   \begin{tabularx}{\linewidth}{lXXrrr}
+%     \toprule
+%     \rowcolor{primary}
+%     \thdcell{Année} & \thdcell{Communes}            & \thdcell{Wilayas}             & \thdcell{Intégrations} & \thdcell{Pub inst.} & \thdcell{CA total}    \\
+%     \midrule
+%     N+1             & $5 \times 15\,000 \times 12$  & $1 \times 50\,000 \times 12$  & 100\,000               & 50\,000             & \textbf{1\,650\,000}  \\
+%     \rowcolor{lightgray}
+%     N+2             & $10 \times 15\,000 \times 12$ & $2 \times 50\,000 \times 12$  & 200\,000               & 100\,000            & \textbf{3\,300\,000}  \\
+%     N+3             & $20 \times 15\,000 \times 12$ & $5 \times 50\,000 \times 12$  & 400\,000               & 200\,000            & \textbf{7\,200\,000}  \\
+%     \rowcolor{lightgray}
+%     N+4             & $35 \times 15\,000 \times 12$ & $8 \times 50\,000 \times 12$  & 600\,000               & 350\,000            & \textbf{12\,050\,000} \\
+%     N+5             & $50 \times 15\,000 \times 12$ & $12 \times 50\,000 \times 12$ & 800\,000               & 500\,000            & \textbf{17\,500\,000} \\
+%     \bottomrule
+%   \end{tabularx}
+% \end{table}
+
+% \subsection{Scénario optimiste}
+
+% \begin{table}[H]
+%   \centering
+%   \caption{Chiffre d'affaires — Scénario optimiste (en DA)}
+%   \renewcommand{\arraystretch}{1.3}
+%   \small
+%   \begin{tabularx}{\linewidth}{lXXrrr}
+%     \toprule
+%     \rowcolor{primary}
+%     \thdcell{Année} & \thdcell{Communes}             & \thdcell{Wilayas}             & \thdcell{Intégrations} & \thdcell{Pub inst.} & \thdcell{CA total}    \\
+%     \midrule
+%     N+1             & $20 \times 15\,000 \times 12$  & $5 \times 50\,000 \times 12$  & 500\,000               & 200\,000            & \textbf{7\,300\,000}  \\
+%     \rowcolor{lightgray}
+%     N+2             & $40 \times 15\,000 \times 12$  & $10 \times 50\,000 \times 12$ & 800\,000               & 400\,000            & \textbf{14\,400\,000} \\
+%     N+3             & $70 \times 15\,000 \times 12$  & $15 \times 50\,000 \times 12$ & 1\,200\,000            & 700\,000            & \textbf{23\,500\,000} \\
+%     \rowcolor{lightgray}
+%     N+4             & $100 \times 15\,000 \times 12$ & $20 \times 50\,000 \times 12$ & 1\,500\,000            & 1\,000\,000         & \textbf{32\,500\,000} \\
+%     N+5             & $130 \times 15\,000 \times 12$ & $25 \times 50\,000 \times 12$ & 2\,000\,000            & 1\,300\,000         & \textbf{41\,700\,000} \\
+%     \bottomrule
+%   \end{tabularx}
+% \end{table}
+% ============================================================
 \chapter{Plan Financier}
+% ============================================================
 
-Cette section présente une étude financière complète portant sur une période
-prévisionnelle de cinq ans. Elle met en évidence les investissements requis,
-les charges d'exploitation et les sources potentielles de revenus.
-
-\section{Les Coûts et Charges}
-
-\subsection{Immobilisations corporelles}
-
-\begin{table}[H]
-  \centering
-  \caption{Immobilisations corporelles (en DA)}
-  \renewcommand{\arraystretch}{1.3}
-  \begin{tabular}{lrrrrrr}
-    \toprule
-    \rowcolor{primary}
-    \thdcell{Libellé}  & \thdcell{P.U} & \thdcell{Qté} & \thdcell{N}       & \thdcell{N+1}     & \thdcell{N+2}     & \thdcell{N+3}     \\
-    \midrule
-    PC\,/\,Laptop      & 120\,000      & 3             & 360\,000          & 300\,000          & 250\,000          & 200\,000          \\
-    \rowcolor{lightgray}
-    Bureau             & 36\,000       & 3             & 108\,000          & 108\,000          & 98\,000           & 90\,000           \\
-    Chaise ergonomique & 12\,000       & 6             & 72\,000           & 72\,000           & 60\,000           & 50\,000           \\
-    \rowcolor{lightgray}
-    Serveur VPS        & 80\,000       & 1             & 80\,000           & 80\,000           & 80\,000           & 80\,000           \\
-    Climatiseur        & 68\,000       & 1             & 68\,000           & 68\,000           & 59\,000           & 48\,000           \\
-    \rowcolor{lightgray}
-    Imprimante         & 45\,000       & 1             & 45\,000           & 45\,000           & 30\,000           & 28\,000           \\
-    \midrule
-    \rowcolor{primary!30}
-    \textbf{TOTAL}     &               &               & \textbf{733\,000} & \textbf{673\,000} & \textbf{577\,000} & \textbf{496\,000} \\
-    \bottomrule
-  \end{tabular}
-\end{table}
-
-\subsection{Immobilisations incorporelles}
-
-\begin{table}[H]
-  \centering
-  \caption{Immobilisations incorporelles (en DA)}
-  \renewcommand{\arraystretch}{1.3}
-  \begin{tabular}{lrrrr}
-    \toprule
-    \rowcolor{primary}
-    \thdcell{Libellé}                     & \thdcell{N}       & \thdcell{N+1}     & \thdcell{N+2}     & \thdcell{N+3}     \\
-    \midrule
-    Nom de domaine + hébergement web      & 24\,000           & 24\,000           & 24\,000           & 24\,000           \\
-    \rowcolor{lightgray}
-    API Google Maps (clé premium)         & 60\,000           & 60\,000           & 60\,000           & 60\,000           \\
-    Licences logiciels (Adobe, JetBrains) & 80\,000           & 80\,000           & 80\,000           & 80\,000           \\
-    \rowcolor{lightgray}
-    Certificat SSL et sécurité            & 20\,000           & 20\,000           & 20\,000           & 20\,000           \\
-    \midrule
-    \rowcolor{primary!30}
-    \textbf{TOTAL}                        & \textbf{184\,000} & \textbf{184\,000} & \textbf{184\,000} & \textbf{184\,000} \\
-    \bottomrule
-  \end{tabular}
-\end{table}
-
-\subsection{Charges d'exploitation}
-
-\begin{table}[H]
-  \centering
-  \caption{Charges d'exploitation (en DA)}
-  \renewcommand{\arraystretch}{1.3}
-  \begin{tabular}{lrrrr}
-    \toprule
-    \rowcolor{primary}
-    \thdcell{Libellé}                    & \thdcell{N}       & \thdcell{N+1}     & \thdcell{N+2}     & \thdcell{N+3}     \\
-    \midrule
-    ADSL, électricité, factures diverses & 200\,000          & 200\,000          & 200\,000          & 200\,000          \\
-    \rowcolor{lightgray}
-    Assurance matériel et personnel      & 40\,000           & 40\,000           & 50\,000           & 50\,000           \\
-    Location bureau\,/\,coworking        & 360\,000          & 360\,000          & 480\,000          & 480\,000          \\
-    \rowcolor{lightgray}
-    Maintenance et mises à jour          & 30\,000           & 30\,000           & 30\,000           & 30\,000           \\
-    Marketing digital                    & 100\,000          & 150\,000          & 200\,000          & 200\,000          \\
-    \midrule
-    \rowcolor{primary!30}
-    \textbf{TOTAL}                       & \textbf{730\,000} & \textbf{780\,000} & \textbf{960\,000} & \textbf{960\,000} \\
-    \bottomrule
-  \end{tabular}
-\end{table}
-
-\subsection{Dépenses de personnel}
-
-\begin{table}[H]
-  \centering
-  \caption{Dépenses de personnel (en DA)}
-  \renewcommand{\arraystretch}{1.3}
-  \begin{tabular}{lrrrr}
-    \toprule
-    \rowcolor{primary}
-    \thdcell{Poste}               & \thdcell{N}          & \thdcell{N+1}        & \thdcell{N+2}        & \thdcell{N+3}        \\
-    \midrule
-    Fondatrice\,/\,Chef de projet & 720\,000             & 780\,000             & 840\,000             & 900\,000             \\
-    \rowcolor{lightgray}
-    Lead Développeuse web         & 600\,000             & 660\,000             & 720\,000             & 780\,000             \\
-    Chargée de communication      & 600\,000             & 660\,000             & 720\,000             & 780\,000             \\
-    \rowcolor{lightgray}
-    Secrétaire\,/\,Support        & 360\,000             & 384\,000             & 432\,000             & 456\,000             \\
-    \midrule
-    \rowcolor{primary!30}
-    \textbf{TOTAL}                & \textbf{2\,280\,000} & \textbf{2\,484\,000} & \textbf{2\,712\,000} & \textbf{2\,916\,000} \\
-    \bottomrule
-  \end{tabular}
-\end{table}
-
-\section{Chiffre d'Affaires}
-
-Les revenus de Baligh+ proviennent de plusieurs sources :
-\begin{itemize}
-  \item \textbf{Service A} — Abonnement mensuel commune (accès dashboard) : 15\,000 DA/mois.
-  \item \textbf{Service B} — Abonnement direction de wilaya (API + analytics) : 50\,000 DA/mois.
-  \item \textbf{Service C} — Commission sur intégrations tiers (passerelles SMS, notifications push) : 8\,\%.
-  \item \textbf{Service D} — Publicité institutionnelle ciblée : 10\,000 DA\,/\,annonce sponsorisée.
+\textbf{Baligh+} est une plateforme numérique institutionnelle conçue pour moderniser la
+gestion des collectivités locales algériennes (communes et wilayas). Elle offre aux
+administrations un tableau de bord interactif, des outils analytiques avancés et des
+intégrations avec des services tiers (SMS, notifications push, cartographie) afin
+d'améliorer la transparence, l'efficacité opérationnelle et la communication
+citoyenne.
+ 
+Le présent plan financier constitue l'outil de pilotage stratégique du projet. Il
+couvre une \textbf{période prévisionnelle de cinq ans} (N à N+5) et s'articule autour
+de trois volets complémentaires :
+ 
+\begin{itemize}[leftmargin=1.6em, itemsep=3pt]
+  \item[$\bullet$] \textbf{Les coûts d'investissement et charges d'exploitation}
+    nécessaires au lancement et au fonctionnement de la plateforme.
+  \item[$\bullet$] \textbf{Les projections de chiffre d'affaires} selon deux
+    scénarios contrastés — pessimiste et optimiste — basés sur les quatre sources
+    de revenus identifiées.
+  \item[$\bullet$] \textbf{L'analyse de rentabilité et de trésorerie} permettant
+    d'évaluer la viabilité économique et le seuil d'équilibre financier.
 \end{itemize}
+ 
+\begin{notebox}
+  Tous les montants sont exprimés en \textbf{Dinars Algériens (DA)}. La période
+  \textbf{N} correspond à l'année de lancement effectif de la plateforme.
+  Les données présentées s'appuient sur les documents financiers officiels du
+  projet (Bilan actif/passif, Tableau des flux de trésorerie, Compte de résultat).
+\end{notebox}
+ 
+% ============================================================
+\section{Les Coûts et Charges}
+% ============================================================
+ 
+\subsection{Immobilisations Corporelles}
+ 
+Les immobilisations corporelles regroupent l'ensemble du matériel physique
+nécessaire au fonctionnement de l'équipe. Les valeurs indiquées pour N+1 à N+3
+correspondent aux \textbf{valeurs nettes comptables} après dépréciation annuelle.
+ 
+\vspace{6pt}
+\begin{table}[h!]
+\centering
+\caption{Immobilisations corporelles — valeurs nettes (en DA)}
+\renewcommand{\arraystretch}{1.35}
+\begin{tabularx}{\linewidth}{Xrrrrr}
+\toprule
 
-\subsection{Scénario pessimiste}
+\textbf{Libellé} & \textbf{P.U} & \textbf{Qté} &
+\textbf{Année N} & \textbf{N+1} & \textbf{N+2} \\
+\midrule
+PC / Laptop            & 120\,000 & 3 & 360\,000 & 300\,000 & 250\,000 \\
 
-\begin{table}[H]
-  \centering
-  \caption{Chiffre d'affaires — Scénario pessimiste (en DA)}
-  \renewcommand{\arraystretch}{1.3}
-  \small
-  \begin{tabularx}{\linewidth}{lXXrrr}
-    \toprule
-    \rowcolor{primary}
-    \thdcell{Année} & \thdcell{Communes}            & \thdcell{Wilayas}             & \thdcell{Intégrations} & \thdcell{Pub inst.} & \thdcell{CA total}    \\
-    \midrule
-    N+1             & $5 \times 15\,000 \times 12$  & $1 \times 50\,000 \times 12$  & 100\,000               & 50\,000             & \textbf{1\,650\,000}  \\
-    \rowcolor{lightgray}
-    N+2             & $10 \times 15\,000 \times 12$ & $2 \times 50\,000 \times 12$  & 200\,000               & 100\,000            & \textbf{3\,300\,000}  \\
-    N+3             & $20 \times 15\,000 \times 12$ & $5 \times 50\,000 \times 12$  & 400\,000               & 200\,000            & \textbf{7\,200\,000}  \\
-    \rowcolor{lightgray}
-    N+4             & $35 \times 15\,000 \times 12$ & $8 \times 50\,000 \times 12$  & 600\,000               & 350\,000            & \textbf{12\,050\,000} \\
-    N+5             & $50 \times 15\,000 \times 12$ & $12 \times 50\,000 \times 12$ & 800\,000               & 500\,000            & \textbf{17\,500\,000} \\
-    \bottomrule
-  \end{tabularx}
+Bureau de travail      &  36\,000 & 3 & 108\,000 & 108\,000 &  98\,000 \\
+Chaise ergonomique     &  12\,000 & 6 &  72\,000 &  72\,000 &  60\,000 \\
+
+Serveur VPS dédié      &  80\,000 & 1 &  80\,000 &  80\,000 &  80\,000 \\
+Climatiseur            &  68\,000 & 1 &  68\,000 &  68\,000 &  59\,000 \\
+
+Imprimante multifonction &  45\,000 & 1 &  45\,000 &  45\,000 &  30\,000 \\
+\midrule
+\bfseries TOTAL & & &
+\bfseries 733\,000 &
+\bfseries 673\,000 &
+\bfseries 577\,000 \\
+\bottomrule
+\end{tabularx}
 \end{table}
+ 
+\begin{notebox}
+  Le matériel informatique (PC, serveur) est déprécié au taux de
+  \textbf{15--20\,\% par an}, reflétant l'obsolescence technologique rapide dans
+  le secteur numérique. Le mobilier est déprécié à \textbf{8--10\,\% par an}.
+\end{notebox}
+ 
+\subsection{Immobilisations Incorporelles}
+ 
+Les immobilisations incorporelles couvrent les \textbf{droits d'utilisation
+numériques} indispensables à la plateforme : services cloud, licences et
+intégrations d'API. Ces charges sont majoritairement \textbf{récurrentes annuelles}
+et stables sur l'ensemble de la période.
+ 
+\vspace{6pt}
+\begin{table}[h!]
+\centering
+\caption{Immobilisations incorporelles — charges annuelles (en DA)}
+\renewcommand{\arraystretch}{1.35}
+\begin{tabularx}{\linewidth}{Xrrrr}
+\toprule
 
-\subsection{Scénario optimiste}
+\textbf{Libellé} & \textbf{Année N} & \textbf{N+1} & \textbf{N+2} & \textbf{N+3} \\
+\midrule
+Nom de domaine + hébergement web      & 24\,000 & 24\,000 & 24\,000 & 24\,000 \\
 
-\begin{table}[H]
-  \centering
-  \caption{Chiffre d'affaires — Scénario optimiste (en DA)}
-  \renewcommand{\arraystretch}{1.3}
-  \small
-  \begin{tabularx}{\linewidth}{lXXrrr}
-    \toprule
-    \rowcolor{primary}
-    \thdcell{Année} & \thdcell{Communes}             & \thdcell{Wilayas}             & \thdcell{Intégrations} & \thdcell{Pub inst.} & \thdcell{CA total}    \\
-    \midrule
-    N+1             & $20 \times 15\,000 \times 12$  & $5 \times 50\,000 \times 12$  & 500\,000               & 200\,000            & \textbf{7\,300\,000}  \\
-    \rowcolor{lightgray}
-    N+2             & $40 \times 15\,000 \times 12$  & $10 \times 50\,000 \times 12$ & 800\,000               & 400\,000            & \textbf{14\,400\,000} \\
-    N+3             & $70 \times 15\,000 \times 12$  & $15 \times 50\,000 \times 12$ & 1\,200\,000            & 700\,000            & \textbf{23\,500\,000} \\
-    \rowcolor{lightgray}
-    N+4             & $100 \times 15\,000 \times 12$ & $20 \times 50\,000 \times 12$ & 1\,500\,000            & 1\,000\,000         & \textbf{32\,500\,000} \\
-    N+5             & $130 \times 15\,000 \times 12$ & $25 \times 50\,000 \times 12$ & 2\,000\,000            & 1\,300\,000         & \textbf{41\,700\,000} \\
-    \bottomrule
-  \end{tabularx}
+API Google Maps (clé premium)         & 60\,000 & 60\,000 & 60\,000 & 60\,000 \\
+Licences logiciels (Adobe, JetBrains) & 80\,000 & 80\,000 & 80\,000 & 80\,000 \\
+
+Certificat SSL et sécurité            & 20\,000 & 20\,000 & 20\,000 & 20\,000 \\
+\midrule
+\bfseries TOTAL &
+\bfseries 184\,000 &
+\bfseries 184\,000 &
+\bfseries 184\,000 &
+\bfseries 184\,000 \\
+\bottomrule
+\end{tabularx}
 \end{table}
+ 
+\subsection{Charges d'Exploitation}
+ 
+Les charges d'exploitation couvrent les coûts opérationnels récurrents.
+La \textbf{hausse progressive du marketing digital} (de 100\,000 DA en N
+à 200\,000 DA en N+2/N+3) traduit la montée en puissance de la stratégie
+commerciale lors de l'extension aux wilayas voisines.
+ 
+\vspace{6pt}
+\begin{table}[h!]
+\centering
+\caption{Autres charges d'exploitation (en DA)}
+\renewcommand{\arraystretch}{1.35}
+\begin{tabularx}{\linewidth}{Xrrrr}
+\toprule
 
+\textbf{Libellé} & \textbf{Année N} & \textbf{N+1} & \textbf{N+2} & \textbf{N+3} \\
+\midrule
+ADSL, électricité, factures diverses & 200\,000 & 200\,000 & 200\,000 & 200\,000 \\
+
+Assurance matériel et personnel      &  40\,000 &  40\,000 &  50\,000 &  50\,000 \\
+Location bureau / coworking          & 360\,000 & 360\,000 & 480\,000 & 480\,000 \\
+
+Maintenance et mises à jour          &  30\,000 &  30\,000 &  30\,000 &  30\,000 \\
+Marketing digital                    & 100\,000 & 150\,000 & 200\,000 & 200\,000 \\
+\midrule
+\bfseries TOTAL &
+\bfseries 730\,000 &
+\bfseries 780\,000 &
+\bfseries 960\,000 &
+\bfseries 960\,000 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+ 
+\subsection{Dépenses de Personnel}
+ 
+Le poste \textbf{ressources humaines} représente la charge la plus significative
+du projet (\textasciitilde 58\,\% du total). Une revalorisation salariale annuelle
+de \textbf{5 à 8\,\%} est intégrée en signe de reconnaissance de l'engagement
+de chaque collaborateur.
+ 
+\vspace{6pt}
+\begin{table}[h!]
+\centering
+\caption{Dépenses de personnel — salaires annuels (en DA)}
+\renewcommand{\arraystretch}{1.35}
+\begin{tabularx}{\linewidth}{Xrrrr}
+\toprule
+
+\textbf{Poste} & \textbf{Année N} & \textbf{N+1} & \textbf{N+2} & \textbf{N+3} \\
+\midrule
+Fondateur / Chef de projet  & 720\,000 & 780\,000 & 840\,000 & 900\,000 \\
+
+Lead Développeur web        & 600\,000 & 660\,000 & 720\,000 & 780\,000 \\
+Chargé de communication     & 600\,000 & 660\,000 & 720\,000 & 780\,000 \\
+
+Secrétaire / Support         & 360\,000 & 384\,000 & 432\,000 & 456\,000 \\
+\midrule
+\bfseries TOTAL &
+\bfseries 2\,280\,000 &
+\bfseries 2\,484\,000 &
+\bfseries 2\,712\,000 &
+\bfseries 2\,916\,000 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+ 
+\subsection{Synthèse Consolidée des Charges}
+ 
+Le tableau ci-dessous consolide l'ensemble des charges sur les quatre premières
+années d'exploitation, offrant une vision globale de la structure de coûts
+de \textbf{Baligh+}.
+ 
+\vspace{6pt}
+\begin{table}[h!]
+\centering
+\caption{Synthèse globale des charges prévisionnelles (en DA)}
+\renewcommand{\arraystretch}{1.35}
+\begin{tabularx}{\linewidth}{Xrrrr}
+\toprule
+
+\textbf{Catégorie} &
+\textbf{Année N} & \textbf{N+1} & \textbf{N+2} & \textbf{N+3} \\
+\midrule
+Immobilisations corporelles    &   733\,000 &   673\,000 &   577\,000 &   496\,000 \\
+
+Immobilisations incorporelles  &   184\,000 &   184\,000 &   184\,000 &   184\,000 \\
+Charges d'exploitation         &   730\,000 &   780\,000 &   960\,000 &   960\,000 \\
+
+Dépenses de personnel          & 2\,280\,000 & 2\,484\,000 & 2\,712\,000 & 2\,916\,000 \\
+\midrule
+\bfseries TOTAL CHARGES &
+\bfseries 3\,927\,000 &
+\bfseries 4\,121\,000 &
+\bfseries 4\,433\,000 &
+\bfseries 4\,556\,000 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+ 
+% ── Graphique camembert répartition charges ──────────────────
+\vspace{8pt}
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+  xbar stacked,
+  width=13cm, height=5.5cm,
+  bar width=0.6cm,
+  xmin=0, xmax=5000000,
+  symbolic y coords={N+3, N+2, N+1, N},
+  ytick=data,
+  xtick={0,1000000,2000000,3000000,4000000,5000000},
+  xticklabels={0, 1M, 2M, 3M, 4M, 5M},
+  xlabel={\small Montant (DA)},
+  legend style={at={(0.5,-0.22)}, anchor=north, legend columns=4,
+                font=\footnotesize},
+  every axis plot/.append style={draw=none},
+  title={\small\bfseries Répartition des charges par année},
+  title style={yshift=4pt},
+]
+\addplot+[fill=primary!80]     coordinates {(733000,N)  (673000,N+1)  (577000,N+2)  (496000,N+3)};
+\addplot+[fill=secondary!70]   coordinates {(184000,N)  (184000,N+1)  (184000,N+2)  (184000,N+3)};
+\addplot+[fill=accent!90]      coordinates {(730000,N)  (780000,N+1)  (960000,N+2)  (960000,N+3)};
+\addplot+[fill=successgreen!80]coordinates {(2280000,N) (2484000,N+1) (2712000,N+2) (2916000,N+3)};
+\legend{Immo. corp., Immo. incorp., Exploitation, Personnel}
+\end{axis}
+\end{tikzpicture}
+\end{center}
+ 
+% ============================================================
+\section{Chiffre d'Affaires et Sources de Revenus}
+% ============================================================
+ 
+\subsection{Modèle Économique et Services}
+ 
+Le chiffre d'affaires de \textbf{Baligh+} repose sur un modèle hybride
+combinant revenus récurrents (abonnements) et revenus variables (commissions,
+publicité). Quatre services principaux ont été définis :
+ 
+\vspace{8pt}
+\begin{table}[h!]
+\centering
+\caption{Description des services et tarification}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabularx}{\linewidth}{>{\bfseries}cXrl}
+\toprule
+
+\textbf{Réf.} & \textbf{Description du service} &
+\textbf{Tarif} & \textbf{Cible} \\
+\midrule
+A & Abonnement mensuel commune — accès au tableau de bord
+    (dashboard) et outils de gestion & 15\,000 DA/mois & Communes \\
+
+B & Abonnement direction de wilaya — accès API + modules
+    analytiques avancés & 50\,000 DA/mois & Wilayas \\
+C & Commission sur intégrations tierces — passerelles SMS,
+    notifications push & 8\,\% / transaction & Prestataires \\
+
+D & Publicité institutionnelle ciblée — annonces sponsorisées
+    affichées sur la plateforme & 10\,000 DA / annonce & Institutions \\
+\bottomrule
+\end{tabularx}
+\end{table}
+ 
+\begin{notebox}
+  La tarification a été calibrée pour rester accessible aux collectivités
+  locales algériennes tout en assurant la viabilité économique du projet.
+  Le \textbf{Service A} (communes) constitue le moteur principal de croissance
+  en volume ; le \textbf{Service B} (wilayas) génère la valeur la plus élevée
+  par client.
+\end{notebox}
+ 
+\subsection{Scénario Pessimiste}
+ 
+Ce scénario repose sur des \textbf{hypothèses prudentes} : adoption lente par
+les collectivités, faible couverture géographique, budget marketing limité.
+Il sert de \textbf{plancher} pour l'évaluation du risque financier.
+ 
+\textit{Hypothèses :} croissance linéaire du nombre de communes abonnées
+(+5/an), progression modérée des wilayas (+1/an), commissions intégrations
+en hausse lente, publicité institutionnelle en phase d'amorçage.
+ 
+\vspace{6pt}
+\begin{table}[h!]
+\centering
+\caption{Prévisions pessimistes du chiffre d'affaires (en DA)}
+\renewcommand{\arraystretch}{1.4}
+\small
+\begin{tabularx}{\linewidth}{cXXrrr}
+\toprule
+
+\textbf{Année} & \textbf{Communes (Serv. A)} &
+\textbf{Wilayas (Serv. B)} &
+\textbf{Intégrations} & \textbf{Pub. inst.} &
+\textbf{CA total} \\
+\midrule
+N+1 & $5 \times 15\,000 \times 12$  & $1 \times 50\,000 \times 12$
+    & 100\,000 & 50\,000 & \bfseries 1\,650\,000 \\
+
+N+2 & $10 \times 15\,000 \times 12$ & $2 \times 50\,000 \times 12$
+    & 200\,000 & 100\,000 & \bfseries 3\,300\,000 \\
+N+3 & $20 \times 15\,000 \times 12$ & $5 \times 50\,000 \times 12$
+    & 400\,000 & 200\,000 & \bfseries 7\,200\,000 \\
+
+N+4 & $35 \times 15\,000 \times 12$ & $8 \times 50\,000 \times 12$
+    & 600\,000 & 350\,000 & \bfseries 12\,050\,000 \\
+N+5 & $50 \times 15\,000 \times 12$ & $12 \times 50\,000 \times 12$
+    & 800\,000 & 500\,000 & \bfseries 17\,500\,000 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+ 
+\subsection{Scénario Optimiste}
+ 
+Ce scénario intègre une \textbf{adoption rapide} portée par des partenariats
+institutionnels solides, une couverture médiatique favorable et une stratégie
+commerciale active auprès des APC et DTA.
+ 
+\textit{Hypothèses :} démarrage fort dès N+1 (20 communes), extension rapide
+aux wilayas limitrophes, fort volume de publicité institutionnelle.
+ 
+\vspace{6pt}
+\begin{table}[h!]
+\centering
+\caption{Prévisions optimistes du chiffre d'affaires (en DA)}
+\renewcommand{\arraystretch}{1.4}
+\small
+\begin{tabularx}{\linewidth}{cXXrrr}
+\toprule
+
+\textbf{Année} & \textbf{Communes (Serv. A)} &
+\textbf{Wilayas (Serv. B)} &
+\textbf{Intégrations} & \textbf{Pub. inst.} &
+\textbf{CA total} \\
+\midrule
+N+1 & $20 \times 15\,000 \times 12$  & $5 \times 50\,000 \times 12$
+    & 500\,000  & 200\,000   & \bfseries 7\,300\,000 \\
+
+N+2 & $40 \times 15\,000 \times 12$  & $10 \times 50\,000 \times 12$
+    & 800\,000  & 400\,000   & \bfseries 14\,400\,000 \\
+N+3 & $70 \times 15\,000 \times 12$  & $15 \times 50\,000 \times 12$
+    & 1\,200\,000 & 700\,000 & \bfseries 23\,500\,000 \\
+
+N+4 & $100 \times 15\,000 \times 12$ & $20 \times 50\,000 \times 12$
+    & 1\,500\,000 & 1\,000\,000 & \bfseries 32\,500\,000 \\
+N+5 & $130 \times 15\,000 \times 12$ & $25 \times 50\,000 \times 12$
+    & 2\,000\,000 & 1\,300\,000 & \bfseries 41\,700\,000 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+ 
+\subsection{Visualisation Comparée des Scénarios}
+ 
+\vspace{6pt}
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+  width=13.5cm, height=7.5cm,
+  xlabel={\small Année},
+  ylabel={\small CA (Millions de DA)},
+  symbolic x coords={N+1, N+2, N+3, N+4, N+5},
+  xtick=data,
+  ymin=0, ymax=50,
+  ytick={0,5,10,15,20,25,30,35,40,45,50},
+  yticklabels={0,5,10,15,20,25,30,35,40,45,50},
+  legend style={at={(0.5,-0.18)}, anchor=north, legend columns=3,
+                font=\footnotesize},
+  grid=both,
+  grid style={line width=0.3pt, draw=gray!25},
+  major grid style={line width=0.5pt, draw=gray!40},
+  title={\small\bfseries Évolution prévisionnelle du Chiffre d'Affaires},
+  title style={yshift=4pt},
+  cycle list name=color list,
+]
+% Scénario pessimiste
+\addplot+[
+  color=dangerred, mark=square*, thick,
+  mark options={fill=dangerred},
+] coordinates {
+  (N+1,1.65) (N+2,3.30) (N+3,7.20) (N+4,12.05) (N+5,17.50)
+};
+\addlegendentry{Scén. Pessimiste}
+ 
+% Scénario optimiste
+\addplot+[
+  color=successgreen, mark=*, thick,
+  mark options={fill=successgreen},
+] coordinates {
+  (N+1,7.30) (N+2,14.40) (N+3,23.50) (N+4,32.50) (N+5,41.70)
+};
+\addlegendentry{Scén. Optimiste}
+ 
+% Total charges
+\addplot+[
+  color=accent, mark=triangle*, thick, dashed,
+  mark options={fill=accent},
+] coordinates {
+  (N+1,4.12) (N+2,4.43) (N+3,4.56) (N+4,4.80) (N+5,5.00)
+};
+\addlegendentry{Total Charges (estim.)}
+ 
+\end{axis}
+\end{tikzpicture}
+\end{center}
+ 
+% ============================================================
+\section{Analyse de Rentabilité}
+% ============================================================
+ 
+\subsection{Tableau Comparatif CA vs Charges}
+ 
+Le tableau suivant confronte les deux scénarios de chiffre d'affaires au
+total des charges prévisionnelles afin de dégager le \textbf{résultat net
+prévisionnel} sur chaque exercice.
+ 
+\vspace{6pt}
+\begin{table}[h!]
+\centering
+\caption{Analyse de rentabilité — résultats nets prévisionnels (en DA)}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabularx}{\linewidth}{crrrrr}
+\toprule
+
+\textbf{Année} &
+\textbf{CA Pessimiste} &
+\textbf{CA Optimiste} &
+\textbf{Total Charges} &
+\textbf{Résultat Net (Opt.)} &
+\textbf{Statut} \\
+\midrule
+N+1 & 1\,650\,000 & 7\,300\,000 & 4\,121\,000
+    & \bfseries +3\,179\,000
+    & ~Bénéfice \\
+
+N+2 & 3\,300\,000 & 14\,400\,000 & 4\,433\,000
+    & \bfseries +9\,967\,000
+    & ~Bénéfice \\
+N+3 & 7\,200\,000 & 23\,500\,000 & 4\,556\,000
+    & \bfseries +18\,944\,000
+    & ~Bénéfice \\
+
+N+4 & 12\,050\,000 & 32\,500\,000 & 4\,800\,000
+    & \bfseries +27\,700\,000
+    & ~Bénéfice \\
+N+5 & 17\,500\,000 & 41\,700\,000 & 5\,000\,000
+    & \bfseries +36\,700\,000
+    & ~Bénéfice \\
+\bottomrule
+\end{tabularx}
+\end{table}
+ 
+\begin{successbox}[Scénario Optimiste — Analyse]
+  Dans le scénario optimiste, \textbf{Baligh+} atteint la rentabilité dès
+  la première année d'exploitation (N+1) avec un bénéfice net de
+  \DA{3\,179\,000}. La dynamique s'amplifie considérablement sur les
+  exercices suivants, portée par l'extension géographique et la montée
+  en puissance du réseau de collectivités abonnées.
+\end{successbox}
+ 
+\begin{alertbox}[Scénario Pessimiste — Vigilance]
+  Dans le scénario pessimiste, le CA de N+1 (\DA{1\,650\,000}) reste
+  inférieur aux charges totales (\DA{4\,121\,000}), entraînant un
+  déficit de \DA{2\,471\,000}. Un \textbf{soutien institutionnel ou une
+  levée de fonds} est nécessaire pour les premières années.
+\end{alertbox}
+ 
+\subsection{Calcul du Seuil de Rentabilité (Point Mort)}
+ 
+Le seuil de rentabilité correspond au niveau de chiffre d'affaires
+permettant de couvrir l'intégralité des charges. Il est calculé comme
+suit :
+ 
+\vspace{6pt}
+\begin{tcolorbox}[
+  colback=lightblue!50, colframe=primary,
+  title=\enskip Formule du Seuil de Rentabilité,
+  fonttitle=\bfseries\small,
+  sharp corners, top=8pt, bottom=8pt
+]
+\[
+  \text{SR} = \frac{\text{Charges Fixes}}{\text{Taux de Marge sur Coût Variable}}
+  = \frac{3\,927\,000}{0{,}65} \approx \boxed{6\,041\,538 \text{ DA}}
+\]
+\begin{itemize}[leftmargin=1.6em, itemsep=2pt]
+  \item Charges fixes annuelles (année N) : \DA{3\,927\,000}
+  \item Taux de marge sur coûts variables estimé : \pct{65}
+  \item \textbf{Seuil atteint dès N+1 dans le scénario optimiste}
+    (CA = \DA{7\,300\,000} $>$ SR = \DA{6\,041\,538})
+\end{itemize}
+\end{tcolorbox}
+ 
+\subsection{Indicateurs de Performance Financière}
+ 
+\vspace{6pt}
+\begin{table}[h!]
+\centering
+\caption{Indicateurs clés de performance financière (scénario optimiste)}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabularx}{\linewidth}{Xrr}
+\toprule
+
+\textbf{Indicateur} & \textbf{Valeur} & \textbf{Référence} \\
+\midrule
+Retour sur Investissement (ROI) N+1
+  & \bfseries +77,1\,\% & $>0\,\%$ \\
+
+Taux de croissance moyen du CA (opt.)
+  & \bfseries +55,2\,\%/an & Marché\\
+Ratio charges personnel / CA N+1 (opt.)
+  & \bfseries 34,0\,\% & $<50\,\%$ \\
+
+Seuil de rentabilité (CA annuel min.)
+  & \bfseries 6\,041\,538 DA & — \\
+EBITDA prévisionnel N+5 (opt.)
+  & \bfseries 36\,700\,000 DA & — \\
+\bottomrule
+\end{tabularx}
+\end{table}
+ 
+% ============================================================
+\section{Gestion de la Trésorerie}
+% ============================================================
+ 
+\subsection{Structure des Flux de Trésorerie}
+ 
+La gestion de la trésorerie est critique pour toute startup institutionnelle.
+Les données issues du Tableau des Flux de Trésorerie (Annexe) montrent les
+prévisions suivantes :
+ 
+\vspace{6pt}
+\begin{table}[h!]
+\centering
+\caption{Tableau synthétique des flux de trésorerie (en DA)}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabularx}{\linewidth}{Xrrrrr}
+\toprule
+
+\textbf{Flux (en DA)} &
+\textbf{N+1} & \textbf{N+2} & \textbf{N+3} & \textbf{N+4} & \textbf{N+5} \\
+\midrule
+\textbf{Encaissements clients}
+  & 7\,300\,000 & 14\,400\,000 & 23\,500\,000 & 32\,500\,000 & 41\,700\,000 \\
+
+Décaissements fournisseurs \& personnel
+  & (2\,484\,000) & (2\,712\,000) & (2\,916\,000) & (3\,116\,000) & (3\,200\,000) \\
+Décaissements charges exploitation
+  & (780\,000) & (960\,000) & (960\,000) & (1\,075\,000) & (1\,256\,000) \\
+
+\textbf{Flux net opérationnel (A)}
+  & \bfseries 4\,036\,000
+  & \bfseries 10\,728\,000
+  & \bfseries 19\,624\,000
+  & \bfseries 28\,309\,000
+  & \bfseries 37\,244\,000 \\
+\midrule
+Investissements (B)
+  & (2\,649\,000) & — & — & — & — \\
+
+Flux de financement (C)
+  & — & — & — & — & — \\
+\midrule
+\bfseries Variation trésorerie (A+B+C) &
+\bfseries 1\,387\,000 &
+\bfseries 10\,728\,000 &
+\bfseries 19\,624\,000 &
+\bfseries 28\,309\,000 &
+\bfseries 37\,244\,000 \\
+\midrule
+
+Trésorerie cumulée en fin de période
+  & 1\,387\,000 & 12\,115\,000 & 31\,739\,000 & 60\,048\,000 & 97\,292\,000 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+ 
+\begin{notebox}
+  La trésorerie cumulée atteint \DA{97\,292\,000} en fin de N+5 dans le scénario
+  optimiste, témoignant d'une \textbf{solidité financière exceptionnelle} du projet
+  sur la durée. L'investissement initial de \DA{2\,649\,000} en année N
+  est entièrement absorbé dès N+1.
+\end{notebox}
+ 
+\subsection{Évolution de la Trésorerie Cumulée}
+ 
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+  width=13.5cm, height=6cm,
+  xlabel={\small Fin d'exercice},
+  ylabel={\small Trésorerie cumulée (Millions DA)},
+  symbolic x coords={N+1,N+2,N+3,N+4,N+5},
+  xtick=data,
+  ymin=0, ymax=110,
+  grid=both,
+  grid style={line width=0.3pt, draw=gray!25},
+  title={\small\bfseries Trésorerie cumulée en fin de période — Scénario Optimiste},
+  title style={yshift=4pt},
+]
+\addplot+[
+  color=primary, mark=*, thick,
+  fill=lightblue, fill opacity=0.4,
+] coordinates {
+  (N+1,  1.387)
+  (N+2, 12.115)
+  (N+3, 31.739)
+  (N+4, 60.048)
+  (N+5, 97.292)
+} \closedcycle;
+\end{axis}
+\end{tikzpicture}
+\end{center}
+ 
+% ============================================================
+\section{Stratégie de Financement}
+% ============================================================
+ 
+\subsection{Sources de Financement Identifiées}
+ 
+\begin{table}[h!]
+\centering
+\caption{Plan de financement initial — Année N}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabularx}{\linewidth}{Xrr}
+\toprule
+
+\textbf{Source de financement} &
+\textbf{Montant (DA)} & \textbf{Part (\%)} \\
+\midrule
+Apport en capital des fondateurs (3 × 300\,000)
+  & 900\,000 & 22,9\,\% \\
+
+Dispositif ANSEJ / Incubateur universitaire
+  & 2\,000\,000 & 50,9\,\% \\
+Partenariats institutionnels (APC, DTA, ONT)
+  & 500\,000 & 12,7\,\% \\
+
+Revenus précoces — phase pilote (commune test)
+  & 527\,000 & 13,5\,\% \\
+\midrule
+\bfseries TOTAL &
+\bfseries 3\,927\,000 &
+\bfseries 100\,\% \\
+\bottomrule
+\end{tabularx}
+\end{table}
+ 
+\subsection{Recommandations Financières}
+ 
+\begin{itemize}[leftmargin=1.6em, itemsep=5pt]
+  \item[$\bullet$] \textbf{Constituer une trésorerie initiale minimale
+    de \DA{2\,000\,000}} avant le lancement effectif pour absorber le gap de
+    trésorerie des premiers mois.
+  \item[$\bullet$] \textbf{Signer des conventions de partenariat} avec
+    les APC et DTA dès l'année N pour sécuriser les premiers contrats
+    d'abonnement (Services A et B).
+  \item[$\bullet$] \textbf{Activer le dispositif ANSEJ} en priorité —
+    il couvre jusqu'à 70\,\% des investissements initiaux pour les
+    startups algériennes portées par des jeunes diplômés.
+  \item[$\bullet$] \textbf{Réinvestir les bénéfices} générés à partir de N+1
+    (scénario optimiste) pour financer l'extension vers les wilayas voisines
+    sans recours à l'endettement.
+  \item[$\bullet$] \textbf{Mettre en place une réserve de précaution}
+    équivalente à 3 mois de charges (\textasciitilde\DA{1\,000\,000}) pour
+    faire face aux aléas opérationnels.
+\end{itemize}
+ 
+% ============================================================
+\section{Compte de Résultat Prévisionnel}
+% ============================================================
+ 
+Le compte de résultat consolide les produits et les charges pour dégager
+le \textbf{résultat net d'exercice} sur chaque année prévisionnelle.
+Les montants sont issus du \textbf{scénario optimiste} du chiffre d'affaires.
+ 
+\vspace{6pt}
+\begin{table}[h!]
+\centering
+\caption{Compte de résultat prévisionnel — scénario optimiste (en DA)}
+\renewcommand{\arraystretch}{1.38}
+\begin{tabularx}{\linewidth}{Xrrrrr}
+\toprule
+
+\textbf{Poste (en DA)} &
+\textbf{N+1} & \textbf{N+2} & \textbf{N+3} & \textbf{N+4} & \textbf{N+5} \\
+\midrule
+\multicolumn{6}{l}{\bfseries\small
+  I — PRODUITS D'EXPLOITATION} \\
+Chiffre d'affaires (CA)
+  & 7\,300\,000 & 14\,400\,000 & 23\,500\,000 & 32\,500\,000 & 41\,700\,000 \\
+
+\textbf{Total Produits d'exploitation}
+  & \bfseries 7\,300\,000 & \bfseries 14\,400\,000
+  & \bfseries 23\,500\,000 & \bfseries 32\,500\,000
+  & \bfseries 41\,700\,000 \\
+\midrule
+\multicolumn{6}{l}{\bfseries\small
+  II — CHARGES D'EXPLOITATION} \\
+Immobilisations corporelles (amort.)
+  & (673\,000) & (577\,000) & (496\,000) & (425\,000) & (360\,000) \\
+
+Immobilisations incorporelles
+  & (184\,000) & (184\,000) & (184\,000) & (184\,000) & (184\,000) \\
+Charges d'exploitation
+  & (780\,000) & (960\,000) & (960\,000) & (1\,075\,000) & (1\,256\,000) \\
+
+Charges de personnel
+  & (2\,484\,000) & (2\,712\,000) & (2\,916\,000) & (3\,116\,000) & (3\,200\,000) \\
+\textbf{Total Charges d'exploitation}
+  & \bfseries (4\,121\,000) & \bfseries (4\,433\,000)
+  & \bfseries (4\,556\,000) & \bfseries (4\,800\,000)
+  & \bfseries (5\,000\,000) \\
+\midrule
+
+\textbf{Excédent Brut d'Exploitation (EBE)}
+  & \bfseries 3\,179\,000
+  & \bfseries 9\,967\,000
+  & \bfseries 18\,944\,000
+  & \bfseries 27\,700\,000
+  & \bfseries 36\,700\,000 \\
+\midrule
+
+\bfseries RÉSULTAT NET D'EXERCICE &
+\bfseries 3\,179\,000 &
+\bfseries 9\,967\,000 &
+\bfseries 18\,944\,000 &
+\bfseries 27\,700\,000 &
+\bfseries 36\,700\,000 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+ 
+% ── Graphique résultat net ───────────────────────────────────
+\vspace{6pt}
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+  ybar,
+  width=13cm, height=6.5cm,
+  bar width=1.4cm,
+  xlabel={\small Exercice},
+  ylabel={\small Résultat Net (Millions DA)},
+  symbolic x coords={N+1,N+2,N+3,N+4,N+5},
+  xtick=data,
+  ymin=0, ymax=42,
+  ytick={0,5,10,15,20,25,30,35,40},
+  yticklabels={0,5M,10M,15M,20M,25M,30M,35M,40M},
+  nodes near coords,
+  nodes near coords align={vertical},
+  every node near coord/.append style={font=\tiny\bfseries},
+  grid=major,
+  grid style={line width=0.4pt, draw=gray!25},
+  title={\small\bfseries Évolution du Résultat Net d'Exercice — Scénario Optimiste},
+  title style={yshift=4pt},
+]
+\addplot+[fill=successgreen!70, draw=successgreen] coordinates {
+  (N+1, 3.179)
+  (N+2, 9.967)
+  (N+3, 18.944)
+  (N+4, 27.700)
+  (N+5, 36.700)
+};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+ 
+% ============================================================
+\section{Conclusion Financière}
+% ============================================================
+ 
+L'analyse financière conduite dans ce document démontre que \textbf{Baligh+}
+dispose d'un modèle économique \textbf{viable, scalable et adapté} au contexte
+du secteur public algérien en pleine transformation numérique.
+ 
+Les enseignements majeurs de cette étude sont les suivants :
+ 
+\begin{enumerate}[leftmargin=2em, itemsep=6pt]
+  \item \textbf{Structure de coûts maîtrisée :} les charges totales progressent
+    de manière contrôlée (de \DA{3\,927\,000} en N à \DA{5\,000\,000} en N+5),
+    principalement sous l'effet de la revalorisation salariale, reflet d'une
+    gestion RH responsable.
+ 
+  \item \textbf{Modèle de revenus hybride et résilient :} la combinaison
+    abonnements mensuels (communes/wilayas) + commissions + publicité offre
+    une diversification qui réduit la vulnérabilité aux aléas d'une seule
+    source.
+ 
+  \item \textbf{Rentabilité rapide dans le scénario optimiste :} le seuil de
+    rentabilité (\DA{6\,041\,538}) est franchi dès N+1 avec un CA optimiste
+    de \DA{7\,300\,000}, générant un bénéfice net de \DA{3\,179\,000} dès
+    la première année.
+ 
+  \item \textbf{Trésorerie saine et croissante :} la trésorerie cumulée atteint
+    \DA{97\,292\,000} en fin de N+5 (scénario optimiste), signalant une capacité
+    d'autofinancement suffisante pour l'extension nationale.
+ 
+  \item \textbf{Potentiel de croissance exceptionnel (scénario optimiste) :}
+    un CA de \DA{41\,700\,000} en N+5 place \textbf{Baligh+} comme l'une des
+    startups GovTech les plus prometteuses d'Algérie.
+\end{enumerate}
+ 
+\begin{successbox}[Conclusion Générale]
+  \textbf{Baligh+} est un projet entrepreneurial financièrement robuste,
+  porteur d'une valeur économique et institutionnelle significative pour la
+  modernisation des collectivités locales algériennes. La clé du succès réside
+  dans la rapidité d'adoption par les communes pilotes, la qualité des
+  partenariats institutionnels et la cohérence de l'exécution stratégique
+  sur les cinq premières années.
+\end{successbox}
+ 
+\vspace{1.5cm}
+\begin{center}
+  \rule{8cm}{0.4pt}\\[4pt]
+  {\small\itshape Fin du Plan Financier Prévisionnel — Baligh+}\\[2pt]
+  {\small Université Akli Mohand Oulhadj de Bouira — 2024/2025}
+\end{center}
+ 
 % ============================================================
 \chapter{Prototype Expérimental}
 
