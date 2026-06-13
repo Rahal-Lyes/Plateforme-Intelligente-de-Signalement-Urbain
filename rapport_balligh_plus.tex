@@ -95,23 +95,36 @@
   pdfauthor={RAHAL Lyes, BAHAR Naceredine, BOUKHRISSA Yazid},
 }
 
-% ── En-têtes/pieds de page ─────────────────────────────────
+
 \usepackage{fancyhdr}
+
 \pagestyle{fancy}
 \fancyhf{}
+
+% En-tête
 \fancyhead[L]{%
-  \small\textit{\textcolor{muted}{Baligh+}}%
-  \textcolor{accent}{\quad\textbar\quad}%
-  \small\textcolor{dark}{Signalement Urbain Intelligent}%
+  \small\textit{\textcolor{muted}{BALIGH+}}%
+  \textcolor{accent}{\quad|\quad}%
+  % \small\textcolor{dark}{Signalement Urbain Intelligent}%
 }
-\fancyhead[R]{\small\textit{\textcolor{muted}{\leftmark}}}
+
+\fancyhead[R]{%
+  \small\textit{\textcolor{muted}{\leftmark}}%
+}
+
+% Pied de page
 \fancyfoot[C]{%
   \textcolor{accent}{\rule{1.5cm}{0.3pt}}\quad
   \textcolor{primary}{\thepage}%
   \quad\textcolor{accent}{\rule{1.5cm}{0.3pt}}%
 }
-\renewcommand{\headrulewidth}{0pt}
+
+% Lignes décoratives
+\renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0pt}
+
+% \renewcommand{\headrulewidth}{0pt}
+% \renewcommand{\footrulewidth}{0pt}
 
 % Filet personnalisé sous l'en-tête
 \renewcommand{\headrule}{%
@@ -980,7 +993,7 @@ rapidité d'action et l'implication citoyenne.
 \end{table}
 \restoreleftmark
 % ============================================================
-\suppressleftmark
+% \suppressleftmark
 \chapter{Plan de Production et Organisation}
 
 \section{Le processus de production}
@@ -1289,9 +1302,7 @@ de trois volets complémentaires :
  
 \begin{notebox}
   Tous les montants sont exprimés en \textbf{Dinars Algériens (DA)}. La période
-  \textbf{N} correspond à l'année de lancement effectif de la plateforme.
-  Les données présentées s'appuient sur les documents financiers officiels du
-  projet (Bilan actif/passif, Tableau des flux de trésorerie, Compte de résultat).
+  \textbf{N} correspond à l'année de lancement effectif de la plateforme. 
 \end{notebox}
  
 % ============================================================
@@ -2072,21 +2083,24 @@ Les enseignements majeurs de cette étude sont les suivants :
     startups GovTech les plus prometteuses d'Algérie.
 \end{enumerate}
  
-\begin{successbox}[Conclusion Générale]
-  \textbf{Baligh+} est un projet entrepreneurial financièrement robuste,
-  porteur d'une valeur économique et institutionnelle significative pour la
-  modernisation des collectivités locales algériennes. La clé du succès réside
-  dans la rapidité d'adoption par les communes pilotes, la qualité des
-  partenariats institutionnels et la cohérence de l'exécution stratégique
-  sur les cinq premières années.
+% \begin{successbox}[Conclusion Générale]
+%   \textbf{Baligh+} est un projet entrepreneurial financièrement robuste,
+%   porteur d'une valeur économique et institutionnelle significative pour la
+%   modernisation des collectivités locales algériennes. La clé du succès réside
+%   dans la rapidité d'adoption par les communes pilotes, la qualité des
+%   partenariats institutionnels et la cohérence de l'exécution stratégique
+%   sur les cinq premières années.
+% \end{successbox}
+ \begin{successbox}[Conclusion Générale]
+  \textbf{Baligh+} présente un modèle économique viable et un fort potentiel
+  de développement dans le domaine de la gouvernance numérique locale. Les
+  prévisions financières démontrent sa capacité à atteindre la rentabilité et
+  à assurer une croissance durable. La réussite du projet dépendra toutefois
+  de l'adhésion rapide des collectivités territoriales, du renforcement des
+  partenariats institutionnels et de l'exécution rigoureuse de la stratégie de
+  déploiement définie pour les cinq premières années.
 \end{successbox}
- 
-\vspace{1.5cm}
-\begin{center}
-  \rule{8cm}{0.4pt}\\[4pt]
-  {\small\itshape Fin du Plan Financier Prévisionnel — Baligh+}\\[2pt]
-  {\small Université Akli Mohand Oulhadj de Bouira — 2024/2025}
-\end{center}
+
  
 % ============================================================
 \chapter{Prototype Expérimental}
