@@ -1,4 +1,6 @@
-
+% ============================================================
+%  Rapport Baligh+ — Réécriture de v2.pdf
+%  Style : rapport_balligh_plus.tex / page_garde.tex
 % ============================================================
 \documentclass[12pt,a4paper]{report}
 
@@ -9,6 +11,7 @@
 \usepackage{iflang}
 \usepackage{subcaption}
 \usepackage{graphicx}
+
 % ── Police Palatino (élégante & académique) ────────────────
 \usepackage{palatino}
 \usepackage{mathpazo}
@@ -18,19 +21,8 @@
 \usepackage{setspace}
 \onehalfspacing
 
-% ── Palette de couleurs (inspiration algérienne) ───────────
-%   Vert émeraude profond · Or antique · Bleu nuit · Gris doux
+% ── Palette de couleurs ────────────────────────────────────
 \usepackage{xcolor}
-% \definecolor{primary}{RGB}{25,25,112}        % Vert émeraude — couleur principale
-% \definecolor{accent}{RGB}{180, 130, 30}        % Or antique — accentuation
-% \definecolor{dark}{RGB}{25, 35, 55}            % Bleu nuit — texte sombre
-% \definecolor{muted}{RGB}{100, 115, 105}        % Gris sauge — discret
-% \definecolor{lightbg}{RGB}{0,0,139}      % Fond ivoire très doux
-% \definecolor{rulecol}{RGB}{0, 100, 70}         % Lignes décoratives
-% \definecolor{tabhead}{RGB}{0, 80, 55}          % En-tête de tableaux
-% \definecolor{tabalt}{RGB}{232, 242, 237}       % Lignes alternées
-\usepackage{xcolor}
-
 \definecolor{primary}{named}{NavyBlue}
 \definecolor{accent}{named}{Goldenrod}
 \definecolor{dark}{named}{MidnightBlue}
@@ -42,20 +34,17 @@
 
 % ── Titres personnalisés ───────────────────────────────────
 \usepackage{titlesec}
-% Chapitre : grand, sobre, avec filet coloré
 \titleformat{\chapter}[display]
   {\normalfont\Large\bfseries\color{primary}}
   {\textcolor{accent}{\chaptertitlename\ \thechapter}}{10pt}
   {\Huge\color{dark}}
   [\vspace{4pt}\textcolor{accent}{\titlerule[1.5pt]}]
 
-% Section
 \titleformat{\section}
   {\normalfont\large\bfseries\color{primary}}
   {\textcolor{accent}{\thesection}}{1em}{}
   [\vspace{-2pt}\textcolor{muted}{\titlerule[0.4pt]}]
 
-% Sous-section
 \titleformat{\subsection}
   {\normalfont\normalsize\bfseries\color{dark}}
   {\textcolor{accent}{\thesubsection}}{1em}{}
@@ -95,38 +84,25 @@
   pdfauthor={RAHAL Lyes, BAHAR Naceredine, BOUKHRISSA Yazid},
 }
 
-
+% ── En-têtes & pieds de page ───────────────────────────────
 \usepackage{fancyhdr}
-
 \pagestyle{fancy}
 \fancyhf{}
 
-% En-tête
 \fancyhead[L]{%
   \small\textit{\textcolor{muted}{BALIGH+}}%
   \textcolor{accent}{\quad|\quad}%
-  % \small\textcolor{dark}{Signalement Urbain Intelligent}%
 }
-
 \fancyhead[R]{%
   \small\textit{\textcolor{muted}{\leftmark}}%
 }
-
-% Pied de page
 \fancyfoot[C]{%
   \textcolor{accent}{\rule{1.5cm}{0.3pt}}\quad
   \textcolor{primary}{\thepage}%
   \quad\textcolor{accent}{\rule{1.5cm}{0.3pt}}%
 }
-
-% Lignes décoratives
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0pt}
-
-% \renewcommand{\headrulewidth}{0pt}
-% \renewcommand{\footrulewidth}{0pt}
-
-% Filet personnalisé sous l'en-tête
 \renewcommand{\headrule}{%
   {\color{primary}\hrule width\headwidth height 0.4pt}%
   \vspace{0.5pt}%
@@ -134,13 +110,12 @@
 }
 
 % ── Divers ─────────────────────────────────────────────────
-% graphicx already loaded above
 \usepackage{float}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{wasysym}
-\usepackage{microtype}      % Meilleure typographie automatique
-\usepackage{parskip}        % Paragraphes espacés sans indentation
+\usepackage{microtype}
+\usepackage{parskip}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{6pt}
 
@@ -171,56 +146,82 @@
 \begin{document}
 
 % ── Page de garde ───────────────────────────────────────────
-% \begin{titlepage}
+\begin{titlepage}
 
-%   \centering
-%   \vspace*{1cm}
+  \noindent
+  \begin{minipage}[c]{0.15\linewidth}
+    \includegraphics[width=40pt]{./images/logo.png}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[c]{0.15\linewidth}
+    \raggedleft
+    \includegraphics[width=40pt]{./images/logo.png}
+  \end{minipage}
 
-%   {\large\textbf{République Algérienne Démocratique et Populaire}}\\[0.4cm]
-%   {\normalsize Ministère de l'Enseignement Supérieur et de la Recherche Scientifique}\\[0.8cm]
+  \vspace{0.4cm}
 
-%   \rule{\linewidth}{1.5pt}\\[0.3cm]
-%   {\Large\textbf{\textcolor{primary}{Université Akli Mohand Oulhadj de Bouira}}}\\[0.2cm]
-%   {\normalsize Faculté des Sciences et des Sciences Appliquées}\\
-%   {\normalsize Département d'Informatique}\\[0.3cm]
-%   \rule{\linewidth}{1.5pt}\\[1.2cm]
+  \begin{center}
+    {\bfseries
+      République Algérienne Démocratique et Populaire \\[0.2cm]
+      Ministère de l'Enseignement Supérieur et de la Recherche Scientifique
+    }
 
-%   {\large\textbf{Mémoire de Master}}\\[0.2cm]
-%   {\normalsize en Informatique}\\[0.3cm]
-%   {\normalsize\textit{Spécialité : \textbf{Ingénierie des systèmes d'information et du logiciel}}}\\[1.5cm]
+    \vspace{0.4cm}
+    \rule{\linewidth}{1.5pt}\\[0.3cm]
+    {\bfseries\large\textcolor{dark}{Université Akli Mohand Oulhadj de Bouira}} \\[0.2cm]
+    {\bfseries Faculté des Sciences et des Sciences exactes} \\
+    {\bfseries Département d'Informatique}\\[0.3cm]
+    \rule{\linewidth}{1.5pt}
 
-%   {\LARGE\textbf{\textcolor{primary}{Plateforme Intelligente de Signalement Urbain}}}\\[0.6cm]
-%   {\large\textit{``\textbf{Balligh+ — Cas des Communes Algériennes}''}}\\[2cm]
+    \vspace{0.8cm}
 
-%   \begin{tabular}{p{0.45\linewidth}p{0.45\linewidth}}
-%     \textbf{Encadré par}       & \textbf{Réalisé par}   \\
-%     \quad Mr DJOUABRI Abdrazak & \quad RAHAL Lyes       \\
-%                                & \quad BAHAR Naceredine \\
-%                                & \quad BOUKHRISSA Yazid \\
-%   \end{tabular}
+    {\large\bfseries Mémoire de Master} \\[0.2cm]
+    {\normalsize\bfseries en Informatique} \\[0.3cm]
+    {\normalsize\emph{%
+      \textbf{Spécialité :}
+      Ingénierie des Systèmes d'Information et du Logiciel%
+    }}
 
-%   \vfill
-%   {\large\textbf{2025/2026}}
-% \end{titlepage}
-\input{./page_garde.tex}
-% ── Dédicace ────────────────────────────────────────────────
+    \vspace{1cm}
 
+    {\LARGE\bfseries\textcolor{dark}{Plateforme Intelligente de Signalement Urbain}}\\[0.6cm]
+    {\large\textit{``\textbf{BALIGH+} Cas d'étude : commune de Bouira''}}
+
+    \vspace{1.2cm}
+
+    \includegraphics[width=90pt]{./images/baligh_logo.png}
+
+  \end{center}
+
+  \begin{tabular}{p{0.45\linewidth} p{0.45\linewidth}}
+    \textbf{Encadré par}       & \textbf{Réalisé par}   \\[6pt]
+    \quad Mr DJOUABRI Abdrazak & \quad RAHAL Lyes       \\
+                               & \quad BAHAR Naceredine \\
+                               & \quad BOUKHRISSA Yazid \\
+  \end{tabular}
+
+  \vfill
+
+  \begin{center}
+    {\large\bfseries 2025/2026}
+  \end{center}
+
+\end{titlepage}
+
+% ── Dédicace — RAHAL Lyes ───────────────────────────────────
 \cleardoublepage
 \thispagestyle{empty}
-
 \vspace*{4cm}
 
 \begin{center}
   {\large\textit{\textcolor{primary}{\bfseries Dédicace}}}\\[0.8cm]
-
   \rule{0.4\linewidth}{0.4pt}\\[1cm]
 
   {\normalsize\itshape
-
   Je dédie ce travail à mes chers parents, qui ont toujours été une source
   d'amour, de soutien et de motivation. Aucun mot ne saurait exprimer ma
-  gratitude pour tous les sacrifices qu'ils ont consentis afin de me permettre de
-  poursuivre mes études et de réaliser mes ambitions.
+  gratitude pour tous les sacrifices qu'ils ont consentis afin de me permettre
+  de poursuivre mes études et de réaliser mes ambitions.
 
   À ma famille, pour son affection, sa confiance et ses encouragements tout au
   long de mon parcours.
@@ -230,35 +231,26 @@
   Enfin, à tous ceux qui croient en la valeur du savoir et de l'innovation.
 
   \vspace{1cm}
-
   \textit{« Le succès est la somme de petits efforts répétés jour après jour. »}
 
   }\\[1cm]
 
   \rule{0.4\linewidth}{0.4pt}\\[0.5cm]
-
   {\bfseries RAHAL Lyes}
-
 \end{center}
 
 \newpage
 
-% =========================
-% Dédicace de BAHAR Naceredine
-% =========================
-
+% ── Dédicace — BAHAR Naceredine ─────────────────────────────
 \cleardoublepage
 \thispagestyle{empty}
-
 \vspace*{4cm}
 
 \begin{center}
   {\large\textit{\textcolor{primary}{\bfseries Dédicace}}}\\[0.8cm]
-
   \rule{0.4\linewidth}{0.4pt}\\[1cm]
 
   {\normalsize\itshape
-
   Je dédie ce travail à mes parents, dont le soutien, la patience et les
   encouragements m'ont accompagné durant toutes ces années d'études.
 
@@ -271,35 +263,26 @@
   À tous ceux qui m'ont aidé à avancer et à persévérer face aux difficultés.
 
   \vspace{1cm}
-
   \textit{« La persévérance transforme les rêves en réalité. »}
 
   }\\[1cm]
 
   \rule{0.4\linewidth}{0.4pt}\\[0.5cm]
-
   {\bfseries BAHAR Naceredine}
-
 \end{center}
 
 \newpage
 
-% =========================
-% Dédicace de BOUKHRISSA Yazid
-% =========================
-
+% ── Dédicace — BOUKHRISSA Yazid ─────────────────────────────
 \cleardoublepage
 \thispagestyle{empty}
-
 \vspace*{4cm}
 
 \begin{center}
   {\large\textit{\textcolor{primary}{\bfseries Dédicace}}}\\[0.8cm]
-
   \rule{0.4\linewidth}{0.4pt}\\[1cm]
 
   {\normalsize\itshape
-
   Je dédie ce travail à mes très chers parents, pour leur amour, leurs sacrifices
   et leur soutien inconditionnel qui ont toujours éclairé mon chemin.
 
@@ -312,15 +295,12 @@
   professionnel.
 
   \vspace{1cm}
-
   \textit{« L'avenir appartient à ceux qui croient à la beauté de leurs rêves. »}
 
   }\\[1cm]
 
   \rule{0.4\linewidth}{0.4pt}\\[0.5cm]
-
   {\bfseries BOUKHRISSA Yazid}
-
 \end{center}
 
 \newpage
@@ -363,30 +343,41 @@ pas été possible.
 \end{flushright}
 \newpage
 
+% ── Liste des abréviations ──────────────────────────────────
+\cleardoublepage
+\chapter*{Liste des Abréviations}
+\addcontentsline{toc}{chapter}{Liste des Abréviations}
+
 \begin{tabularx}{\linewidth}{>{\bfseries\color{primary}}lX}
   \toprule
   \rowcolor{primary}
-  \textcolor{white}{\textbf{Abréviation}}
-      &
-  \textcolor{white}{\textbf{Signification}}
-  \\
+  \textcolor{white}{\textbf{Abréviation}} &
+  \textcolor{white}{\textbf{Signification}} \\
   \midrule
 
-  API & Application Programming Interface (Interface de Programmation
-  Applicative)                                                        \\ BD & Base de Données \\ CDD & Cahier des Charges et Définition
-  des besoins                                                         \\ CSS & Cascading Style Sheets (Feuilles de Style en Cascade) \\
-  GPS & Global Positioning System (Système de Positionnement Global)  \\ HTML &
-  HyperText Markup Language                                           \\ HTTP & HyperText Transfer Protocol \\ JS &
-  JavaScript                                                          \\ MVC & Modèle-Vue-Contrôleur \\ MySQL & My Structured Query
-  Language                                                            \\ OSM & OpenStreetMap \\ PHP & PHP : Hypertext Preprocessor \\ RTL &
-  Right-To-Left (Écriture de droite à gauche)                         \\ SI & Système d'Information \\
-  SQL & Structured Query Language (Langage de Requête Structurée)     \\ UI & User
-  Interface (Interface Utilisateur)                                   \\ URL & Uniform Resource Locator
-  (Localisateur Uniforme de Ressource)                                \\ UX & User Experience (Expérience
-  Utilisateur)                                                        \\ WEBP & Web Picture Format \\
+  API  & Application Programming Interface (Interface de Programmation Applicative) \\
+  BD   & Base de Données \\
+  CDD  & Cahier des Charges et Définition des besoins \\
+  CSS  & Cascading Style Sheets (Feuilles de Style en Cascade) \\
+  GPS  & Global Positioning System (Système de Positionnement Global) \\
+  HTML & HyperText Markup Language \\
+  HTTP & HyperText Transfer Protocol \\
+  JS   & JavaScript \\
+  MVC  & Modèle-Vue-Contrôleur \\
+  MySQL & My Structured Query Language \\
+  OSM  & OpenStreetMap \\
+  PHP  & PHP : Hypertext Preprocessor \\
+  RTL  & Right-To-Left (Écriture de droite à gauche) \\
+  SI   & Système d'Information \\
+  SQL  & Structured Query Language (Langage de Requête Structurée) \\
+  UI   & User Interface (Interface Utilisateur) \\
+  URL  & Uniform Resource Locator (Localisateur Uniforme de Ressource) \\
+  UX   & User Experience (Expérience Utilisateur) \\
+  WEBP & Web Picture Format \\
 
   \bottomrule
 \end{tabularx}
+
 % ── Liste des tableaux ──────────────────────────────────────
 \listoftables
 \addcontentsline{toc}{chapter}{Liste des Tableaux}
@@ -397,21 +388,14 @@ pas été possible.
 \addcontentsline{toc}{chapter}{Liste des Figures}
 \newpage
 
-% ── Préface (Français) ──────────────────────────────────────
+% ── Préface ─────────────────────────────────────────────────
 \cleardoublepage
 \chapter*{Préface}
 \addcontentsline{toc}{chapter}{Préface}
 
-% ── Préface (Arabe) ─────────────────────────────────────────
 \begin{flushright}
   {\small\textcolor{muted}{\textit{النسخة العربية}}}
 \end{flushright}
-
-\vspace{0.4cm}
-
-% \begin{flushright}
-% {\large\textbf{\textcolor{primary}{\Arab{mqd_map}}}}
-% \end{flushright}
 
 \vspace{0.4cm}
 
@@ -432,6 +416,7 @@ pas été possible.
 \vspace{0.8cm}
 
 \newpage
+
 {\small\textcolor{muted}{\textit{Version française}}}
 \vspace{0.4cm}
 
@@ -464,11 +449,10 @@ place du numérique dans la gouvernance locale algérienne, et incitera d'autres
   \textit{Les auteurs}
 \end{flushright}
 
-\vspace{1cm}
+\vspace{0.6cm}
 \textcolor{accent}{\rule{\linewidth}{0.6pt}}
-\vspace{0.8cm}
+\vspace{0.6cm}
 
-% ── Préface (English) ───────────────────────────────────────
 {\small\textcolor{muted}{\textit{English version}}}
 \vspace{0.4cm}
 
@@ -478,8 +462,8 @@ digital transition that is gradually reshaping every sector of public life. Yet
 one essential link is too often overlooked: the direct relationship between the
 citizen and their local municipality.
 
-It is in this context that we designed \textbf {BALIGH+} — from the Arabic word
-\textit{\Arab{bl-g}} meaning \textit{"to inform, to transmit"} — a digital
+It is in this context that we designed \textbf{BALIGH+} — from the Arabic word
+\textit{\Arab{bl-g}} meaning \textit{``to inform, to transmit''} — a digital
 platform dedicated to participatory reporting of urban dysfunctions. Potholes,
 street-lighting failures, water leaks, illegal waste dumps: everyday problems
 that, for lack of a proper channel, remain unaddressed for far too long.
@@ -499,14 +483,6 @@ other students to engage in projects with concrete territorial impact.
   \textit{The authors}
 \end{flushright}
 
-\vspace{1cm}
-\textcolor{accent}{\rule{\linewidth}{0.6pt}}
-\vspace{0.8cm}
-
-\vspace{1cm}
-\begin{flushright}
-
-\end{flushright}
 \newpage
 
 % ── Table des matières ──────────────────────────────────────
@@ -525,7 +501,7 @@ pour signaler les dysfonctionnements urbains — nids-de-poule, pannes
 d'éclairage, fuites d'eau, dépôts sauvages de déchets — et pour suivre en temps
 réel le traitement de leurs signalements.
 
-L'idée a ainsi évolué vers la création de la plateforme \textbf {Baligh+}, une
+L'idée a ainsi évolué vers la création de la plateforme \textbf{Baligh+}, une
 application web monopage multilingue (arabe\,/\,français\,/\,anglais)
 permettant à tout citoyen de soumettre un signalement géolocalisé, illustré de
 photos, en quelques clics. La plateforme met en relation les citoyens et
@@ -535,7 +511,7 @@ transparence via un tableau de bord analytique accessible à l'administrateur.
 Concrètement, le projet consiste à concevoir et développer une application web
 complète en PHP/HTML/CSS/JavaScript, sans framework lourd, utilisant une base
 de données MySQL pour le stockage et la gestion des données, intégrant une
-cartographie interactive (OpenStreetMap,/,Leaflet.js) ainsi qu'un système de
+cartographie interactive (OpenStreetMap / Leaflet.js) ainsi qu'un système de
 notifications en temps quasi-réel. Le développement s'est déroulé en plusieurs
 étapes : conception UX/UI, développement du back-end PHP, conception de la base
 de données MySQL, intégration de la carte, tests fonctionnels et déploiement
@@ -549,7 +525,6 @@ Le projet s'articule autour des valeurs fondamentales suivantes :
   \item Favoriser la participation citoyenne active dans la gestion urbaine locale.
   \item Offrir une interface multilingue (arabe\,/\,français\,/\,anglais\,/\,tamazight)
         accessible depuis tout appareil connecté.
-
   \item Réduire le délai de réponse des services communaux grâce à une transmission
         numérique instantanée.
   \item Valoriser la géolocalisation et le média visuel (photos) pour une meilleure
@@ -559,8 +534,8 @@ Le projet s'articule autour des valeurs fondamentales suivantes :
         visibilité des actions.
 \end{itemize}
 
-
 \section{Équipe de travail}
+
 \begin{table}[H]
   \centering
   \caption{Composition de l'équipe projet}
@@ -568,38 +543,40 @@ Le projet s'articule autour des valeurs fondamentales suivantes :
   \begin{tabularx}{\linewidth}{>{\bfseries}lXX}
     \toprule
     \rowcolor{primary}
-    \thdcell{Membre} & \thdcell{Formation / Rôle}          & \thdcell{Responsabilités}                 \\
+    \thdcell{Membre} & \thdcell{Formation / Rôle} & \thdcell{Responsabilités} \\
     \midrule
 
-    DJOUABRI Abrezak & Lead Technique / Chef de projet     & Supervision technique du
-    projet, orientation architecturale, validation des choix technologiques et
-    encadrement de l'équipe de développement                                                           \\
+    DJOUABRI Abrezak & Lead Technique / Chef de projet &
+    Supervision technique du projet, orientation architecturale, validation des
+    choix technologiques et encadrement de l'équipe de développement \\
 
     \rowcolor{lightgray}
 
-    RAHAL Lyes       & Développeur Back-end                & Développement du back-end PHP, gestion de
-    la base de données MySQL, création des API et gestion des fonctionnalités
-    serveur                                                                                            \\
+    RAHAL Lyes & Développeur Back-end &
+    Développement du back-end PHP, gestion de la base de données MySQL,
+    création des API et gestion des fonctionnalités serveur \\
 
-    BOUKHRISSA Yazid & Support technique et tests          & Tests fonctionnels, validation
-    des fonctionnalités, assistance technique et suivi du déploiement                                  \\
+    BOUKHRISSA Yazid & Support technique et tests &
+    Tests fonctionnels, validation des fonctionnalités, assistance technique
+    et suivi du déploiement \\
 
     \rowcolor{lightgray}
 
-    BAHAR Naceredine & Développeur Front-end / UI Designer & Conception de
-    l'interface utilisateur, intégration HTML/CSS/JavaScript, amélioration de
-    l'expérience utilisateur (UX/UI)                                                                   \\
+    BAHAR Naceredine & Développeur Front-end / UI Designer &
+    Conception de l'interface utilisateur, intégration HTML/CSS/JavaScript,
+    amélioration de l'expérience utilisateur (UX/UI) \\
 
     \bottomrule
   \end{tabularx}
 \end{table}
+
 \section{Les objectifs du projet}
 
 \subsection{Objectifs à court terme (0 à 1 an)}
 \begin{itemize}
   \item Lancer une version fonctionnelle dans la commune de Bouira.
-  \item Recueillir les retours des communautés concernées afin d'adapter la plateforme
-        à leurs besoins réels et améliorer l'expérience utilisateur.
+  \item Recueillir les retours des communautés concernées afin d'adapter la
+        plateforme à leurs besoins réels et améliorer l'expérience utilisateur.
 \end{itemize}
 
 \subsection{Objectifs à moyen terme (1 à 3 ans)}
@@ -616,50 +593,11 @@ Le projet s'articule autour des valeurs fondamentales suivantes :
   \item Positionner Baligh+ comme référence nationale du signalement urbain
         participatif.
   \item Étendre le modèle à d'autres pays du Maghreb et d'Afrique francophone.
-
-  \item Atteindre une adoption massive de la plateforme à l'échelle nationale, avec une
-        base d'utilisateurs actifs en constante progression.
+  \item Atteindre une adoption massive de la plateforme à l'échelle nationale,
+        avec une base d'utilisateurs actifs en constante progression.
 \end{itemize}
 
 \section{Calendrier de réalisation du projet}
-
-
-% \begin{table}[H]
-%   \centering
-%   \caption{Calendrier de réalisation — 4 mois}
-%   \renewcommand{\arraystretch}{1.3}
-%   \begin{tabularx}{\linewidth}{cXcccc}
-%     \toprule
-%     \rowcolor{primary}
-%     \thdcell{N°} & \thdcell{Travaux}                                                       & \thdcell{M1} & \thdcell{M2} & \thdcell{M3} & \thdcell{M4} \\
-%     \midrule
-%     1            & Analyse des besoins et étude de faisabilité
-%                  & \checkmark                                                              &              &              &                             \\
-
-%     \rowcolor{lightgray}
-%     2            & Prototypage rapide et Architecture globales
-%                  & \checkmark                                                              & \checkmark   &              &                             \\
-
-%     3            & Conception de la base de données MySQL et architecture de l'application
-%                  &                                                                         & \checkmark   &              &                             \\
-
-%     \rowcolor{lightgray}
-%     4            & Développement front-end (HTML/CSS/JS)
-%                  &                                                                         & \checkmark   & \checkmark   &                             \\
-
-%     5            & Intégration Leaflet.js, géolocalisation GPS
-%                  &                                                                         &              & \checkmark   &                             \\
-
-%     \rowcolor{lightgray}
-%     6            & Système de notifications et tableau de bord administrateur
-%                  &                                                                         &              & \checkmark   & \checkmark                  \\
-
-%     7            & Tests fonctionnels et déploiement pilote
-%                  &                                                                         &              &              & \checkmark                  \\
-
-%     \bottomrule
-%   \end{tabularx}
-% \end{table}
 
 \begin{table}[H]
   \centering
@@ -668,39 +606,43 @@ Le projet s'articule autour des valeurs fondamentales suivantes :
   \begin{tabularx}{\linewidth}{cXccccccccc}
     \toprule
     \rowcolor{primary}
-    \thdcell{N°} & \thdcell{Travaux}                                                       & \thdcell{M1} & \thdcell{M2} & \thdcell{M3} & \thdcell{M4} & \thdcell{M5} & \thdcell{M6} & \thdcell{M7} & \thdcell{M8} & \thdcell{M9} \\
+    \thdcell{N°} & \thdcell{Travaux} &
+    \thdcell{M1} & \thdcell{M2} & \thdcell{M3} & \thdcell{M4} &
+    \thdcell{M5} & \thdcell{M6} & \thdcell{M7} & \thdcell{M8} & \thdcell{M9} \\
     \midrule
-    1            & Analyse des besoins et étude de faisabilité
-                 & \checkmark   & \checkmark   & \checkmark   &              &              &              &              &              &              \\
+
+    1 & Analyse des besoins et étude de faisabilité
+      & \checkmark & \checkmark & \checkmark & & & & & & \\
 
     \rowcolor{lightgray}
-    2            & Prototypage rapide et architecture globale
-                 &              &              & \checkmark   & \checkmark   &              &              &              &              &              \\
+    2 & Prototypage rapide et architecture globale
+      & & & \checkmark & \checkmark & & & & & \\
 
-    3            & Conception de la base de données MySQL et architecture de l'application
-                 &              &              &              & \checkmark   & \checkmark   &              &              &              &              \\
-
-    \rowcolor{lightgray}
-    4            & Développement back-end (PHP, API REST, MySQL)
-                 &              &              &              &              & \checkmark   & \checkmark   &              &              &              \\
-
-    5            & Développement front-end (HTML/CSS/JS)
-                 &              &              &              &              & \checkmark   & \checkmark   & \checkmark   &              &              \\
+    3 & Conception de la base de données MySQL et architecture de l'application
+      & & & & \checkmark & \checkmark & & & & \\
 
     \rowcolor{lightgray}
-    6            & Intégration Leaflet.js, géolocalisation GPS
-                 &              &              &              &              &              &              & \checkmark   &              &              \\
+    4 & Développement back-end (PHP, API REST, MySQL)
+      & & & & & \checkmark & \checkmark & & & \\
 
-    7            & Système de notifications et tableau de bord administrateur
-                 &              &              &              &              &              &              & \checkmark   & \checkmark   &              \\
+    5 & Développement front-end (HTML/CSS/JS)
+      & & & & & \checkmark & \checkmark & \checkmark & & \\
 
     \rowcolor{lightgray}
-    8            & Tests fonctionnels et déploiement pilote
-                 &              &              &              &              &              &              &              & \checkmark   & \checkmark   \\
+    6 & Intégration Leaflet.js, géolocalisation GPS
+      & & & & & & & \checkmark & & \\
+
+    7 & Système de notifications et tableau de bord administrateur
+      & & & & & & & \checkmark & \checkmark & \\
+
+    \rowcolor{lightgray}
+    8 & Tests fonctionnels et déploiement pilote
+      & & & & & & & & \checkmark & \checkmark \\
 
     \bottomrule
   \end{tabularx}
 \end{table}
+
 % ============================================================
 \chapter{Aspects Innovants}
 
@@ -717,16 +659,16 @@ l'optimisation et l'adaptation de solutions numériques existantes au contexte
 local algérien :
 
 \begin{itemize}
-  \item La numérisation des canaux de signalement communaux (remplacement du guichet
-        physique).
+  \item La numérisation des canaux de signalement communaux (remplacement du
+        guichet physique).
   \item L'intégration d'une carte interactive affichant tous les signalements
         géolocalisés.
-  \item Un espace communautaire de vote permettant aux citoyens de prioriser les
-        problèmes.
-  \item Une interface trilingue (arabe\,/\,français\,/\,anglais) avec support RTL
-        natif.
-  \item Un système de priorité (\textbf{Urgent\,/\,Normal\,/\,Faible}) et d'historique
-        de statut.
+  \item Un espace communautaire de vote permettant aux citoyens de prioriser
+        les problèmes.
+  \item Une interface trilingue (arabe\,/\,français\,/\,anglais) avec support
+        RTL natif.
+  \item Un système de priorité (\textbf{Urgent\,/\,Normal\,/\,Faible}) et
+        d'historique de statut.
 \end{itemize}
 
 \subsection{Innovation technologique}
@@ -738,33 +680,32 @@ local algérien :
   \begin{tabularx}{\linewidth}{lXX}
     \toprule
     \rowcolor{primary}
-    \thdcell{Couche} & \thdcell{Technologie}                                & \thdcell{Justification}                                  \\
+    \thdcell{Couche} & \thdcell{Technologie} & \thdcell{Justification} \\
     \midrule
 
-    Front-end        & HTML5\,/\,CSS3\,/\,JavaScript                        & Création d'une interface
-    utilisateur dynamique, responsive et compatible avec tous les navigateurs
-    modernes                                                                                                                           \\
+    Front-end & HTML5\,/\,CSS3\,/\,JavaScript &
+    Création d'une interface utilisateur dynamique, responsive et compatible
+    avec tous les navigateurs modernes \\
 
     \rowcolor{lightgray}
+    Back-end & PHP 8.x &
+    Gestion de la logique métier, traitement des requêtes et communication
+    avec la base de données \\
 
-    Back-end         & PHP 8.x                                              & Gestion de la logique métier, traitement des requêtes et
-    communication avec la base de données                                                                                              \\
-
-    Base de données  & MySQL                                                & Stockage structuré et sécurisé des données des
-    utilisateurs et des signalements                                                                                                   \\
-
-    \rowcolor{lightgray}
-
-    Cartographie     & Leaflet.js + OpenStreetMap                           & Affichage interactif des cartes et
-    gestion des signalements géolocalisés                                                                                              \\
-
-    Géolocalisation  & API Geolocation (GPS navigateur)                     & Localisation automatique
-    des utilisateurs et des incidents signalés                                                                                         \\
+    Base de données & MySQL &
+    Stockage structuré et sécurisé des données des utilisateurs et des
+    signalements \\
 
     \rowcolor{lightgray}
+    Cartographie & Leaflet.js + OpenStreetMap &
+    Affichage interactif des cartes et gestion des signalements géolocalisés \\
 
-    Sécurité         & Sessions PHP, validation des données, protection XSS & Sécurisation
-    des comptes utilisateurs et des échanges de données                                                                                \\
+    Géolocalisation & API Geolocation (GPS navigateur) &
+    Localisation automatique des utilisateurs et des incidents signalés \\
+
+    \rowcolor{lightgray}
+    Sécurité & Sessions PHP, validation des données, protection XSS &
+    Sécurisation des comptes utilisateurs et des échanges de données \\
 
     \bottomrule
   \end{tabularx}
@@ -776,12 +717,12 @@ Baligh+ constitue une innovation de marché dans un secteur encore largement
 non numérisé en Algérie :
 
 \begin{itemize}
-  \item Le ciblage d'un marché local peu exploité : 1\,541 communes algériennes sans
-        outil de signalement digital.
-  \item La mise en relation directe citoyens $\leftrightarrow$ administration via une
-        interface unique.
-  \item Un modèle économique hybride : freemium communal + abonnement municipal +
-        publicité institutionnelle.
+  \item Le ciblage d'un marché local peu exploité : 1\,541 communes algériennes
+        sans outil de signalement digital.
+  \item La mise en relation directe citoyens $\leftrightarrow$ administration
+        via une interface unique.
+  \item Un modèle économique hybride : freemium communal + abonnement municipal
+        + publicité institutionnelle.
 \end{itemize}
 
 \section{Les domaines d'innovation}
@@ -798,32 +739,33 @@ de statut et archivage — remplaçant un processus papier long et opaque.
   \item Tableau de bord analytique (graphiques mensuels et par catégorie).
   \item Export CSV des signalements pour traitement externe.
   \item Historique complet des changements de statut par signalement.
-  \item Numérotation de référence unique : \texttt{ANNÉE/CODE\_WILAYA/SÉQUENCE}.
+  \item Numérotation de référence unique : ANNÉE/CODE\_WILAYA/SÉQUENCE.
 \end{itemize}
 
 \subsection{Innovation de clientèle}
 Baligh+ cible de nouveaux segments :
 \begin{itemize}
-  \item Citoyens ordinaires souhaitant signaler un problème sans se déplacer en mairie.
-  \item Administrations municipales cherchant à moderniser la gestion des réclamations.
-  \item Chercheurs et urbanistes nécessitant des données ouvertes sur l'état du domaine
-        public.
+  \item Citoyens ordinaires souhaitant signaler un problème sans se déplacer
+        en mairie.
+  \item Administrations municipales cherchant à moderniser la gestion des
+        réclamations.
+  \item Chercheurs et urbanistes nécessitant des données ouvertes sur l'état
+        du domaine public.
 \end{itemize}
 
 \subsection{Innovation de modèle économique}
 Le modèle d'affaires repose sur un système hybride :
 \begin{itemize}
-  \item Commissions sur les abonnements municipaux pour accès au tableau de bord
-        avancé.
+  \item Commissions sur les abonnements municipaux pour accès au tableau de
+        bord avancé.
   \item Abonnements premium pour les communes souhaitant une API dédiée.
-  \item Publicité institutionnelle ciblée (Direction des travaux publics, SEAAL, etc.).
-  \item Partenariats avec les incubateurs universitaires et les programmes de Smart
-        City.
+  \item Publicité institutionnelle ciblée (Direction des travaux publics,
+        SEAAL, etc.).
+  \item Partenariats avec les incubateurs universitaires et les programmes de
+        Smart City.
 \end{itemize}
 
 % ============================================================
-\suppressleftmark
-
 \chapter{Analyse Stratégique du Marché}
 
 \section{Présentation du marché}
@@ -839,20 +781,20 @@ concret, immédiatement déployable, sans investissement lourd en infrastructure
 \begin{itemize}
   \item Citoyens algériens connectés (plus de 32 millions d'internautes en 2024).
   \item 1\,541 communes algériennes réparties sur 58 wilayas.
-  \item Directions de wilaya chargées des travaux publics, de l'hydraulique et de
-        l'urbanisme.
+  \item Directions de wilaya chargées des travaux publics, de l'hydraulique et
+        de l'urbanisme.
   \item Associations de quartier et mouvements civiques locaux.
   \item Universités et centres de recherche en urbanisme et data science.
 \end{itemize}
 
 \subsection{Le marché cible (segment)}
 \begin{itemize}
-  \item Citoyens algériens urbains (18–45 ans), actifs sur les réseaux sociaux, à
-        l'aise avec le smartphone.
+  \item Citoyens algériens urbains (18--45 ans), actifs sur les réseaux sociaux,
+        à l'aise avec le smartphone.
   \item Agents communaux et responsables techniques cherchant à moderniser le
         traitement des réclamations.
-  \item Collectivités locales participant aux programmes de digitalisation des services
-        publics.
+  \item Collectivités locales participant aux programmes de digitalisation des
+        services publics.
   \item ONG et associations engagées dans l'amélioration du cadre de vie.
 \end{itemize}
 
@@ -865,15 +807,31 @@ concret, immédiatement déployable, sans investissement lourd en infrastructure
   \begin{tabularx}{\linewidth}{lX}
     \toprule
     \rowcolor{primary}
-    \thdcell{Partenaire potentiel}       & \thdcell{Apport et opportunité}                                                                      \\
+    \thdcell{Partenaire potentiel} & \thdcell{Apport et opportunité} \\
     \midrule
-    APC\,/\,Mairies                      & Validation institutionnelle, déploiement officiel, intégration aux systèmes de réclamation existants \\
+
+    APC / Mairies &
+    Validation institutionnelle, déploiement officiel, intégration aux
+    systèmes de réclamation existants \\
+
     \rowcolor{lightgray}
-    Directions des Travaux Publics (DTP) & Données terrain pour planification des interventions ; réduction des délais de signalement           \\
-    SEAAL\,/\,ADE\,/\,Sonelgaz           & Signalements spécifiques (fuites, pannes) routés directement vers les services techniques            \\
+    Directions des Travaux Publics (DTP) &
+    Données terrain pour planification des interventions ; réduction des
+    délais de signalement \\
+
+    SEAAL / ADE / Sonelgaz &
+    Signalements spécifiques (fuites, pannes) routés directement vers les
+    services techniques \\
+
     \rowcolor{lightgray}
-    Universités et incubateurs           & Hébergement, encadrement académique, accès aux programmes de financement startup                     \\
-    Collectivités Smart City             & Intégration dans les projets de ville intelligente (Alger, Oran, Constantine)                        \\
+    Universités et incubateurs &
+    Hébergement, encadrement académique, accès aux programmes de financement
+    startup \\
+
+    Collectivités Smart City &
+    Intégration dans les projets de ville intelligente (Alger, Oran,
+    Constantine) \\
+
     \bottomrule
   \end{tabularx}
 \end{table}
@@ -882,17 +840,20 @@ concret, immédiatement déployable, sans investissement lourd en infrastructure
 
 \subsection{Concurrents directs}
 \begin{itemize}
-  \item \textbf{Fix My Street Algeria} (projet pilote non déployé à grande échelle) : signalement urbain, peu de communes couvertes.
-  \item \textbf{Watani App} : application citoyenne généraliste, faible taux d'adoption et interface peu intuitive.
-  \item \textbf{Groupes Facebook locaux} : informels, très influents, sans traçabilité ni suivi officiel.
+  \item Fix My Street Algeria (projet pilote non déployé à grande échelle) :
+        signalement urbain, peu de communes couvertes.
+  \item Watani App : application citoyenne généraliste, faible taux d'adoption
+        et interface peu intuitive.
+  \item Groupes Facebook locaux : informels, très influents, sans traçabilité
+        ni suivi officiel.
 \end{itemize}
 
 \subsection{Concurrents indirects}
 \begin{itemize}
-  \item Portails e-gov de l'ARPCE : services administratifs numériques sans module de
-        signalement terrain.
-  \item Applications de mairies étrangères (ex. Paris.fr, Fixmystreet UK) : non
-        localisées, inaccessibles.
+  \item Portails e-gov de l'ARPCE : services administratifs numériques sans
+        module de signalement terrain.
+  \item Applications de mairies étrangères (ex. Paris.fr, Fixmystreet UK) :
+        non localisées, inaccessibles.
 \end{itemize}
 
 \subsection{Points forts et faiblesses des concurrents}
@@ -903,15 +864,28 @@ concret, immédiatement déployable, sans investissement lourd en infrastructure
   \renewcommand{\arraystretch}{1.4}
   \begin{tabularx}{\linewidth}{lXX}
     \toprule
-    \rowcolor{lightgray}
-    \thdcell{Concurrent}  & \thdcell{Points forts}                                & \thdcell{Points faibles}                                      \\
+    \rowcolor{primary}
+    \thdcell{Concurrent} & \thdcell{Points forts} & \thdcell{Points faibles} \\
     \midrule
-    Groupes Facebook      & Notoriété locale, facilité d'accès, communauté active & Aucune traçabilité, pas de suivi officiel, contenu non modéré \\
+
+    Groupes Facebook &
+    Notoriété locale, facilité d'accès, communauté active &
+    Aucune traçabilité, pas de suivi officiel, contenu non modéré \\
+
     \rowcolor{lightgray}
-    Watani App            & Interface mobile, visibilité nationale                & Fonctionnalités limitées, faible couverture géographique      \\
-    Fix My Street Algérie & Concept pertinent, open source                        & Déploiement incomplet, peu de communes actives                \\
+    Watani App &
+    Interface mobile, visibilité nationale &
+    Fonctionnalités limitées, faible couverture géographique \\
+
+    Fix My Street Algérie &
+    Concept pertinent, open source &
+    Déploiement incomplet, peu de communes actives \\
+
     \rowcolor{lightgray}
-    Portails e-gov        & Légitimité institutionnelle                           & Pas de module signalement terrain, très peu ergonomiques      \\
+    Portails e-gov &
+    Légitimité institutionnelle &
+    Pas de module signalement terrain, très peu ergonomiques \\
+
     \bottomrule
   \end{tabularx}
 \end{table}
@@ -921,11 +895,12 @@ concret, immédiatement déployable, sans investissement lourd en infrastructure
 \begin{table}[H]
   \centering
   \caption{Matrice SWOT — Baligh+}
-  \renewcommand{\arraystretch}{1.5}
-  \begin{tabularx}{\linewidth}{|X|X|}
-    \hline
-    \textbf{\textcolor{dark}{FORCES}}                               & \textbf{\textcolor{dark}{FAIBLESSES}} \\
-    \hline
+  \renewcommand{\arraystretch}{1.4}
+  \begin{tabularx}{\linewidth}{XX}
+    \toprule
+    \rowcolor{primary}
+    \thdcell{FORCES} & \thdcell{FAIBLESSES} \\
+    \midrule
     \begin{itemize}[leftmargin=*,topsep=2pt,itemsep=1pt]
       \item Plateforme trilingue (AR/FR/EN) avec support RTL
       \item Cartographie interactive (Leaflet + OSM)
@@ -934,33 +909,38 @@ concret, immédiatement déployable, sans investissement lourd en infrastructure
       \item Architecture légère sans dépendances lourdes
       \item Numérotation de référence unique par wilaya
       \item Vote communautaire pour priorisation
-    \end{itemize} &
+    \end{itemize}
+    &
     \begin{itemize}[leftmargin=*,topsep=2pt,itemsep=1pt]
-      \item Base de données MySQL nécessitant une optimisation pour une montée en charge
-            importante
+      \item Base de données MySQL nécessitant une optimisation pour une montée
+            en charge importante
       \item Absence d'application mobile native
       \item Dépendance à la connectivité Internet
       \item Faible notoriété de la plateforme lors du lancement
       \item Résistance possible des institutions face à la transformation numérique
-    \end{itemize}                       \\
-    \hline
-    \textbf{\textcolor{dark}{OPPORTUNITÉS}}                         & \textbf{\textcolor{dark}{MENACES}}    \\
-    \hline
+    \end{itemize}
+    \\
+    \midrule
+    \rowcolor{primary}
+    \thdcell{OPPORTUNITÉS} & \thdcell{MENACES} \\
+    \midrule
     \begin{itemize}[leftmargin=*,topsep=2pt,itemsep=1pt]
       \item Programme national e-Algeria et Smart City
       \item Croissance du taux de pénétration d'internet (70\,\%)
       \item Absence de solution nationale concurrente mature
       \item Partenariats universitaires et incubateurs
       \item Demande citoyenne forte pour plus de transparence
-    \end{itemize} &
+    \end{itemize}
+    &
     \begin{itemize}[leftmargin=*,topsep=2pt,itemsep=1pt]
       \item Instabilité réglementaire sur les données personnelles
       \item Concurrence de géants du civic-tech internationaux
       \item Faible infrastructure numérique dans les zones rurales
       \item Résistance des mairies à la digitalisation
       \item Risques de sécurité et abus de la plateforme
-    \end{itemize}                                          \\
-    \hline
+    \end{itemize}
+    \\
+    \bottomrule
   \end{tabularx}
 \end{table}
 
@@ -976,24 +956,38 @@ rapidité d'action et l'implication citoyenne.
 \begin{table}[H]
   \centering
   \caption{Mix marketing 4P}
-  \renewcommand{\arraystretch}{1.5}
+  \renewcommand{\arraystretch}{1.4}
   \begin{tabularx}{\linewidth}{lX}
     \toprule
-    \rowcolor{white}
-    \thdcell{Dimension}   & \thdcell{Détail}                                                                                                                                                        \\
+    \rowcolor{primary}
+    \thdcell{Dimension} & \thdcell{Détail} \\
     \midrule
-    \textbf{Produit}      & Plateforme web responsive trilingue + future app mobile ; signalement photo + géolocalisation ; dashboard admin analytique ; export CSV ; historique de statut          \\
+
+    Produit &
+    Plateforme web responsive trilingue + future app mobile ; signalement
+    photo + géolocalisation ; dashboard admin analytique ; export CSV ;
+    historique de statut \\
+
     \rowcolor{lightgray}
-    \textbf{Prix}         & Gratuit pour les citoyens ; abonnement mensuel commune (15\,000 DA/mois) ; abonnement direction de wilaya (50\,000 DA/mois) ; commissions modérées sur intégrations API \\
-    \textbf{Distribution} & Web responsive accessible depuis tout navigateur ; présence dans les mairies et APC partenaires ; référencement sur les moteurs de recherche                            \\
+    Prix &
+    Gratuit pour les citoyens ; abonnement mensuel commune (15\,000
+    DA/mois) ; abonnement direction de wilaya (50\,000 DA/mois) ;
+    commissions modérées sur intégrations API \\
+
+    Distribution &
+    Web responsive accessible depuis tout navigateur ; présence dans les
+    mairies et APC partenaires ; référencement sur les moteurs de recherche \\
+
     \rowcolor{lightgray}
-    \textbf{Promotion}    & Marketing digital (Facebook, Instagram, TikTok) ; partenariats avec influenceurs civic-tech ; presse locale et événements universitaires                                \\
+    Promotion &
+    Marketing digital (Facebook, Instagram, TikTok) ; partenariats avec
+    influenceurs civic-tech ; presse locale et événements universitaires \\
+
     \bottomrule
   \end{tabularx}
 \end{table}
-\restoreleftmark
+
 % ============================================================
-% \suppressleftmark
 \chapter{Plan de Production et Organisation}
 
 \section{Le processus de production}
@@ -1007,10 +1001,9 @@ du problème, la catégorie (Route, Éclairage, Déchets, Eau, Autre), la wilaya
 la commune, puis une description détaillée. Il peut géolocaliser le problème en
 cliquant sur la carte ou en utilisant le GPS de son appareil, et joindre
 jusqu'à 6 photos (JPG\,/\,PNG\,/\,WEBP). À la soumission, un numéro de
-référence unique (ex. \texttt{2026/16/0001}) est généré et le citoyen reçoit
-une notification de confirmation. Il suit ensuite l'évolution du statut
-(\textit{En attente} $\to$ \textit{En traitement} $\to$ \textit{Résolu}) en
-temps réel.
+référence unique (ex. 2026/16/0001) est généré et le citoyen reçoit une
+notification de confirmation. Il suit ensuite l'évolution du statut
+(En attente $\rightarrow$ En traitement $\rightarrow$ Résolu) en temps réel.
 
 \subsection{Parcours de l'administrateur (commune)}
 
@@ -1026,18 +1019,20 @@ automatiquement une notification vers le citoyen concerné.
 
 \subsection{Ressources matérielles}
 \begin{itemize}
-  \item Ordinateurs portables performants pour les développeuses (min. 16 Go RAM, SSD).
+  \item Ordinateurs portables performants pour les développeuses (min. 16 Go
+        RAM, SSD).
   \item Smartphones Android et iOS pour les tests de compatibilité mobile.
-  \item Connexion Internet haut débit pour le travail collaboratif et les tests en
-        ligne.
-  \item Serveur d'hébergement VPS (OVH\,/\,Hetzner) ou cloud (AWS Lightsail) pour le
-        déploiement.
+  \item Connexion Internet haut débit pour le travail collaboratif et les tests
+        en ligne.
+  \item Serveur d'hébergement VPS (OVH\,/\,Hetzner) ou cloud (AWS Lightsail)
+        pour le déploiement.
 \end{itemize}
 
 \subsection{Ressources logicielles}
 \begin{itemize}
-  \item PHP 8.x pour le back-end (architecture single-file \texttt{index.php}).
-  \item HTML5\,/\,CSS3\,/\,JavaScript Vanilla pour le front-end — pas de framework.
+  \item PHP 8.x pour le back-end (architecture single-file index.php).
+  \item HTML5\,/\,CSS3\,/\,JavaScript Vanilla pour le front-end — pas de
+        framework.
   \item Leaflet.js + OpenStreetMap pour la cartographie interactive.
   \item API Geolocation du navigateur pour la détection GPS.
   \item Figma pour le prototypage des interfaces et l'UX design.
@@ -1046,35 +1041,36 @@ automatiquement une notification vers le citoyen concerné.
 \end{itemize}
 
 \section{Main-d'œuvre}
+
 \begin{table}[H]
   \centering
   \caption{Répartition des rôles}
   \renewcommand{\arraystretch}{1.4}
-  \begin{tabularx}{\linewidth}{l l X}
+  \begin{tabularx}{\linewidth}{lllX}
     \toprule
     \rowcolor{primary}
-    \thdcell{Fonction} & \thdcell{Responsable}                                                            & \thdcell{Rôle}                                    \\
+    \thdcell{Fonction} & \thdcell{Responsable} & \thdcell{Rôle} \\
     \midrule
 
-    Chef de projet     & RAHAL Lyes                                                                       & Coordination générale du projet, planification et
-    suivi                                                                                                                                                     \\
+    Chef de projet & RAHAL Lyes &
+    Coordination générale du projet, planification et suivi \\
 
     \rowcolor{lightgray}
-    Lead Développeur
-                       & BAHAR Naceredine
-                       & UX/UI, architecture PHP, intégration Leaflet, développement back-end et sécurité                                                     \\
+    Lead Développeur & BAHAR Naceredine &
+    UX/UI, architecture PHP, intégration Leaflet, développement back-end et
+    sécurité \\
 
-    Chargé de contenu  & BOUKHRISSA Yazid                                                                 & Gestion du contenu trilingue,
-    communication et partenariats                                                                                                                             \\
+    Chargé de contenu & BOUKHRISSA Yazid &
+    Gestion du contenu trilingue, communication et partenariats \\
 
     \rowcolor{lightgray}
-    Testeurs externes
-                       & Citoyens pilotes
-                       & Tests fonctionnels, retours d'expérience et validation terrain                                                                       \\
+    Testeurs externes & Citoyens pilotes &
+    Tests fonctionnels, retours d'expérience et validation terrain \\
 
     \bottomrule
   \end{tabularx}
 \end{table}
+
 \section{Les principaux partenaires}
 
 \begin{table}[H]
@@ -1084,15 +1080,27 @@ automatiquement une notification vers le citoyen concerné.
   \begin{tabularx}{\linewidth}{lX}
     \toprule
     \rowcolor{primary}
-    \thdcell{Partenaire}          & \thdcell{Rôle et apport}                                                      \\
+    \thdcell{Partenaire} & \thdcell{Rôle et apport} \\
     \midrule
-    APC et Directions de Wilaya   & Validation institutionnelle, accès aux données officielles, soutien local     \\
+
+    APC et Directions de Wilaya &
+    Validation institutionnelle, accès aux données officielles, soutien local \\
+
     \rowcolor{lightgray}
-    ARPCE\,/\,MPTIC               & Conformité réglementaire, labellisation e-gov, intégration portails nationaux \\
-    Universités et CDTA           & Hébergement académique, encadrement recherche, financement incubateur         \\
+    ARPCE / MPTIC &
+    Conformité réglementaire, labellisation e-gov, intégration portails
+    nationaux \\
+
+    Universités et CDTA &
+    Hébergement académique, encadrement recherche, financement incubateur \\
+
     \rowcolor{lightgray}
-    Associations civiques locales & Mobilisation citoyenne, promotion terrain, remontée de signalements           \\
-    Opérateurs télécom            & Notifications SMS, partenariats data pour zones à faible Wi-Fi                \\
+    Associations civiques locales &
+    Mobilisation citoyenne, promotion terrain, remontée de signalements \\
+
+    Opérateurs télécom &
+    Notifications SMS, partenariats data pour zones à faible Wi-Fi \\
+
     \bottomrule
   \end{tabularx}
 \end{table}
@@ -1102,1006 +1110,367 @@ automatiquement une notification vers le citoyen concerné.
 La structure organisationnelle repose sur une hiérarchie simple et
 fonctionnelle :
 \begin{itemize}
-  \item Au sommet, la chef de projet supervise et coordonne toutes les activités.
-  \item La lead développeuse est responsable de l'aspect technique et rend compte
-        directement.
+  \item Au sommet, la chef de projet supervise et coordonne toutes les
+        activités.
+  \item La lead développeuse est responsable de l'aspect technique et rend
+        compte directement.
   \item La chargée de contenu gère les relations externes et la communication
         multilingue.
-  \item Les testeurs et partenaires communaux enrichissent la plateforme par des
-        retours terrain.
+  \item Les testeurs et partenaires communaux enrichissent la plateforme par
+        des retours terrain.
 \end{itemize}
-\restoreleftmark
-% ============================================================
-% \chapter{Plan Financier}
 
-% Cette section présente une étude financière complète portant sur une période
-% prévisionnelle de cinq ans. Elle met en évidence les investissements requis,
-% les charges d'exploitation et les sources potentielles de revenus.
-
-% \section{Les Coûts et Charges}
-
-% \subsection{Immobilisations corporelles}
-
-% \begin{table}[H]
-%   \centering
-%   \caption{Immobilisations corporelles (en DA)}
-%   \renewcommand{\arraystretch}{1.3}
-%   \begin{tabular}{lrrrrrr}
-%     \toprule
-%     \rowcolor{primary}
-%     \thdcell{Libellé}  & \thdcell{P.U} & \thdcell{Qté} & \thdcell{N}       & \thdcell{N+1}     & \thdcell{N+2}     & \thdcell{N+3}     \\
-%     \midrule
-%     PC\,/\,Laptop      & 120\,000      & 3             & 360\,000          & 300\,000          & 250\,000          & 200\,000          \\
-%     \rowcolor{lightgray}
-%     Bureau             & 36\,000       & 3             & 108\,000          & 108\,000          & 98\,000           & 90\,000           \\
-%     Chaise ergonomique & 12\,000       & 6             & 72\,000           & 72\,000           & 60\,000           & 50\,000           \\
-%     \rowcolor{lightgray}
-%     Serveur VPS        & 80\,000       & 1             & 80\,000           & 80\,000           & 80\,000           & 80\,000           \\
-%     Climatiseur        & 68\,000       & 1             & 68\,000           & 68\,000           & 59\,000           & 48\,000           \\
-%     \rowcolor{lightgray}
-%     Imprimante         & 45\,000       & 1             & 45\,000           & 45\,000           & 30\,000           & 28\,000           \\
-%     \midrule
-%     \rowcolor{primary!30}
-%     \textbf{TOTAL}     &               &               & \textbf{733\,000} & \textbf{673\,000} & \textbf{577\,000} & \textbf{496\,000} \\
-%     \bottomrule
-%   \end{tabular}
-% \end{table}
-
-% \subsection{Immobilisations incorporelles}
-
-% \begin{table}[H]
-%   \centering
-%   \caption{Immobilisations incorporelles (en DA)}
-%   \renewcommand{\arraystretch}{1.3}
-%   \begin{tabular}{lrrrr}
-%     \toprule
-%     \rowcolor{primary}
-%     \thdcell{Libellé}                     & \thdcell{N}       & \thdcell{N+1}     & \thdcell{N+2}     & \thdcell{N+3}     \\
-%     \midrule
-%     Nom de domaine + hébergement web      & 24\,000           & 24\,000           & 24\,000           & 24\,000           \\
-%     \rowcolor{lightgray}
-%     API Google Maps (clé premium)         & 60\,000           & 60\,000           & 60\,000           & 60\,000           \\
-%     Licences logiciels (Adobe, JetBrains) & 80\,000           & 80\,000           & 80\,000           & 80\,000           \\
-%     \rowcolor{lightgray}
-%     Certificat SSL et sécurité            & 20\,000           & 20\,000           & 20\,000           & 20\,000           \\
-%     \midrule
-%     \rowcolor{primary!30}
-%     \textbf{TOTAL}                        & \textbf{184\,000} & \textbf{184\,000} & \textbf{184\,000} & \textbf{184\,000} \\
-%     \bottomrule
-%   \end{tabular}
-% \end{table}
-
-% \subsection{Charges d'exploitation}
-
-% \begin{table}[H]
-%   \centering
-%   \caption{Charges d'exploitation (en DA)}
-%   \renewcommand{\arraystretch}{1.3}
-%   \begin{tabular}{lrrrr}
-%     \toprule
-%     \rowcolor{primary}
-%     \thdcell{Libellé}                    & \thdcell{N}       & \thdcell{N+1}     & \thdcell{N+2}     & \thdcell{N+3}     \\
-%     \midrule
-%     ADSL, électricité, factures diverses & 200\,000          & 200\,000          & 200\,000          & 200\,000          \\
-%     \rowcolor{lightgray}
-%     Assurance matériel et personnel      & 40\,000           & 40\,000           & 50\,000           & 50\,000           \\
-%     Location bureau\,/\,coworking        & 360\,000          & 360\,000          & 480\,000          & 480\,000          \\
-%     \rowcolor{lightgray}
-%     Maintenance et mises à jour          & 30\,000           & 30\,000           & 30\,000           & 30\,000           \\
-%     Marketing digital                    & 100\,000          & 150\,000          & 200\,000          & 200\,000          \\
-%     \midrule
-%     \rowcolor{primary!30}
-%     \textbf{TOTAL}                       & \textbf{730\,000} & \textbf{780\,000} & \textbf{960\,000} & \textbf{960\,000} \\
-%     \bottomrule
-%   \end{tabular}
-% \end{table}
-
-% \subsection{Dépenses de personnel}
-
-% \begin{table}[H]
-%   \centering
-%   \caption{Dépenses de personnel (en DA)}
-%   \renewcommand{\arraystretch}{1.3}
-%   \begin{tabular}{lrrrr}
-%     \toprule
-%     \rowcolor{primary}
-%     \thdcell{Poste}               & \thdcell{N}          & \thdcell{N+1}        & \thdcell{N+2}        & \thdcell{N+3}        \\
-%     \midrule
-%     Fondatrice\,/\,Chef de projet & 720\,000             & 780\,000             & 840\,000             & 900\,000             \\
-%     \rowcolor{lightgray}
-%     Lead Développeuse web         & 600\,000             & 660\,000             & 720\,000             & 780\,000             \\
-%     Chargée de communication      & 600\,000             & 660\,000             & 720\,000             & 780\,000             \\
-%     \rowcolor{lightgray}
-%     Secrétaire\,/\,Support        & 360\,000             & 384\,000             & 432\,000             & 456\,000             \\
-%     \midrule
-%     \rowcolor{primary!30}
-%     \textbf{TOTAL}                & \textbf{2\,280\,000} & \textbf{2\,484\,000} & \textbf{2\,712\,000} & \textbf{2\,916\,000} \\
-%     \bottomrule
-%   \end{tabular}
-% \end{table}
-
-% \section{Chiffre d'Affaires}
-
-% Les revenus de Baligh+ proviennent de plusieurs sources :
-% \begin{itemize}
-%   \item \textbf{Service A} — Abonnement mensuel commune (accès dashboard) : 15\,000 DA/mois.
-%   \item \textbf{Service B} — Abonnement direction de wilaya (API + analytics) : 50\,000 DA/mois.
-%   \item \textbf{Service C} — Commission sur intégrations tiers (passerelles SMS, notifications push) : 8\,\%.
-%   \item \textbf{Service D} — Publicité institutionnelle ciblée : 10\,000 DA\,/\,annonce sponsorisée.
-% \end{itemize}
-
-% \subsection{Scénario pessimiste}
-
-% \begin{table}[H]
-%   \centering
-%   \caption{Chiffre d'affaires — Scénario pessimiste (en DA)}
-%   \renewcommand{\arraystretch}{1.3}
-%   \small
-%   \begin{tabularx}{\linewidth}{lXXrrr}
-%     \toprule
-%     \rowcolor{primary}
-%     \thdcell{Année} & \thdcell{Communes}            & \thdcell{Wilayas}             & \thdcell{Intégrations} & \thdcell{Pub inst.} & \thdcell{CA total}    \\
-%     \midrule
-%     N+1             & $5 \times 15\,000 \times 12$  & $1 \times 50\,000 \times 12$  & 100\,000               & 50\,000             & \textbf{1\,650\,000}  \\
-%     \rowcolor{lightgray}
-%     N+2             & $10 \times 15\,000 \times 12$ & $2 \times 50\,000 \times 12$  & 200\,000               & 100\,000            & \textbf{3\,300\,000}  \\
-%     N+3             & $20 \times 15\,000 \times 12$ & $5 \times 50\,000 \times 12$  & 400\,000               & 200\,000            & \textbf{7\,200\,000}  \\
-%     \rowcolor{lightgray}
-%     N+4             & $35 \times 15\,000 \times 12$ & $8 \times 50\,000 \times 12$  & 600\,000               & 350\,000            & \textbf{12\,050\,000} \\
-%     N+5             & $50 \times 15\,000 \times 12$ & $12 \times 50\,000 \times 12$ & 800\,000               & 500\,000            & \textbf{17\,500\,000} \\
-%     \bottomrule
-%   \end{tabularx}
-% \end{table}
-
-% \subsection{Scénario optimiste}
-
-% \begin{table}[H]
-%   \centering
-%   \caption{Chiffre d'affaires — Scénario optimiste (en DA)}
-%   \renewcommand{\arraystretch}{1.3}
-%   \small
-%   \begin{tabularx}{\linewidth}{lXXrrr}
-%     \toprule
-%     \rowcolor{primary}
-%     \thdcell{Année} & \thdcell{Communes}             & \thdcell{Wilayas}             & \thdcell{Intégrations} & \thdcell{Pub inst.} & \thdcell{CA total}    \\
-%     \midrule
-%     N+1             & $20 \times 15\,000 \times 12$  & $5 \times 50\,000 \times 12$  & 500\,000               & 200\,000            & \textbf{7\,300\,000}  \\
-%     \rowcolor{lightgray}
-%     N+2             & $40 \times 15\,000 \times 12$  & $10 \times 50\,000 \times 12$ & 800\,000               & 400\,000            & \textbf{14\,400\,000} \\
-%     N+3             & $70 \times 15\,000 \times 12$  & $15 \times 50\,000 \times 12$ & 1\,200\,000            & 700\,000            & \textbf{23\,500\,000} \\
-%     \rowcolor{lightgray}
-%     N+4             & $100 \times 15\,000 \times 12$ & $20 \times 50\,000 \times 12$ & 1\,500\,000            & 1\,000\,000         & \textbf{32\,500\,000} \\
-%     N+5             & $130 \times 15\,000 \times 12$ & $25 \times 50\,000 \times 12$ & 2\,000\,000            & 1\,300\,000         & \textbf{41\,700\,000} \\
-%     \bottomrule
-%   \end{tabularx}
-% \end{table}
 % ============================================================
 \chapter{Plan Financier}
-% ============================================================
 
-\textbf{Baligh+} est une plateforme numérique institutionnelle conçue pour moderniser la
-gestion des collectivités locales algériennes (communes et wilayas). Elle offre aux
-administrations un tableau de bord interactif, des outils analytiques avancés et des
-intégrations avec des services tiers (SMS, notifications push, cartographie) afin
-d'améliorer la transparence, l'efficacité opérationnelle et la communication
-citoyenne.
- 
-Le présent plan financier constitue l'outil de pilotage stratégique du projet. Il
-couvre une \textbf{période prévisionnelle de cinq ans} (N à N+5) et s'articule autour
-de trois volets complémentaires :
- 
-\begin{itemize}[leftmargin=1.6em, itemsep=3pt]
-  \item[$\bullet$] \textbf{Les coûts d'investissement et charges d'exploitation}
-    nécessaires au lancement et au fonctionnement de la plateforme.
-  \item[$\bullet$] \textbf{Les projections de chiffre d'affaires} selon deux
-    scénarios contrastés — pessimiste et optimiste — basés sur les quatre sources
-    de revenus identifiées.
-  \item[$\bullet$] \textbf{L'analyse de rentabilité et de trésorerie} permettant
-    d'évaluer la viabilité économique et le seuil d'équilibre financier.
-\end{itemize}
- 
+Baligh+ est une plateforme web de signalement civique développée par une équipe
+de trois étudiants dans le cadre d'un projet académique à l'Université Akli
+Mohand Oulhadj de Bouira. Le présent plan financier présente une estimation
+réaliste des coûts de démarrage et des projections de revenus sur trois ans,
+correspondant à la phase de lancement et de première croissance du projet.
+
 \begin{notebox}
-  Tous les montants sont exprimés en \textbf{Dinars Algériens (DA)}. La période
-  \textbf{N} correspond à l'année de lancement effectif de la plateforme. 
+  Tous les montants sont exprimés en Dinars Algériens (DA). L'année N désigne
+  l'année de lancement effectif de la plateforme. Les projections s'appuient
+  sur les réalités du marché local algérien et les tarifs actuels des
+  prestataires nationaux.
 \end{notebox}
- 
-% ============================================================
+
 \section{Les Coûts et Charges}
-% ============================================================
- 
-\subsection{Immobilisations Corporelles}
- 
-Les immobilisations corporelles regroupent l'ensemble du matériel physique
-nécessaire au fonctionnement de l'équipe. Les valeurs indiquées pour N+1 à N+3
-correspondent aux \textbf{valeurs nettes comptables} après dépréciation annuelle.
- 
-\vspace{6pt}
-\begin{table}[h!]
-\centering
-\caption{Immobilisations corporelles — valeurs nettes (en DA)}
-\renewcommand{\arraystretch}{1.35}
-\begin{tabularx}{\linewidth}{Xrrrrr}
-\toprule
 
-\textbf{Libellé} & \textbf{P.U} & \textbf{Qté} &
-\textbf{Année N} & \textbf{N+1} & \textbf{N+2} \\
-\midrule
-PC / Laptop            & 120\,000 & 3 & 360\,000 & 300\,000 & 250\,000 \\
+\subsection{Investissements Initiaux (Année N)}
 
-Bureau de travail      &  36\,000 & 3 & 108\,000 & 108\,000 &  98\,000 \\
-Chaise ergonomique     &  12\,000 & 6 &  72\,000 &  72\,000 &  60\,000 \\
+Les investissements de démarrage couvrent le matériel informatique
+indispensable au développement et au déploiement de la plateforme. L'équipe
+travaille principalement depuis l'université et l'incubateur, ce qui réduit
+considérablement les frais fixes.
 
-Serveur VPS dédié      &  80\,000 & 1 &  80\,000 &  80\,000 &  80\,000 \\
-Climatiseur            &  68\,000 & 1 &  68\,000 &  68\,000 &  59\,000 \\
-
-Imprimante multifonction &  45\,000 & 1 &  45\,000 &  45\,000 &  30\,000 \\
-\midrule
-\bfseries TOTAL & & &
-\bfseries 733\,000 &
-\bfseries 673\,000 &
-\bfseries 577\,000 \\
-\bottomrule
-\end{tabularx}
-\end{table}
- 
 \begin{notebox}
-  Le matériel informatique (PC, serveur) est déprécié au taux de
-  \textbf{15--20\,\% par an}, reflétant l'obsolescence technologique rapide dans
-  le secteur numérique. Le mobilier est déprécié à \textbf{8--10\,\% par an}.
+  La plateforme utilise OpenStreetMap (cartographie gratuite et open source) et
+  des outils libres (VS Code, GitHub, PHP, MySQL), ce qui élimine les coûts de
+  licences logicielles. L'hébergement est assuré par un VPS économique
+  (OVHcloud Algérie ou Hetzner).
 \end{notebox}
- 
-\subsection{Immobilisations Incorporelles}
- 
-Les immobilisations incorporelles couvrent les \textbf{droits d'utilisation
-numériques} indispensables à la plateforme : services cloud, licences et
-intégrations d'API. Ces charges sont majoritairement \textbf{récurrentes annuelles}
-et stables sur l'ensemble de la période.
- 
-\vspace{6pt}
-\begin{table}[h!]
-\centering
-\caption{Immobilisations incorporelles — charges annuelles (en DA)}
-\renewcommand{\arraystretch}{1.35}
-\begin{tabularx}{\linewidth}{Xrrrr}
-\toprule
 
-\textbf{Libellé} & \textbf{Année N} & \textbf{N+1} & \textbf{N+2} & \textbf{N+3} \\
-\midrule
-Nom de domaine + hébergement web      & 24\,000 & 24\,000 & 24\,000 & 24\,000 \\
+\begin{table}[H]
+  \centering
+  \caption{Investissements initiaux — Année N (en DA)}
+  \renewcommand{\arraystretch}{1.4}
+  \begin{tabularx}{\linewidth}{Xccc}
+    \toprule
+    \rowcolor{primary}
+    \thdcell{Libellé} & \thdcell{P.U (DA)} & \thdcell{Qté} &
+    \thdcell{Total (DA)} \\
+    \midrule
 
-API Google Maps (clé premium)         & 60\,000 & 60\,000 & 60\,000 & 60\,000 \\
-Licences logiciels (Adobe, JetBrains) & 80\,000 & 80\,000 & 80\,000 & 80\,000 \\
+    PC / Laptop développement         & 85\,000 & 3 & 255\,000 \\
+    \rowcolor{lightgray}
+    Smartphone (tests mobile)         & 35\,000 & 1 &  35\,000 \\
+    Disque dur externe (sauvegardes)  &  8\,000 & 2 &  16\,000 \\
 
-Certificat SSL et sécurité            & 20\,000 & 20\,000 & 20\,000 & 20\,000 \\
-\midrule
-\bfseries TOTAL &
-\bfseries 184\,000 &
-\bfseries 184\,000 &
-\bfseries 184\,000 &
-\bfseries 184\,000 \\
-\bottomrule
-\end{tabularx}
+    \midrule
+    \rowcolor{primary}
+    \multicolumn{3}{l}{\textcolor{white}{\textbf{TOTAL INVESTISSEMENT}}} &
+    \textcolor{white}{\textbf{306\,000}} \\
+    \bottomrule
+  \end{tabularx}
 \end{table}
- 
-\subsection{Charges d'Exploitation}
- 
-Les charges d'exploitation couvrent les coûts opérationnels récurrents.
-La \textbf{hausse progressive du marketing digital} (de 100\,000 DA en N
-à 200\,000 DA en N+2/N+3) traduit la montée en puissance de la stratégie
-commerciale lors de l'extension aux wilayas voisines.
- 
-\vspace{6pt}
-\begin{table}[h!]
-\centering
-\caption{Autres charges d'exploitation (en DA)}
-\renewcommand{\arraystretch}{1.35}
-\begin{tabularx}{\linewidth}{Xrrrr}
-\toprule
 
-\textbf{Libellé} & \textbf{Année N} & \textbf{N+1} & \textbf{N+2} & \textbf{N+3} \\
-\midrule
-ADSL, électricité, factures diverses & 200\,000 & 200\,000 & 200\,000 & 200\,000 \\
+\subsection{Charges d'Exploitation Annuelles}
 
-Assurance matériel et personnel      &  40\,000 &  40\,000 &  50\,000 &  50\,000 \\
-Location bureau / coworking          & 360\,000 & 360\,000 & 480\,000 & 480\,000 \\
+Les charges récurrentes sont maintenues au minimum grâce à l'utilisation de
+technologies open source et à l'hébergement mutualisé en phase d'amorçage.
 
-Maintenance et mises à jour          &  30\,000 &  30\,000 &  30\,000 &  30\,000 \\
-Marketing digital                    & 100\,000 & 150\,000 & 200\,000 & 200\,000 \\
-\midrule
-\bfseries TOTAL &
-\bfseries 730\,000 &
-\bfseries 780\,000 &
-\bfseries 960\,000 &
-\bfseries 960\,000 \\
-\bottomrule
-\end{tabularx}
+\begin{table}[H]
+  \centering
+  \caption{Charges d'exploitation annuelles (en DA)}
+  \renewcommand{\arraystretch}{1.4}
+  \begin{tabularx}{\linewidth}{Xccc}
+    \toprule
+    \rowcolor{primary}
+    \thdcell{Libellé} & \thdcell{Année N} & \thdcell{N+1} &
+    \thdcell{N+2} \\
+    \midrule
+
+    Hébergement VPS (OVH / Hetzner)             & 18\,000 & 24\,000 & 36\,000 \\
+    \rowcolor{lightgray}
+    Nom de domaine (.dz ou .com)                &  3\,500 &  3\,500 &  3\,500 \\
+    Certificat SSL (Let's Encrypt — gratuit)    &       0 &       0 &       0 \\
+    \rowcolor{lightgray}
+    Connexion Internet haut débit               & 36\,000 & 36\,000 & 36\,000 \\
+    Fournitures et divers                       & 12\,000 & 15\,000 & 18\,000 \\
+    \rowcolor{lightgray}
+    Marketing digital (Facebook Ads, etc.)      & 30\,000 & 60\,000 & 90\,000 \\
+    \midrule
+    \rowcolor{primary}
+    \textcolor{white}{\textbf{TOTAL CHARGES EXPLOITATION}} &
+    \textcolor{white}{\textbf{99\,500}} &
+    \textcolor{white}{\textbf{138\,500}} &
+    \textcolor{white}{\textbf{183\,500}} \\
+    \bottomrule
+  \end{tabularx}
 \end{table}
- 
-\subsection{Dépenses de Personnel}
- 
-Le poste \textbf{ressources humaines} représente la charge la plus significative
-du projet (\textasciitilde 58\,\% du total). Une revalorisation salariale annuelle
-de \textbf{5 à 8\,\%} est intégrée en signe de reconnaissance de l'engagement
-de chaque collaborateur.
- 
-\vspace{6pt}
-\begin{table}[h!]
-\centering
-\caption{Dépenses de personnel — salaires annuels (en DA)}
-\renewcommand{\arraystretch}{1.35}
-\begin{tabularx}{\linewidth}{Xrrrr}
-\toprule
 
-\textbf{Poste} & \textbf{Année N} & \textbf{N+1} & \textbf{N+2} & \textbf{N+3} \\
-\midrule
-Fondateur / Chef de projet  & 720\,000 & 780\,000 & 840\,000 & 900\,000 \\
+\subsection{Rémunération de l'Équipe}
 
-Lead Développeur web        & 600\,000 & 660\,000 & 720\,000 & 780\,000 \\
-Chargé de communication     & 600\,000 & 660\,000 & 720\,000 & 780\,000 \\
+En phase de démarrage, les fondateurs perçoivent une rémunération symbolique
+sous forme de bourses ou indemnités incubateur. Une revalorisation est prévue
+dès que les premiers abonnements communaux sont sécurisés.
 
-Secrétaire / Support         & 360\,000 & 384\,000 & 432\,000 & 456\,000 \\
-\midrule
-\bfseries TOTAL &
-\bfseries 2\,280\,000 &
-\bfseries 2\,484\,000 &
-\bfseries 2\,712\,000 &
-\bfseries 2\,916\,000 \\
-\bottomrule
-\end{tabularx}
+\begin{table}[H]
+  \centering
+  \caption{Rémunération prévisionnelle de l'équipe — annuelle (en DA)}
+  \renewcommand{\arraystretch}{1.4}
+  \begin{tabularx}{\linewidth}{Xccc}
+    \toprule
+    \rowcolor{primary}
+    \thdcell{Poste} & \thdcell{Année N} & \thdcell{N+1} & \thdcell{N+2} \\
+    \midrule
+
+    Chef de projet / Développeur back-end  & 180\,000 & 300\,000 & 420\,000 \\
+    \rowcolor{lightgray}
+    Développeur front-end / UI Designer    & 180\,000 & 300\,000 & 420\,000 \\
+    Chargé de communication et tests       & 120\,000 & 240\,000 & 360\,000 \\
+    \midrule
+    \rowcolor{primary}
+    \textcolor{white}{\textbf{TOTAL RÉMUNÉRATIONS}} &
+    \textcolor{white}{\textbf{480\,000}} &
+    \textcolor{white}{\textbf{840\,000}} &
+    \textcolor{white}{\textbf{1\,200\,000}} \\
+    \bottomrule
+  \end{tabularx}
 \end{table}
- 
-\subsection{Synthèse Consolidée des Charges}
- 
-Le tableau ci-dessous consolide l'ensemble des charges sur les quatre premières
-années d'exploitation, offrant une vision globale de la structure de coûts
-de \textbf{Baligh+}.
- 
-\vspace{6pt}
-\begin{table}[h!]
-\centering
-\caption{Synthèse globale des charges prévisionnelles (en DA)}
-\renewcommand{\arraystretch}{1.35}
-\begin{tabularx}{\linewidth}{Xrrrr}
-\toprule
 
-\textbf{Catégorie} &
-\textbf{Année N} & \textbf{N+1} & \textbf{N+2} & \textbf{N+3} \\
-\midrule
-Immobilisations corporelles    &   733\,000 &   673\,000 &   577\,000 &   496\,000 \\
+\subsection{Synthèse des Charges Totales}
 
-Immobilisations incorporelles  &   184\,000 &   184\,000 &   184\,000 &   184\,000 \\
-Charges d'exploitation         &   730\,000 &   780\,000 &   960\,000 &   960\,000 \\
+\begin{table}[H]
+  \centering
+  \caption{Synthèse globale des charges (en DA)}
+  \renewcommand{\arraystretch}{1.4}
+  \begin{tabularx}{\linewidth}{Xccc}
+    \toprule
+    \rowcolor{primary}
+    \thdcell{Catégorie} & \thdcell{Année N} & \thdcell{N+1} & \thdcell{N+2} \\
+    \midrule
 
-Dépenses de personnel          & 2\,280\,000 & 2\,484\,000 & 2\,712\,000 & 2\,916\,000 \\
-\midrule
-\bfseries TOTAL CHARGES &
-\bfseries 3\,927\,000 &
-\bfseries 4\,121\,000 &
-\bfseries 4\,433\,000 &
-\bfseries 4\,556\,000 \\
-\bottomrule
-\end{tabularx}
+    Investissements initiaux    & 306\,000 &       0 &         0 \\
+    \rowcolor{lightgray}
+    Charges d'exploitation      &  99\,500 & 138\,500 & 183\,500 \\
+    Rémunérations               & 480\,000 & 840\,000 & 1\,200\,000 \\
+    \midrule
+    \rowcolor{primary}
+    \textcolor{white}{\textbf{TOTAL CHARGES}} &
+    \textcolor{white}{\textbf{885\,500}} &
+    \textcolor{white}{\textbf{978\,500}} &
+    \textcolor{white}{\textbf{1\,383\,500}} \\
+    \bottomrule
+  \end{tabularx}
 \end{table}
- 
-% ── Graphique camembert répartition charges ──────────────────
-\vspace{8pt}
-\begin{center}
-\begin{tikzpicture}
-\begin{axis}[
-  xbar stacked,
-  width=13cm, height=5.5cm,
-  bar width=0.6cm,
-  xmin=0, xmax=5000000,
-  symbolic y coords={N+3, N+2, N+1, N},
-  ytick=data,
-  xtick={0,1000000,2000000,3000000,4000000,5000000},
-  xticklabels={0, 1M, 2M, 3M, 4M, 5M},
-  xlabel={\small Montant (DA)},
-  legend style={at={(0.5,-0.22)}, anchor=north, legend columns=4,
-                font=\footnotesize},
-  every axis plot/.append style={draw=none},
-  title={\small\bfseries Répartition des charges par année},
-  title style={yshift=4pt},
-]
-\addplot+[fill=primary!80]     coordinates {(733000,N)  (673000,N+1)  (577000,N+2)  (496000,N+3)};
-\addplot+[fill=secondary!70]   coordinates {(184000,N)  (184000,N+1)  (184000,N+2)  (184000,N+3)};
-\addplot+[fill=accent!90]      coordinates {(730000,N)  (780000,N+1)  (960000,N+2)  (960000,N+3)};
-\addplot+[fill=successgreen!80]coordinates {(2280000,N) (2484000,N+1) (2712000,N+2) (2916000,N+3)};
-\legend{Immo. corp., Immo. incorp., Exploitation, Personnel}
-\end{axis}
-\end{tikzpicture}
-\end{center}
- 
-% ============================================================
+
 \section{Chiffre d'Affaires et Sources de Revenus}
-% ============================================================
- 
-\subsection{Modèle Économique et Services}
- 
-Le chiffre d'affaires de \textbf{Baligh+} repose sur un modèle hybride
-combinant revenus récurrents (abonnements) et revenus variables (commissions,
-publicité). Quatre services principaux ont été définis :
- 
-\vspace{8pt}
-\begin{table}[h!]
-\centering
-\caption{Description des services et tarification}
-\renewcommand{\arraystretch}{1.4}
-\begin{tabularx}{\linewidth}{>{\bfseries}cXrl}
-\toprule
 
-\textbf{Réf.} & \textbf{Description du service} &
-\textbf{Tarif} & \textbf{Cible} \\
-\midrule
-A & Abonnement mensuel commune — accès au tableau de bord
-    (dashboard) et outils de gestion & 15\,000 DA/mois & Communes \\
+\subsection{Modèle Économique}
 
-B & Abonnement direction de wilaya — accès API + modules
-    analytiques avancés & 50\,000 DA/mois & Wilayas \\
-C & Commission sur intégrations tierces — passerelles SMS,
-    notifications push & 8\,\% / transaction & Prestataires \\
+Le modèle de revenus de Baligh+ repose sur des abonnements institutionnels et
+une publicité ciblée. Les tarifs sont volontairement accessibles pour favoriser
+l'adoption par les collectivités locales algériennes.
 
-D & Publicité institutionnelle ciblée — annonces sponsorisées
-    affichées sur la plateforme & 10\,000 DA / annonce & Institutions \\
-\bottomrule
-\end{tabularx}
+\begin{table}[H]
+  \centering
+  \caption{Services et tarification}
+  \renewcommand{\arraystretch}{1.4}
+  \begin{tabularx}{\linewidth}{clXl}
+    \toprule
+    \rowcolor{primary}
+    \thdcell{Réf.} & \thdcell{Description} & \thdcell{Tarif} &
+    \thdcell{Cible} \\
+    \midrule
+
+    A & Abonnement commune — dashboard + gestion des signalements &
+      8\,000 DA/mois & Communes \\
+
+    \rowcolor{lightgray}
+    B & Abonnement wilaya — accès API + statistiques avancées &
+      25\,000 DA/mois & Directions DTP \\
+
+    C & Publicité institutionnelle (annonce sponsorisée) &
+      5\,000 DA/annonce & Institutions \\
+
+    \bottomrule
+  \end{tabularx}
 \end{table}
- 
+
 \begin{notebox}
-  La tarification a été calibrée pour rester accessible aux collectivités
-  locales algériennes tout en assurant la viabilité économique du projet.
-  Le \textbf{Service A} (communes) constitue le moteur principal de croissance
-  en volume ; le \textbf{Service B} (wilayas) génère la valeur la plus élevée
-  par client.
+  Les tarifs ont été calibrés par rapport aux budgets réels des APC algériennes
+  et aux tarifs pratiqués par les fournisseurs locaux de logiciels de gestion
+  municipale (entre 5\,000 et 15\,000 DA/mois en moyenne).
 \end{notebox}
- 
+
 \subsection{Scénario Pessimiste}
- 
-Ce scénario repose sur des \textbf{hypothèses prudentes} : adoption lente par
-les collectivités, faible couverture géographique, budget marketing limité.
-Il sert de \textbf{plancher} pour l'évaluation du risque financier.
- 
-\textit{Hypothèses :} croissance linéaire du nombre de communes abonnées
-(+5/an), progression modérée des wilayas (+1/an), commissions intégrations
-en hausse lente, publicité institutionnelle en phase d'amorçage.
- 
-\vspace{6pt}
-\begin{table}[h!]
-\centering
-\caption{Prévisions pessimistes du chiffre d'affaires (en DA)}
-\renewcommand{\arraystretch}{1.4}
-\small
-\begin{tabularx}{\linewidth}{cXXrrr}
-\toprule
 
-\textbf{Année} & \textbf{Communes (Serv. A)} &
-\textbf{Wilayas (Serv. B)} &
-\textbf{Intégrations} & \textbf{Pub. inst.} &
-\textbf{CA total} \\
-\midrule
-N+1 & $5 \times 15\,000 \times 12$  & $1 \times 50\,000 \times 12$
-    & 100\,000 & 50\,000 & \bfseries 1\,650\,000 \\
+Ce scénario suppose une adoption très lente : une commune pilote en N+1,
+progression modeste liée aux délais administratifs habituels.
 
-N+2 & $10 \times 15\,000 \times 12$ & $2 \times 50\,000 \times 12$
-    & 200\,000 & 100\,000 & \bfseries 3\,300\,000 \\
-N+3 & $20 \times 15\,000 \times 12$ & $5 \times 50\,000 \times 12$
-    & 400\,000 & 200\,000 & \bfseries 7\,200\,000 \\
+\begin{table}[H]
+  \centering
+  \caption{Prévisions pessimistes du chiffre d'affaires (en DA)}
+  \renewcommand{\arraystretch}{1.4}
+  \begin{tabularx}{\linewidth}{lXXcc}
+    \toprule
+    \rowcolor{primary}
+    \thdcell{Année} & \thdcell{Communes (A)} & \thdcell{Wilayas (B)} &
+    \thdcell{Pub. (C)} & \thdcell{CA total} \\
+    \midrule
 
-N+4 & $35 \times 15\,000 \times 12$ & $8 \times 50\,000 \times 12$
-    & 600\,000 & 350\,000 & \bfseries 12\,050\,000 \\
-N+5 & $50 \times 15\,000 \times 12$ & $12 \times 50\,000 \times 12$
-    & 800\,000 & 500\,000 & \bfseries 17\,500\,000 \\
-\bottomrule
-\end{tabularx}
+    N+1 & $1 \times 8\,000 \times 12$ & 0                       & 20\,000 & 116\,000   \\
+    \rowcolor{lightgray}
+    N+2 & $3 \times 8\,000 \times 12$ & $1 \times 25\,000 \times 6$ & 50\,000 & 488\,000 \\
+    N+3 & $8 \times 8\,000 \times 12$ & $2 \times 25\,000 \times 12$ & 80\,000 & 1\,448\,000 \\
+
+    \bottomrule
+  \end{tabularx}
 \end{table}
- 
+
 \subsection{Scénario Optimiste}
- 
-Ce scénario intègre une \textbf{adoption rapide} portée par des partenariats
-institutionnels solides, une couverture médiatique favorable et une stratégie
-commerciale active auprès des APC et DTA.
- 
-\textit{Hypothèses :} démarrage fort dès N+1 (20 communes), extension rapide
-aux wilayas limitrophes, fort volume de publicité institutionnelle.
- 
-\vspace{6pt}
-\begin{table}[h!]
-\centering
-\caption{Prévisions optimistes du chiffre d'affaires (en DA)}
-\renewcommand{\arraystretch}{1.4}
-\small
-\begin{tabularx}{\linewidth}{cXXrrr}
-\toprule
 
-\textbf{Année} & \textbf{Communes (Serv. A)} &
-\textbf{Wilayas (Serv. B)} &
-\textbf{Intégrations} & \textbf{Pub. inst.} &
-\textbf{CA total} \\
-\midrule
-N+1 & $20 \times 15\,000 \times 12$  & $5 \times 50\,000 \times 12$
-    & 500\,000  & 200\,000   & \bfseries 7\,300\,000 \\
+Ce scénario suppose un partenariat institutionnel dès l'année N (incubateur
+universitaire, soutien de la DTP de Bouira) et un bouche-à-oreille positif
+entre communes.
 
-N+2 & $40 \times 15\,000 \times 12$  & $10 \times 50\,000 \times 12$
-    & 800\,000  & 400\,000   & \bfseries 14\,400\,000 \\
-N+3 & $70 \times 15\,000 \times 12$  & $15 \times 50\,000 \times 12$
-    & 1\,200\,000 & 700\,000 & \bfseries 23\,500\,000 \\
+\begin{table}[H]
+  \centering
+  \caption{Prévisions optimistes du chiffre d'affaires (en DA)}
+  \renewcommand{\arraystretch}{1.4}
+  \begin{tabularx}{\linewidth}{lXXcc}
+    \toprule
+    \rowcolor{primary}
+    \thdcell{Année} & \thdcell{Communes (A)} & \thdcell{Wilayas (B)} &
+    \thdcell{Pub. (C)} & \thdcell{CA total} \\
+    \midrule
 
-N+4 & $100 \times 15\,000 \times 12$ & $20 \times 50\,000 \times 12$
-    & 1\,500\,000 & 1\,000\,000 & \bfseries 32\,500\,000 \\
-N+5 & $130 \times 15\,000 \times 12$ & $25 \times 50\,000 \times 12$
-    & 2\,000\,000 & 1\,300\,000 & \bfseries 41\,700\,000 \\
-\bottomrule
-\end{tabularx}
+    N+1 & $5 \times 8\,000 \times 12$  & $1 \times 25\,000 \times 6$  & 60\,000  & 690\,000   \\
+    \rowcolor{lightgray}
+    N+2 & $12 \times 8\,000 \times 12$ & $2 \times 25\,000 \times 12$ & 120\,000 & 1\,872\,000 \\
+    N+3 & $25 \times 8\,000 \times 12$ & $4 \times 25\,000 \times 12$ & 200\,000 & 3\,800\,000 \\
+
+    \bottomrule
+  \end{tabularx}
 \end{table}
- 
-\subsection{Visualisation Comparée des Scénarios}
- 
-\vspace{6pt}
-\begin{center}
-\begin{tikzpicture}
-\begin{axis}[
-  width=13.5cm, height=7.5cm,
-  xlabel={\small Année},
-  ylabel={\small CA (Millions de DA)},
-  symbolic x coords={N+1, N+2, N+3, N+4, N+5},
-  xtick=data,
-  ymin=0, ymax=50,
-  ytick={0,5,10,15,20,25,30,35,40,45,50},
-  yticklabels={0,5,10,15,20,25,30,35,40,45,50},
-  legend style={at={(0.5,-0.18)}, anchor=north, legend columns=3,
-                font=\footnotesize},
-  grid=both,
-  grid style={line width=0.3pt, draw=gray!25},
-  major grid style={line width=0.5pt, draw=gray!40},
-  title={\small\bfseries Évolution prévisionnelle du Chiffre d'Affaires},
-  title style={yshift=4pt},
-  cycle list name=color list,
-]
-% Scénario pessimiste
-\addplot+[
-  color=dangerred, mark=square*, thick,
-  mark options={fill=dangerred},
-] coordinates {
-  (N+1,1.65) (N+2,3.30) (N+3,7.20) (N+4,12.05) (N+5,17.50)
-};
-\addlegendentry{Scén. Pessimiste}
- 
-% Scénario optimiste
-\addplot+[
-  color=successgreen, mark=*, thick,
-  mark options={fill=successgreen},
-] coordinates {
-  (N+1,7.30) (N+2,14.40) (N+3,23.50) (N+4,32.50) (N+5,41.70)
-};
-\addlegendentry{Scén. Optimiste}
- 
-% Total charges
-\addplot+[
-  color=accent, mark=triangle*, thick, dashed,
-  mark options={fill=accent},
-] coordinates {
-  (N+1,4.12) (N+2,4.43) (N+3,4.56) (N+4,4.80) (N+5,5.00)
-};
-\addlegendentry{Total Charges (estim.)}
- 
-\end{axis}
-\end{tikzpicture}
-\end{center}
- 
-% ============================================================
+
 \section{Analyse de Rentabilité}
-% ============================================================
- 
-\subsection{Tableau Comparatif CA vs Charges}
- 
-Le tableau suivant confronte les deux scénarios de chiffre d'affaires au
-total des charges prévisionnelles afin de dégager le \textbf{résultat net
-prévisionnel} sur chaque exercice.
- 
-\vspace{6pt}
-\begin{table}[h!]
-\centering
-\caption{Analyse de rentabilité — résultats nets prévisionnels (en DA)}
-\renewcommand{\arraystretch}{1.4}
-\begin{tabularx}{\linewidth}{crrrrr}
-\toprule
 
-\textbf{Année} &
-\textbf{CA Pessimiste} &
-\textbf{CA Optimiste} &
-\textbf{Total Charges} &
-\textbf{Résultat Net (Opt.)} &
-\textbf{Statut} \\
-\midrule
-N+1 & 1\,650\,000 & 7\,300\,000 & 4\,121\,000
-    & \bfseries +3\,179\,000
-    & ~Bénéfice \\
+\subsection{Résultats Nets Prévisionnels}
 
-N+2 & 3\,300\,000 & 14\,400\,000 & 4\,433\,000
-    & \bfseries +9\,967\,000
-    & ~Bénéfice \\
-N+3 & 7\,200\,000 & 23\,500\,000 & 4\,556\,000
-    & \bfseries +18\,944\,000
-    & ~Bénéfice \\
+\begin{table}[H]
+  \centering
+  \caption{Résultats nets — comparaison des deux scénarios (en DA)}
+  \renewcommand{\arraystretch}{1.4}
+  \begin{tabularx}{\linewidth}{lXXXX}
+    \toprule
+    \rowcolor{primary}
+    \thdcell{Année} & \thdcell{Charges} & \thdcell{CA Pessimiste} &
+    \thdcell{Résultat (Pess.)} & \thdcell{CA Optimiste} \\
+    \midrule
 
-N+4 & 12\,050\,000 & 32\,500\,000 & 4\,800\,000
-    & \bfseries +27\,700\,000
-    & ~Bénéfice \\
-N+5 & 17\,500\,000 & 41\,700\,000 & 5\,000\,000
-    & \bfseries +36\,700\,000
-    & ~Bénéfice \\
-\bottomrule
-\end{tabularx}
+    N   & 885\,500   & 0         & $-885\,500$ & 0           \\
+    \rowcolor{lightgray}
+    N+1 & 978\,500   & 116\,000  & $-862\,500$ & 690\,000    \\
+    N+2 & 1\,383\,500 & 488\,000 & $-895\,500$ & 1\,872\,000 \\
+    N+3 & 1\,550\,000 & 1\,448\,000 & $-102\,000$ & 3\,800\,000 \\
+
+    \bottomrule
+  \end{tabularx}
 \end{table}
- 
-\begin{successbox}[Scénario Optimiste — Analyse]
-  Dans le scénario optimiste, \textbf{Baligh+} atteint la rentabilité dès
-  la première année d'exploitation (N+1) avec un bénéfice net de
-  \DA{3\,179\,000}. La dynamique s'amplifie considérablement sur les
-  exercices suivants, portée par l'extension géographique et la montée
-  en puissance du réseau de collectivités abonnées.
-\end{successbox}
- 
-\begin{alertbox}[Scénario Pessimiste — Vigilance]
-  Dans le scénario pessimiste, le CA de N+1 (\DA{1\,650\,000}) reste
-  inférieur aux charges totales (\DA{4\,121\,000}), entraînant un
-  déficit de \DA{2\,471\,000}. Un \textbf{soutien institutionnel ou une
-  levée de fonds} est nécessaire pour les premières années.
-\end{alertbox}
- 
-\subsection{Calcul du Seuil de Rentabilité (Point Mort)}
- 
-Le seuil de rentabilité correspond au niveau de chiffre d'affaires
-permettant de couvrir l'intégralité des charges. Il est calculé comme
-suit :
- 
-\vspace{6pt}
-\begin{tcolorbox}[
-  colback=lightblue!50, colframe=primary,
-  title=\enskip Formule du Seuil de Rentabilité,
-  fonttitle=\bfseries\small,
-  sharp corners, top=8pt, bottom=8pt
-]
-\[
-  \text{SR} = \frac{\text{Charges Fixes}}{\text{Taux de Marge sur Coût Variable}}
-  = \frac{3\,927\,000}{0{,}65} \approx \boxed{6\,041\,538 \text{ DA}}
-\]
-\begin{itemize}[leftmargin=1.6em, itemsep=2pt]
-  \item Charges fixes annuelles (année N) : \DA{3\,927\,000}
-  \item Taux de marge sur coûts variables estimé : \pct{65}
-  \item \textbf{Seuil atteint dès N+1 dans le scénario optimiste}
-    (CA = \DA{7\,300\,000} $>$ SR = \DA{6\,041\,538})
-\end{itemize}
-\end{tcolorbox}
- 
-\subsection{Indicateurs de Performance Financière}
- 
-\vspace{6pt}
-\begin{table}[h!]
-\centering
-\caption{Indicateurs clés de performance financière (scénario optimiste)}
-\renewcommand{\arraystretch}{1.4}
-\begin{tabularx}{\linewidth}{Xrr}
-\toprule
 
-\textbf{Indicateur} & \textbf{Valeur} & \textbf{Référence} \\
-\midrule
-Retour sur Investissement (ROI) N+1
-  & \bfseries +77,1\,\% & $>0\,\%$ \\
-
-Taux de croissance moyen du CA (opt.)
-  & \bfseries +55,2\,\%/an & Marché\\
-Ratio charges personnel / CA N+1 (opt.)
-  & \bfseries 34,0\,\% & $<50\,\%$ \\
-
-Seuil de rentabilité (CA annuel min.)
-  & \bfseries 6\,041\,538 DA & — \\
-EBITDA prévisionnel N+5 (opt.)
-  & \bfseries 36\,700\,000 DA & — \\
-\bottomrule
-\end{tabularx}
-\end{table}
- 
-% ============================================================
-\section{Gestion de la Trésorerie}
-% ============================================================
- 
-\subsection{Structure des Flux de Trésorerie}
- 
-La gestion de la trésorerie est critique pour toute startup institutionnelle.
-Les données issues du Tableau des Flux de Trésorerie (Annexe) montrent les
-prévisions suivantes :
- 
-\vspace{6pt}
-\begin{table}[h!]
-\centering
-\caption{Tableau synthétique des flux de trésorerie (en DA)}
-\renewcommand{\arraystretch}{1.4}
-\begin{tabularx}{\linewidth}{Xrrrrr}
-\toprule
-
-\textbf{Flux (en DA)} &
-\textbf{N+1} & \textbf{N+2} & \textbf{N+3} & \textbf{N+4} & \textbf{N+5} \\
-\midrule
-\textbf{Encaissements clients}
-  & 7\,300\,000 & 14\,400\,000 & 23\,500\,000 & 32\,500\,000 & 41\,700\,000 \\
-
-Décaissements fournisseurs \& personnel
-  & (2\,484\,000) & (2\,712\,000) & (2\,916\,000) & (3\,116\,000) & (3\,200\,000) \\
-Décaissements charges exploitation
-  & (780\,000) & (960\,000) & (960\,000) & (1\,075\,000) & (1\,256\,000) \\
-
-\textbf{Flux net opérationnel (A)}
-  & \bfseries 4\,036\,000
-  & \bfseries 10\,728\,000
-  & \bfseries 19\,624\,000
-  & \bfseries 28\,309\,000
-  & \bfseries 37\,244\,000 \\
-\midrule
-Investissements (B)
-  & (2\,649\,000) & — & — & — & — \\
-
-Flux de financement (C)
-  & — & — & — & — & — \\
-\midrule
-\bfseries Variation trésorerie (A+B+C) &
-\bfseries 1\,387\,000 &
-\bfseries 10\,728\,000 &
-\bfseries 19\,624\,000 &
-\bfseries 28\,309\,000 &
-\bfseries 37\,244\,000 \\
-\midrule
-
-Trésorerie cumulée en fin de période
-  & 1\,387\,000 & 12\,115\,000 & 31\,739\,000 & 60\,048\,000 & 97\,292\,000 \\
-\bottomrule
-\end{tabularx}
-\end{table}
- 
 \begin{notebox}
-  La trésorerie cumulée atteint \DA{97\,292\,000} en fin de N+5 dans le scénario
-  optimiste, témoignant d'une \textbf{solidité financière exceptionnelle} du projet
-  sur la durée. L'investissement initial de \DA{2\,649\,000} en année N
-  est entièrement absorbé dès N+1.
+  Dans le scénario optimiste, l'équilibre financier est atteint dès N+2
+  (12 communes + 2 wilayas abonnées). Le déficit des premières années est
+  couvert par les dispositifs de soutien à l'entrepreneuriat étudiant (ANSEJ,
+  incubateur universitaire).
 \end{notebox}
- 
-\subsection{Évolution de la Trésorerie Cumulée}
- 
-\begin{center}
-\begin{tikzpicture}
-\begin{axis}[
-  width=13.5cm, height=6cm,
-  xlabel={\small Fin d'exercice},
-  ylabel={\small Trésorerie cumulée (Millions DA)},
-  symbolic x coords={N+1,N+2,N+3,N+4,N+5},
-  xtick=data,
-  ymin=0, ymax=110,
-  grid=both,
-  grid style={line width=0.3pt, draw=gray!25},
-  title={\small\bfseries Trésorerie cumulée en fin de période — Scénario Optimiste},
-  title style={yshift=4pt},
-]
-\addplot+[
-  color=primary, mark=*, thick,
-  fill=lightblue, fill opacity=0.4,
-] coordinates {
-  (N+1,  1.387)
-  (N+2, 12.115)
-  (N+3, 31.739)
-  (N+4, 60.048)
-  (N+5, 97.292)
-} \closedcycle;
-\end{axis}
-\end{tikzpicture}
-\end{center}
- 
-% ============================================================
-\section{Stratégie de Financement}
-% ============================================================
- 
-\subsection{Sources de Financement Identifiées}
- 
-\begin{table}[h!]
-\centering
-\caption{Plan de financement initial — Année N}
-\renewcommand{\arraystretch}{1.4}
-\begin{tabularx}{\linewidth}{Xrr}
-\toprule
 
-\textbf{Source de financement} &
-\textbf{Montant (DA)} & \textbf{Part (\%)} \\
-\midrule
-Apport en capital des fondateurs (3 × 300\,000)
-  & 900\,000 & 22,9\,\% \\
+\subsection{Seuil de Rentabilité}
 
-Dispositif ANSEJ / Incubateur universitaire
-  & 2\,000\,000 & 50,9\,\% \\
-Partenariats institutionnels (APC, DTA, ONT)
-  & 500\,000 & 12,7\,\% \\
+Pour couvrir les charges annuelles de N+1 (978\,500\,DA), il faut atteindre :
 
-Revenus précoces — phase pilote (commune test)
-  & 527\,000 & 13,5\,\% \\
-\midrule
-\bfseries TOTAL &
-\bfseries 3\,927\,000 &
-\bfseries 100\,\% \\
-\bottomrule
-\end{tabularx}
+\[
+  \text{Nombre de communes nécessaires} =
+  \frac{978\,500}{8\,000 \times 12} \approx 11 \text{ communes abonnées}
+\]
+
+Cet objectif est atteignable en N+2 dans le scénario optimiste, compte tenu
+des 58 wilayas et 1\,541 communes que compte l'Algérie.
+
+\section{Plan de Financement}
+
+Le besoin de financement total pour les deux premières années est estimé à
+1\,864\,000\,DA (N + N+1). Les sources identifiées sont les suivantes :
+
+\begin{table}[H]
+  \centering
+  \caption{Sources de financement — Phase d'amorçage (en DA)}
+  \renewcommand{\arraystretch}{1.4}
+  \begin{tabularx}{\linewidth}{Xcc}
+    \toprule
+    \rowcolor{primary}
+    \thdcell{Source} & \thdcell{Montant (DA)} & \thdcell{Part (\%)} \\
+    \midrule
+
+    Apport personnel des fondateurs ($3 \times 100\,000$) & 300\,000 & 16,1\,\% \\
+    \rowcolor{lightgray}
+    Incubateur universitaire (Bouira) — bourse projet      & 500\,000 & 26,8\,\% \\
+    Dispositif ANSEJ — financement startup étudiant        & 864\,000 & 46,3\,\% \\
+    \rowcolor{lightgray}
+    Premiers revenus pilotes (commune de Bouira)           & 200\,000 & 10,8\,\% \\
+    \midrule
+    \rowcolor{primary}
+    \textcolor{white}{\textbf{TOTAL}} &
+    \textcolor{white}{\textbf{1\,864\,000}} &
+    \textcolor{white}{\textbf{100\,\%}} \\
+    \bottomrule
+  \end{tabularx}
 \end{table}
- 
-\subsection{Recommandations Financières}
- 
-\begin{itemize}[leftmargin=1.6em, itemsep=5pt]
-  \item[$\bullet$] \textbf{Constituer une trésorerie initiale minimale
-    de \DA{2\,000\,000}} avant le lancement effectif pour absorber le gap de
-    trésorerie des premiers mois.
-  \item[$\bullet$] \textbf{Signer des conventions de partenariat} avec
-    les APC et DTA dès l'année N pour sécuriser les premiers contrats
-    d'abonnement (Services A et B).
-  \item[$\bullet$] \textbf{Activer le dispositif ANSEJ} en priorité —
-    il couvre jusqu'à 70\,\% des investissements initiaux pour les
-    startups algériennes portées par des jeunes diplômés.
-  \item[$\bullet$] \textbf{Réinvestir les bénéfices} générés à partir de N+1
-    (scénario optimiste) pour financer l'extension vers les wilayas voisines
-    sans recours à l'endettement.
-  \item[$\bullet$] \textbf{Mettre en place une réserve de précaution}
-    équivalente à 3 mois de charges (\textasciitilde\DA{1\,000\,000}) pour
-    faire face aux aléas opérationnels.
-\end{itemize}
- 
-% ============================================================
-\section{Compte de Résultat Prévisionnel}
-% ============================================================
- 
-Le compte de résultat consolide les produits et les charges pour dégager
-le \textbf{résultat net d'exercice} sur chaque année prévisionnelle.
-Les montants sont issus du \textbf{scénario optimiste} du chiffre d'affaires.
- 
-\vspace{6pt}
-\begin{table}[h!]
-\centering
-\caption{Compte de résultat prévisionnel — scénario optimiste (en DA)}
-\renewcommand{\arraystretch}{1.38}
-\begin{tabularx}{\linewidth}{Xrrrrr}
-\toprule
 
-\textbf{Poste (en DA)} &
-\textbf{N+1} & \textbf{N+2} & \textbf{N+3} & \textbf{N+4} & \textbf{N+5} \\
-\midrule
-\multicolumn{6}{l}{\bfseries\small
-  I — PRODUITS D'EXPLOITATION} \\
-Chiffre d'affaires (CA)
-  & 7\,300\,000 & 14\,400\,000 & 23\,500\,000 & 32\,500\,000 & 41\,700\,000 \\
+\begin{notebox}
+  Le dispositif ANSEJ (Agence Nationale de Soutien à l'Emploi des Jeunes)
+  finance jusqu'à 70\,\% des investissements initiaux pour les startups
+  portées par des jeunes diplômés algériens, ce qui en fait le levier
+  principal pour ce projet.
+\end{notebox}
 
-\textbf{Total Produits d'exploitation}
-  & \bfseries 7\,300\,000 & \bfseries 14\,400\,000
-  & \bfseries 23\,500\,000 & \bfseries 32\,500\,000
-  & \bfseries 41\,700\,000 \\
-\midrule
-\multicolumn{6}{l}{\bfseries\small
-  II — CHARGES D'EXPLOITATION} \\
-Immobilisations corporelles (amort.)
-  & (673\,000) & (577\,000) & (496\,000) & (425\,000) & (360\,000) \\
-
-Immobilisations incorporelles
-  & (184\,000) & (184\,000) & (184\,000) & (184\,000) & (184\,000) \\
-Charges d'exploitation
-  & (780\,000) & (960\,000) & (960\,000) & (1\,075\,000) & (1\,256\,000) \\
-
-Charges de personnel
-  & (2\,484\,000) & (2\,712\,000) & (2\,916\,000) & (3\,116\,000) & (3\,200\,000) \\
-\textbf{Total Charges d'exploitation}
-  & \bfseries (4\,121\,000) & \bfseries (4\,433\,000)
-  & \bfseries (4\,556\,000) & \bfseries (4\,800\,000)
-  & \bfseries (5\,000\,000) \\
-\midrule
-
-\textbf{Excédent Brut d'Exploitation (EBE)}
-  & \bfseries 3\,179\,000
-  & \bfseries 9\,967\,000
-  & \bfseries 18\,944\,000
-  & \bfseries 27\,700\,000
-  & \bfseries 36\,700\,000 \\
-\midrule
-
-\bfseries RÉSULTAT NET D'EXERCICE &
-\bfseries 3\,179\,000 &
-\bfseries 9\,967\,000 &
-\bfseries 18\,944\,000 &
-\bfseries 27\,700\,000 &
-\bfseries 36\,700\,000 \\
-\bottomrule
-\end{tabularx}
-\end{table}
- 
-% ── Graphique résultat net ───────────────────────────────────
-\vspace{6pt}
-\begin{center}
-\begin{tikzpicture}
-\begin{axis}[
-  ybar,
-  width=13cm, height=6.5cm,
-  bar width=1.4cm,
-  xlabel={\small Exercice},
-  ylabel={\small Résultat Net (Millions DA)},
-  symbolic x coords={N+1,N+2,N+3,N+4,N+5},
-  xtick=data,
-  ymin=0, ymax=42,
-  ytick={0,5,10,15,20,25,30,35,40},
-  yticklabels={0,5M,10M,15M,20M,25M,30M,35M,40M},
-  nodes near coords,
-  nodes near coords align={vertical},
-  every node near coord/.append style={font=\tiny\bfseries},
-  grid=major,
-  grid style={line width=0.4pt, draw=gray!25},
-  title={\small\bfseries Évolution du Résultat Net d'Exercice — Scénario Optimiste},
-  title style={yshift=4pt},
-]
-\addplot+[fill=successgreen!70, draw=successgreen] coordinates {
-  (N+1, 3.179)
-  (N+2, 9.967)
-  (N+3, 18.944)
-  (N+4, 27.700)
-  (N+5, 36.700)
-};
-\end{axis}
-\end{tikzpicture}
-\end{center}
- 
-% ============================================================
 \section{Conclusion Financière}
-% ============================================================
- 
-L'analyse financière conduite dans ce document démontre que \textbf{Baligh+}
-dispose d'un modèle économique \textbf{viable, scalable et adapté} au contexte
-du secteur public algérien en pleine transformation numérique.
- 
-Les enseignements majeurs de cette étude sont les suivants :
- 
-\begin{enumerate}[leftmargin=2em, itemsep=6pt]
-  \item \textbf{Structure de coûts maîtrisée :} les charges totales progressent
-    de manière contrôlée (de \DA{3\,927\,000} en N à \DA{5\,000\,000} en N+5),
-    principalement sous l'effet de la revalorisation salariale, reflet d'une
-    gestion RH responsable.
- 
-  \item \textbf{Modèle de revenus hybride et résilient :} la combinaison
-    abonnements mensuels (communes/wilayas) + commissions + publicité offre
-    une diversification qui réduit la vulnérabilité aux aléas d'une seule
-    source.
- 
-  \item \textbf{Rentabilité rapide dans le scénario optimiste :} le seuil de
-    rentabilité (\DA{6\,041\,538}) est franchi dès N+1 avec un CA optimiste
-    de \DA{7\,300\,000}, générant un bénéfice net de \DA{3\,179\,000} dès
-    la première année.
- 
-  \item \textbf{Trésorerie saine et croissante :} la trésorerie cumulée atteint
-    \DA{97\,292\,000} en fin de N+5 (scénario optimiste), signalant une capacité
-    d'autofinancement suffisante pour l'extension nationale.
- 
-  \item \textbf{Potentiel de croissance exceptionnel (scénario optimiste) :}
-    un CA de \DA{41\,700\,000} en N+5 place \textbf{Baligh+} comme l'une des
-    startups GovTech les plus prometteuses d'Algérie.
-\end{enumerate}
- 
-% \begin{successbox}[Conclusion Générale]
-%   \textbf{Baligh+} est un projet entrepreneurial financièrement robuste,
-%   porteur d'une valeur économique et institutionnelle significative pour la
-%   modernisation des collectivités locales algériennes. La clé du succès réside
-%   dans la rapidité d'adoption par les communes pilotes, la qualité des
-%   partenariats institutionnels et la cohérence de l'exécution stratégique
-%   sur les cinq premières années.
-% \end{successbox}
- \begin{successbox}[Conclusion Générale]
-  \textbf{Baligh+} présente un modèle économique viable et un fort potentiel
-  de développement dans le domaine de la gouvernance numérique locale. Les
-  prévisions financières démontrent sa capacité à atteindre la rentabilité et
-  à assurer une croissance durable. La réussite du projet dépendra toutefois
-  de l'adhésion rapide des collectivités territoriales, du renforcement des
-  partenariats institutionnels et de l'exécution rigoureuse de la stratégie de
-  déploiement définie pour les cinq premières années.
-\end{successbox}
 
- 
+L'analyse financière montre que Baligh+ est un projet à coûts de démarrage
+modestes et à fort potentiel d'adoption institutionnelle. Les principaux
+enseignements sont :
+
+\begin{enumerate}
+  \item \textbf{Faibles barrières à l'entrée} : grâce aux technologies open
+        source (PHP, OpenStreetMap, MySQL), l'investissement initial se limite
+        à 885\,500\,DA, accessible via l'incubateur universitaire et l'ANSEJ.
+
+  \item \textbf{Modèle de revenus réaliste} : un tarif de 8\,000\,DA/mois par
+        commune est cohérent avec les budgets des APC algériennes et ne
+        nécessite que 11 communes abonnées pour atteindre l'équilibre.
+
+  \item \textbf{Rentabilité en N+2 (scénario optimiste)} : avec 12 communes et
+        2 wilayas clientes, le projet dégage un bénéfice net de 488\,500\,DA
+        dès la troisième année.
+
+  \item \textbf{Croissance organique} : le bouche-à-oreille entre communes et
+        les partenariats institutionnels constituent le moteur de croissance
+        principal, sans coût commercial élevé.
+\end{enumerate}
+
+\begin{notebox}
+  Baligh+ démontre qu'une plateforme civique viable peut être lancée avec un
+  budget minimal, en s'appuyant sur des outils open source et les mécanismes
+  de soutien à l'entrepreneuriat étudiant existants en Algérie. La clé du
+  succès réside dans la signature rapide d'une convention pilote avec la
+  commune de Bouira, qui servira de référence pour l'extension progressive aux
+  autres wilayas.
+\end{notebox}
+
 % ============================================================
 \chapter{Prototype Expérimental}
 
@@ -2115,25 +1484,27 @@ utilisateur.
 La page d'accueil constitue le premier point de contact avec la plateforme.
 Elle comprend :
 \begin{itemize}
-  \item Une barre de navigation avec le logo Baligh+, les liens de navigation, le
-        sélecteur de langue (AR\,/\,FR\,/\,EN) et les boutons de
-        connexion\,/\,inscription.
-  \item Une bannière héro avec le slogan « Plateforme Intelligente de Signalement
-        Urbain » et deux boutons d'action (Ajouter un signalement\,/\,Mes
-        signalements).
-  \item Un bloc de statistiques en temps réel : Total signalements\,/\,En
-        attente\,/\,En traitement\,/\,Résolus.
+  \item Une barre de navigation avec le logo Baligh+, les liens de navigation,
+        le sélecteur de langue (AR\,/\,FR\,/\,EN) et les boutons de connexion
+        / inscription.
+  \item Une bannière héro avec le slogan « Plateforme Intelligente de
+        Signalement Urbain » et deux boutons d'action (Ajouter un signalement
+        / Mes signalements).
+  \item Un bloc de statistiques en temps réel : Total signalements / En
+        attente / En traitement / Résolus.
   \item Une section « Comment ça marche ? » en 4 étapes visuelles.
-  \item Une galerie des 5 catégories de signalements (Routes, Éclairage, Déchets, Eau,
-        Autre).
-  \item Les derniers signalements soumis avec statut, votes et bouton de détail.
+  \item Une galerie des 5 catégories de signalements (Routes, Éclairage,
+        Déchets, Eau, Autre).
+  \item Les derniers signalements soumis avec statut, votes et bouton de
+        détail.
   \item Un footer avec les liens utiles et les crédits.
 \end{itemize}
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.95\linewidth]{images/01.PNG}
-  \caption{Interface d'accueil — Page principale de Baligh+}\label{fig:accueil}
+  \includegraphics[width=0.85\textwidth]{images/01.png}
+  \caption{Interface d'accueil — Page principale de Baligh+}
+  \label{fig:accueil}
 \end{figure}
 
 \section{Interface de la Carte Interactive}
@@ -2147,8 +1518,9 @@ clustering automatique pour les zones denses.
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.95\linewidth]{images/02.PNG}
-  \caption{Carte interactive des signalements géolocalisés}\label{fig:carte}
+  \includegraphics[width=0.90\textwidth]{images/02.png}
+  \caption{Carte interactive des signalements géolocalisés}
+  \label{fig:carte}
 \end{figure}
 
 \section{Interface de Soumission d'un Signalement}
@@ -2157,21 +1529,19 @@ Cette interface guide le citoyen connecté à travers un formulaire structuré
 comprenant :
 \begin{itemize}
   \item Titre du problème (champ texte, obligatoire).
-  \item Type de problème (sélecteur :
-        Route\,/\,Éclairage\,/\,Déchets\,/\,Eau\,/\,Autre).
+  \item Type de problème (sélecteur : Route\,/\,Éclairage\,/\,Déchets\,/\,Eau\,/\,Autre).
   \item Wilaya (liste déroulante des 58 wilayas algériennes avec code officiel).
   \item Commune\,/\,Quartier (champ texte avec suggestions).
   \item Description détaillée (lieu, durée, gravité — zone texte).
-  \item Géolocalisation : bouton GPS ou clic sur la carte intégrée (déplacement du
-        marqueur possible).
+  \item Géolocalisation : bouton GPS ou clic sur la carte intégrée (déplacement
+        du marqueur possible).
   \item Photos (jusqu'à 6 fichiers JPG/PNG/WEBP, interface de glisser-déposer).
-  \item Bouton \textit{Envoyer le signalement} — génère le numéro de référence et les
-        notifications.
+  \item Bouton \textit{Envoyer le signalement} — génère le numéro de référence
+        et les notifications.
 \end{itemize}
 
 \begin{figure}[H]
   \centering
-
   \includegraphics[width=0.85\textwidth]{images/03.png}
 
   \vspace{0.5cm}
@@ -2185,6 +1555,7 @@ comprenant :
   \caption{Formulaire de soumission d'un signalement}
   \label{fig:soumission}
 \end{figure}
+
 \section{Interface « Tous les signalements »}
 
 Cette page liste l'ensemble des signalements avec filtrage dynamique par statut
@@ -2195,7 +1566,6 @@ communautaire et accès aux détails.
 
 \begin{figure}[H]
   \centering
-
   \includegraphics[width=0.90\textwidth]{images/04.png}
   \caption{Liste filtrée de tous les signalements}
   \label{fig:liste}
@@ -2205,22 +1575,22 @@ communautaire et accès aux détails.
 
 Cette page complète affiche :
 \begin{itemize}
-  \item Le numéro de référence unique, le titre, la catégorie et la date de soumission.
+  \item Le numéro de référence unique, le titre, la catégorie et la date de
+        soumission.
   \item La galerie de photos (jusqu'à 6, avec lightbox navigation clavier).
   \item La description complète et l'historique des changements de statut.
   \item Le bouton de vote communautaire et le compteur de votes.
   \item Le bouton \textit{Voir sur la carte} (modal Leaflet intégré).
-  \item La section commentaires avec les réponses officielles distinguées visuellement.
+  \item La section commentaires avec les réponses officielles distinguées
+        visuellement.
   \item Le formulaire d'ajout de commentaire (citoyens connectés uniquement).
 \end{itemize}
+
 \begin{figure}[H]
   \centering
-
   \includegraphics[height=7cm]{images/05.png}
   \hfill
   \includegraphics[height=7cm]{images/05-01.png}
-  \hfill
-
   \caption{Page de détail d'un signalement avec commentaires}
   \label{fig:detail}
 \end{figure}
@@ -2244,7 +1614,7 @@ caractères) et Confirmation de mot de passe, avec validation côté serveur.
 Cette page personnelle liste tous les signalements soumis par l'utilisateur
 connecté, avec le statut actuel, le nombre de votes et de commentaires, et des
 statistiques récapitulatives (Total\,/\,Résolus). Un bouton \textit{Nouveau
-  signalement} est mis en évidence pour encourager la contribution.
+signalement} est mis en évidence pour encourager la contribution.
 
 \begin{figure}[H]
   \centering
@@ -2264,8 +1634,8 @@ Le tableau de bord propose une vue complète et structurée de la plateforme :
 
 \subsection{Statistiques globales}
 Des compteurs en temps réel affichent le nombre total de signalements, ceux
-\textit{en attente}, \textit{en traitement}, \textit{résolus} ainsi que le taux
-de résolution global (en pourcentage).
+\textit{en attente}, \textit{en traitement}, \textit{résolus} ainsi que le
+taux de résolution global (en pourcentage).
 
 \begin{figure}[H]
   \centering
@@ -2295,9 +1665,11 @@ paginée avec pour chaque entrée :
   \item La localisation (wilaya\,/\,commune).
   \item Le nombre de votes communautaires.
   \item La date de soumission.
-  \item Deux menus déroulants inline pour modifier le \textbf{statut} (En attente, En
-        traitement, Résolu) et la \textbf{priorité} (Normale, Urgente).
-  \item Des boutons d'action rapide : \textit{voir le détail} et \textit{supprimer}.
+  \item Deux menus déroulants inline pour modifier le \textbf{statut} (En
+        attente, En traitement, Résolu) et la \textbf{priorité} (Normale,
+        Urgente).
+  \item Des boutons d'action rapide : \textit{voir le détail} et
+        \textit{supprimer}.
 \end{itemize}
 
 \subsection{Gestion des utilisateurs et commentaires}
@@ -2312,7 +1684,7 @@ Deux onglets supplémentaires permettent :
 \subsection{Export et navigation}
 Un bouton \textbf{Export CSV} génère un fichier horodaté de tous les
 signalements (compatible Excel UTF-8). Un accès direct à la \textbf{carte
-  interactive} est disponible depuis la barre de navigation admin. Une icône de
+interactive} est disponible depuis la barre de navigation admin. Une icône de
 notification en haut à gauche affiche les alertes en temps réel (badge
 numérique).
 
@@ -2336,16 +1708,19 @@ validation des trois champs (ancien, nouveau, confirmation).
   \caption{Interface de profil utilisateur}
   \label{fig:profil}
 \end{figure}
+
 \section{Système de Notifications}
 
 Le système de notifications en temps quasi-réel fonctionne ainsi :
 \begin{itemize}
-  \item Une icône cloche dans la navbar affiche le nombre de notifications non lues.
-  \item Un panneau déroulant liste les notifications (nouveau signalement, vote, mise à
-        jour de statut, commentaire officiel) avec icônes distinctives.
+  \item Une icône cloche dans la navbar affiche le nombre de notifications non
+        lues.
+  \item Un panneau déroulant liste les notifications (nouveau signalement, vote,
+        mise à jour de statut, commentaire officiel) avec icônes distinctives.
   \item Les notifications non lues sont mises en évidence par un point coloré.
   \item Le bouton « Tout marquer comme lu » efface les indicateurs.
-  \item Actualisation automatique toutes les 30 secondes (\texttt{setInterval}).
+  \item Actualisation automatique toutes les 30 secondes
+        (\texttt{setInterval}).
 \end{itemize}
 
 \begin{figure}[H]
@@ -2370,8 +1745,8 @@ solutions concrètes aux besoins du quotidien urbain.
 Le prototype développé démontre la faisabilité technique du projet avec des
 technologies accessibles (PHP, JavaScript Vanilla, Leaflet.js) et une
 architecture déployable immédiatement sur un hébergement standard. Le support
-trilingue (arabe\,/\,français\,/\,anglais) avec gestion RTL native garantit une
-accessibilité maximale pour l'ensemble des citoyens algériens.
+trilingue (arabe\,/\,français\,/\,anglais) avec gestion RTL native garantit
+une accessibilité maximale pour l'ensemble des citoyens algériens.
 
 Les initiatives entrepreneuriales dans ce domaine offrent l'opportunité de
 diversifier l'offre de services publics numériques, de renforcer la
