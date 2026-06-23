@@ -76,4 +76,4 @@ Le projet Balligh+ utilise :
 
 ## 📞 Contact
 
-Pour toute question concernant ce projet, veuillez contacter l'équipe de développement.
+Pour toute question concernant ce projet, veuillez contacter l'équipe de développement.# Intelligent-Reporting-Platform
